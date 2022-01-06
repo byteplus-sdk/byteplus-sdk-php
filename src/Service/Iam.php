@@ -16,7 +16,7 @@ class Iam extends V4Curl
                     'Accept' => 'application/json'
                 ],
                 'v4_credentials' => [
-                    'region' => 'cn-north-1',
+                    'region' => 'ap-singapore-1',
                     'service' => 'iam',
                 ],
             ],
