@@ -15,7 +15,7 @@ $template = [
 
 $body = [
     'SmsAccount' => "your sms account",
-    'Sign' => "sign",
+    'From' => "BytePlus",
     "TemplateID"=>    "ST_xxx",
     "TemplateParam"=> json_encode($template),
     "PhoneNumbers"=>  "phone numbers",
