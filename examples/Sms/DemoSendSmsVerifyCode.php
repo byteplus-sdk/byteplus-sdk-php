@@ -8,19 +8,17 @@ $client = Sms::getInstance('');// 可选ap-singapore-1 新加坡
 $client->setAccessKey("your ak");
 $client->setSecretKey("your sk");
 
-// template
-$template = [
-    'code' => "123456",
-];
-
 $body = [
-    "SmsAccount"    => "smsAccount",
-    "From"          => "BytePlus",
-    "TemplateID"    => "ST_xxx",
-    "TemplateParam" => json_encode($template),
-    "PhoneNumbers"  => "+65xxxxxxxx",
-    "Tag"           => "tag",
+    "SmsAccount"  => "smsAccount",
+    "From"        => "BytePlus",
+    "TemplateID"  => "ST_xxx",
+    "PhoneNumber" => "+65xxxxxxxx",
+    "Scene"       => "myscene",
+    "ExpireTime"  => 1800,
+    "TryCount"    => 3,
+    "CodeType"    => 6,
+    "Tag"         => "tag",
 ];
 
-$response = $client->sendSms(['json' => $body]);
+$response = $client->sendSmsVerifyCode(['json' => $body]);
 echo $response;
