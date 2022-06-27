@@ -46,6 +46,46 @@ class Sms extends V4Curl
                 ],
             ]
         ],
+        'Conversion' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'Conversion',
+                    'Version' => '2020-01-01',
+                ],
+            ]
+        ],
+        'SendSmsVerifyCode' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'SendSmsVerifyCode',
+                    'Version' => '2020-01-01',
+                ],
+            ]
+        ],
+        'CheckSmsVerifyCode' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'CheckSmsVerifyCode',
+                    'Version' => '2020-01-01',
+                ],
+            ]
+        ],
+        'SendBatchSms' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'SendBatchSms',
+                    'Version' => '2021-01-01',
+                ],
+            ]
+        ]
     ];
 
     public function sendSms(array $query = [])
@@ -53,6 +93,42 @@ class Sms extends V4Curl
         $response = $this->request('SendSms', $query);
         if ($response->getStatusCode() >= 500) {
             $response = $this->request('SendSms', $query);
+        }
+        return $response->getBody();
+    }
+
+    public function conversion(array $query = [])
+    {
+        $response = $this->request('Conversion', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('Conversion', $query);
+        }
+        return $response->getBody();
+    }
+
+    public function sendSmsVerifyCode(array $query = [])
+    {
+        $response = $this->request('SendSmsVerifyCode', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('SendSmsVerifyCode', $query);
+        }
+        return $response->getBody();
+    }
+
+    public function checkSmsVerifyCode(array $query = [])
+    {
+        $response = $this->request('CheckSmsVerifyCode', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('CheckSmsVerifyCode', $query);
+        }
+        return $response->getBody();
+    }
+
+    public function sendBatchSms(array $query = [])
+    {
+        $response = $this->request('SendBatchSms', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('SendBatchSms', $query);
         }
         return $response->getBody();
     }
