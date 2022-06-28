@@ -13,9 +13,5 @@ $response = $client->listUsers([]);
 echo $response;
 
 echo "\nDemo 2\n";
-$response = $client->listUsers(['query'=>['Limit'=>1, 'Offset'=>0]]);
-echo $response;
-
-echo "\nDemo 3\n";
-$response = $client->listUsers(['v4_credentials'=>['ak'=>"$ak", 'sk'=>$sk], 'query'=>['Limit'=>1, 'Offset'=>0]]);
+$response = $client->listUsers(['query'=>['Limit'=>10, 'Offset'=>0]]);
 echo $response;
