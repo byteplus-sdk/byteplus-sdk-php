@@ -13,7 +13,8 @@
     "ext-json": "*",
     "google/protobuf": "v3.12.*",
     "google/gax": "*",
-    "ext-openssl": "*"
+    "ext-openssl": "*",
+    "guzzlehttp/psr7": "v1.9.0"
   },
   "autoload": {
     "psr-4": {
