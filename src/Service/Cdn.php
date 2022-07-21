@@ -396,15 +396,10 @@ class Cdn extends V4Curl
         ];
     }
 
-    public function requestWithRetry(string $api, array $configs): string
+    public function requestStr(string $api, array $configs): string
     {
-        try {
-            $response = $this->request($api, $configs);
-            return $response->getBody()->getContents();
-        } catch (\Exception $e) {
-            $response = $this->request($api, $configs);
-            return $response->getBody()->getContents();
-        }
+        $response = $this->request($api, $configs);
+        return $response->getBody()->getContents();
     }
 
     public function addCdnDomain(array $data = []): string
@@ -412,7 +407,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("AddCdnDomain", ['json' => $data]);
+        return $this->requestStr("AddCdnDomain", ['json' => $data]);
     }
 
     public function startCdnDomain(array $data = []): string
@@ -420,7 +415,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("StartCdnDomain", ['json' => $data]);
+        return $this->requestStr("StartCdnDomain", ['json' => $data]);
     }
 
     public function stopCdnDomain(array $data = []): string
@@ -428,7 +423,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("StopCdnDomain", ['json' => $data]);
+        return $this->requestStr("StopCdnDomain", ['json' => $data]);
     }
 
     public function deleteCdnDomain(array $data = []): string
@@ -436,7 +431,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DeleteCdnDomain", ['json' => $data]);
+        return $this->requestStr("DeleteCdnDomain", ['json' => $data]);
     }
 
     public function listCdnDomains(array $data = []): string
@@ -444,7 +439,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("ListCdnDomains", ['json' => $data]);
+        return $this->requestStr("ListCdnDomains", ['json' => $data]);
     }
 
     public function describeCdnConfig(array $data = []): string
@@ -452,7 +447,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnConfig", ['json' => $data]);
+        return $this->requestStr("DescribeCdnConfig", ['json' => $data]);
     }
 
     public function updateCdnConfig(array $data = []): string
@@ -460,7 +455,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("UpdateCdnConfig", ['json' => $data]);
+        return $this->requestStr("UpdateCdnConfig", ['json' => $data]);
     }
 
     public function describeCdnData(array $data = []): string
@@ -468,7 +463,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnData", ['json' => $data]);
+        return $this->requestStr("DescribeCdnData", ['json' => $data]);
     }
 
     public function describeEdgeNrtDataSummary(array $data = []): string
@@ -476,7 +471,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeEdgeNrtDataSummary", ['json' => $data]);
+        return $this->requestStr("DescribeEdgeNrtDataSummary", ['json' => $data]);
     }
 
     public function describeCdnOriginData(array $data = []): string
@@ -484,7 +479,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnOriginData", ['json' => $data]);
+        return $this->requestStr("DescribeCdnOriginData", ['json' => $data]);
     }
 
     public function describeOriginNrtDataSummary(array $data = []): string
@@ -492,7 +487,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeOriginNrtDataSummary", ['json' => $data]);
+        return $this->requestStr("DescribeOriginNrtDataSummary", ['json' => $data]);
     }
 
     public function describeCdnDataDetail(array $data = []): string
@@ -500,7 +495,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnDataDetail", ['json' => $data]);
+        return $this->requestStr("DescribeCdnDataDetail", ['json' => $data]);
     }
 
     public function describeEdgeStatisticalData(array $data = []): string
@@ -508,7 +503,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeEdgeStatisticalData", ['json' => $data]);
+        return $this->requestStr("DescribeEdgeStatisticalData", ['json' => $data]);
     }
 
     public function describeEdgeTopNrtData(array $data = []): string
@@ -516,7 +511,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeEdgeTopNrtData", ['json' => $data]);
+        return $this->requestStr("DescribeEdgeTopNrtData", ['json' => $data]);
     }
 
     public function describeOriginTopNrtData(array $data = []): string
@@ -524,7 +519,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeOriginTopNrtData", ['json' => $data]);
+        return $this->requestStr("DescribeOriginTopNrtData", ['json' => $data]);
     }
 
     public function describeEdgeTopStatusCode(array $data = []): string
@@ -532,7 +527,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeEdgeTopStatusCode", ['json' => $data]);
+        return $this->requestStr("DescribeEdgeTopStatusCode", ['json' => $data]);
     }
 
     public function describeOriginTopStatusCode(array $data = []): string
@@ -540,7 +535,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeOriginTopStatusCode", ['json' => $data]);
+        return $this->requestStr("DescribeOriginTopStatusCode", ['json' => $data]);
     }
 
     public function describeEdgeTopStatisticalData(array $data = []): string
@@ -548,7 +543,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeEdgeTopStatisticalData", ['json' => $data]);
+        return $this->requestStr("DescribeEdgeTopStatisticalData", ['json' => $data]);
     }
 
     public function describeCdnRegionAndIsp(array $data = []): string
@@ -556,7 +551,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnRegionAndIsp", ['json' => $data]);
+        return $this->requestStr("DescribeCdnRegionAndIsp", ['json' => $data]);
     }
 
     public function describeCdnDomainTopData(array $data = []): string
@@ -564,7 +559,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnDomainTopData", ['json' => $data]);
+        return $this->requestStr("DescribeCdnDomainTopData", ['json' => $data]);
     }
 
     public function describeCdnService(array $data = []): string
@@ -572,7 +567,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnService", ['json' => $data]);
+        return $this->requestStr("DescribeCdnService", ['json' => $data]);
     }
 
     public function describeAccountingData(array $data = []): string
@@ -580,7 +575,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeAccountingData", ['json' => $data]);
+        return $this->requestStr("DescribeAccountingData", ['json' => $data]);
     }
 
     public function submitRefreshTask(array $data = []): string
@@ -588,7 +583,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("SubmitRefreshTask", ['json' => $data]);
+        return $this->requestStr("SubmitRefreshTask", ['json' => $data]);
     }
 
     public function submitPreloadTask(array $data = []): string
@@ -596,7 +591,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("SubmitPreloadTask", ['json' => $data]);
+        return $this->requestStr("SubmitPreloadTask", ['json' => $data]);
     }
 
     public function describeContentTasks(array $data = []): string
@@ -604,7 +599,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeContentTasks", ['json' => $data]);
+        return $this->requestStr("DescribeContentTasks", ['json' => $data]);
     }
 
     public function describeContentQuota(array $data = []): string
@@ -612,7 +607,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeContentQuota", ['json' => $data]);
+        return $this->requestStr("DescribeContentQuota", ['json' => $data]);
     }
 
     public function submitBlockTask(array $data = []): string
@@ -620,7 +615,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("SubmitBlockTask", ['json' => $data]);
+        return $this->requestStr("SubmitBlockTask", ['json' => $data]);
     }
 
     public function submitUnblockTask(array $data = []): string
@@ -628,7 +623,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("SubmitUnblockTask", ['json' => $data]);
+        return $this->requestStr("SubmitUnblockTask", ['json' => $data]);
     }
 
     public function describeContentBlockTasks(array $data = []): string
@@ -636,7 +631,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeContentBlockTasks", ['json' => $data]);
+        return $this->requestStr("DescribeContentBlockTasks", ['json' => $data]);
     }
 
     public function describeCdnAccessLog(array $data = []): string
@@ -644,7 +639,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnAccessLog", ['json' => $data]);
+        return $this->requestStr("DescribeCdnAccessLog", ['json' => $data]);
     }
 
     public function describeIPInfo(array $data = []): string
@@ -652,7 +647,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeIPInfo", ['json' => $data]);
+        return $this->requestStr("DescribeIPInfo", ['json' => $data]);
     }
 
     public function describeIPListInfo(array $data = []): string
@@ -660,7 +655,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeIPListInfo", ['json' => $data]);
+        return $this->requestStr("DescribeIPListInfo", ['json' => $data]);
     }
 
     public function describeCdnUpperIp(array $data = []): string
@@ -668,7 +663,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DescribeCdnUpperIp", ['json' => $data]);
+        return $this->requestStr("DescribeCdnUpperIp", ['json' => $data]);
     }
 
     public function addResourceTags(array $data = []): string
@@ -676,7 +671,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("AddResourceTags", ['json' => $data]);
+        return $this->requestStr("AddResourceTags", ['json' => $data]);
     }
 
     public function updateResourceTags(array $data = []): string
@@ -684,7 +679,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("UpdateResourceTags", ['json' => $data]);
+        return $this->requestStr("UpdateResourceTags", ['json' => $data]);
     }
 
     public function listResourceTags(array $data = []): string
@@ -692,7 +687,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("ListResourceTags", ['json' => $data]);
+        return $this->requestStr("ListResourceTags", ['json' => $data]);
     }
 
     public function deleteResourceTags(array $data = []): string
@@ -700,7 +695,7 @@ class Cdn extends V4Curl
         if (empty($data)) {
             $data = new \ArrayObject();
         }
-        return $this->requestWithRetry("DeleteResourceTags", ['json' => $data]);
+        return $this->requestStr("DeleteResourceTags", ['json' => $data]);
     }
 
 }
