@@ -8,8 +8,6 @@ class Cdn extends V4Curl
 {
 
     protected $apiList = [
-
-        #添加加速域名: https://www.volcengine.com/docs/6454/97340
         'AddCdnDomain' => [
           'url' => '/',
           'method' => 'post',
@@ -21,7 +19,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #上线加速域名: https://www.volcengine.com/docs/6454/74667
         'StartCdnDomain' => [
           'url' => '/',
           'method' => 'post',
@@ -33,7 +30,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #下线加速域名: https://www.volcengine.com/docs/6454/75129
         'StopCdnDomain' => [
           'url' => '/',
           'method' => 'post',
@@ -45,7 +41,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #删除加速域名: https://www.volcengine.com/docs/6454/75130
         'DeleteCdnDomain' => [
           'url' => '/',
           'method' => 'post',
@@ -57,7 +52,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取域名列表: https://www.volcengine.com/docs/6454/75269
         'ListCdnDomains' => [
           'url' => '/',
           'method' => 'post',
@@ -69,7 +63,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取域名配置详情: https://www.volcengine.com/docs/6454/80320
         'DescribeCdnConfig' => [
           'url' => '/',
           'method' => 'post',
@@ -81,7 +74,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #修改加速域名配置: https://www.volcengine.com/docs/6454/97266
         'UpdateCdnConfig' => [
           'url' => '/',
           'method' => 'post',
@@ -93,7 +85,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取访问统计的细分数据: https://www.volcengine.com/docs/6454/70442
         'DescribeCdnData' => [
           'url' => '/',
           'method' => 'post',
@@ -105,7 +96,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取访问统计的汇总数据: https://www.volcengine.com/docs/6454/96132
         'DescribeEdgeNrtDataSummary' => [
           'url' => '/',
           'method' => 'post',
@@ -117,7 +107,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取回源统计的细分数据: https://www.volcengine.com/docs/6454/70443
         'DescribeCdnOriginData' => [
           'url' => '/',
           'method' => 'post',
@@ -129,7 +118,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取回源统计的汇总数据: https://www.volcengine.com/docs/6454/96133
         'DescribeOriginNrtDataSummary' => [
           'url' => '/',
           'method' => 'post',
@@ -141,7 +129,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取省份运营商的细分数据: https://www.volcengine.com/docs/6454/75159
         'DescribeCdnDataDetail' => [
           'url' => '/',
           'method' => 'post',
@@ -153,7 +140,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取独立访客的细分数据: https://www.volcengine.com/docs/6454/79321
         'DescribeEdgeStatisticalData' => [
           'url' => '/',
           'method' => 'post',
@@ -165,7 +151,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取访问统计的排行数据: https://www.volcengine.com/docs/6454/96145
         'DescribeEdgeTopNrtData' => [
           'url' => '/',
           'method' => 'post',
@@ -177,7 +162,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取回源数据的统计排序: https://www.volcengine.com/docs/6454/104892
         'DescribeOriginTopNrtData' => [
           'url' => '/',
           'method' => 'post',
@@ -189,7 +173,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取访问状态码的统计排序: https://www.volcengine.com/docs/6454/104888
         'DescribeEdgeTopStatusCode' => [
           'url' => '/',
           'method' => 'post',
@@ -201,7 +184,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取回源状态码的统计排序: https://www.volcengine.com/docs/6454/104891
         'DescribeOriginTopStatusCode' => [
           'url' => '/',
           'method' => 'post',
@@ -213,7 +195,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取热点及访客排行数据: https://www.volcengine.com/docs/6454/79322
         'DescribeEdgeTopStatisticalData' => [
           'url' => '/',
           'method' => 'post',
@@ -225,7 +206,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取区域和 ISP 列表: https://www.volcengine.com/docs/6454/70445
         'DescribeCdnRegionAndIsp' => [
           'url' => '/',
           'method' => 'post',
@@ -237,7 +217,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #（Deprecated）查询域名排行数据: https://www.volcengine.com/docs/6454/70447?type=preview
         'DescribeCdnDomainTopData' => [
           'url' => '/',
           'method' => 'post',
@@ -249,7 +228,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #查询账号计费方式: https://www.volcengine.com/docs/6454/78999
         'DescribeCdnService' => [
           'url' => '/',
           'method' => 'post',
@@ -261,7 +239,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取计费指标的细分数据: https://www.volcengine.com/docs/6454/96167
         'DescribeAccountingData' => [
           'url' => '/',
           'method' => 'post',
@@ -273,7 +250,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #提交刷新任务: https://www.volcengine.com/docs/6454/70438
         'SubmitRefreshTask' => [
           'url' => '/',
           'method' => 'post',
@@ -285,7 +261,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #提交预热任务: https://www.volcengine.com/docs/6454/70436
         'SubmitPreloadTask' => [
           'url' => '/',
           'method' => 'post',
@@ -297,7 +272,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取刷新预热任务信息: https://www.volcengine.com/docs/6454/70437
         'DescribeContentTasks' => [
           'url' => '/',
           'method' => 'post',
@@ -309,7 +283,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取刷新预热配额信息: https://www.volcengine.com/docs/6454/70439
         'DescribeContentQuota' => [
           'url' => '/',
           'method' => 'post',
@@ -321,7 +294,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #提交封禁任务: https://www.volcengine.com/docs/6454/79890
         'SubmitBlockTask' => [
           'url' => '/',
           'method' => 'post',
@@ -333,7 +305,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #提交解封任务: https://www.volcengine.com/docs/6454/79893
         'SubmitUnblockTask' => [
           'url' => '/',
           'method' => 'post',
@@ -345,7 +316,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取封禁解封任务信息: https://www.volcengine.com/docs/6454/79906
         'DescribeContentBlockTasks' => [
           'url' => '/',
           'method' => 'post',
@@ -357,7 +327,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取访问日志下载链接: https://www.volcengine.com/docs/6454/70446
         'DescribeCdnAccessLog' => [
           'url' => '/',
           'method' => 'post',
@@ -369,7 +338,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取 IP 归属信息: https://www.volcengine.com/docs/6454/75233
         'DescribeIPInfo' => [
           'url' => '/',
           'method' => 'post',
@@ -381,7 +349,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #批量获取 IP 归属信息: https://www.volcengine.com/docs/6454/106852
         'DescribeIPListInfo' => [
           'url' => '/',
           'method' => 'post',
@@ -393,7 +360,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取回源节点 IP 列表: https://www.volcengine.com/docs/6454/75273
         'DescribeCdnUpperIp' => [
           'url' => '/',
           'method' => 'post',
@@ -405,7 +371,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #添加资源标签: https://www.volcengine.com/docs/6454/80308
         'AddResourceTags' => [
           'url' => '/',
           'method' => 'post',
@@ -417,7 +382,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #更新资源标签: https://www.volcengine.com/docs/6454/80313
         'UpdateResourceTags' => [
           'url' => '/',
           'method' => 'post',
@@ -429,7 +393,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #查询标签清单: https://www.volcengine.com/docs/6454/80315
         'ListResourceTags' => [
           'url' => '/',
           'method' => 'post',
@@ -441,7 +404,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #删除资源标签: https://www.volcengine.com/docs/6454/80316
         'DeleteResourceTags' => [
           'url' => '/',
           'method' => 'post',
@@ -453,7 +415,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #上传证书: https://www.volcengine.com/docs/6454/125708
         'AddCdnCertificate' => [
           'url' => '/',
           'method' => 'post',
@@ -465,7 +426,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #查询CDN证书列表: https://www.volcengine.com/docs/6454/125709
         'ListCertInfo' => [
           'url' => '/',
           'method' => 'post',
@@ -477,7 +437,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #查询CDN有关联域名的证书列表: https://www.volcengine.com/docs/6454/125710
         'ListCdnCertInfo' => [
           'url' => '/',
           'method' => 'post',
@@ -489,7 +448,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #获取特定证书的域名关联信息: https://www.volcengine.com/docs/6454/125711
         'DescribeCertConfig' => [
           'url' => '/',
           'method' => 'post',
@@ -501,7 +459,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        #批量关联证书: https://www.volcengine.com/docs/6454/125712
         'BatchDeployCert' => [
           'url' => '/',
           'method' => 'post',
@@ -512,6 +469,7 @@ class Cdn extends V4Curl
               ],
           ]
         ],
+
 
 ];
 
