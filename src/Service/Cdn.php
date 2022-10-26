@@ -371,50 +371,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        'AddResourceTags' => [
-          'url' => '/',
-          'method' => 'post',
-          'config' => [
-              'query' => [
-                  'Action' => 'AddResourceTags',
-                  'Version' => '2021-03-01',
-              ],
-          ]
-        ],
-
-        'UpdateResourceTags' => [
-          'url' => '/',
-          'method' => 'post',
-          'config' => [
-              'query' => [
-                  'Action' => 'UpdateResourceTags',
-                  'Version' => '2021-03-01',
-              ],
-          ]
-        ],
-
-        'ListResourceTags' => [
-          'url' => '/',
-          'method' => 'post',
-          'config' => [
-              'query' => [
-                  'Action' => 'ListResourceTags',
-                  'Version' => '2021-03-01',
-              ],
-          ]
-        ],
-
-        'DeleteResourceTags' => [
-          'url' => '/',
-          'method' => 'post',
-          'config' => [
-              'query' => [
-                  'Action' => 'DeleteResourceTags',
-                  'Version' => '2021-03-01',
-              ],
-          ]
-        ],
-
         'AddCdnCertificate' => [
           'url' => '/',
           'method' => 'post',
@@ -770,38 +726,6 @@ class Cdn extends V4Curl
             $data = new \ArrayObject();
         }
         return $this->requestWithRetry("DescribeCdnUpperIp", ['json' => $data]);
-    }
-
-    public function addResourceTags(array $data = []): string
-    {
-        if (empty($data)) {
-            $data = new \ArrayObject();
-        }
-        return $this->requestWithRetry("AddResourceTags", ['json' => $data]);
-    }
-
-    public function updateResourceTags(array $data = []): string
-    {
-        if (empty($data)) {
-            $data = new \ArrayObject();
-        }
-        return $this->requestWithRetry("UpdateResourceTags", ['json' => $data]);
-    }
-
-    public function listResourceTags(array $data = []): string
-    {
-        if (empty($data)) {
-            $data = new \ArrayObject();
-        }
-        return $this->requestWithRetry("ListResourceTags", ['json' => $data]);
-    }
-
-    public function deleteResourceTags(array $data = []): string
-    {
-        if (empty($data)) {
-            $data = new \ArrayObject();
-        }
-        return $this->requestWithRetry("DeleteResourceTags", ['json' => $data]);
     }
 
     public function addCdnCertificate(array $data = []): string
