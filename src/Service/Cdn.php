@@ -217,17 +217,6 @@ class Cdn extends V4Curl
           ]
         ],
 
-        'DescribeCdnDomainTopData' => [
-          'url' => '/',
-          'method' => 'post',
-          'config' => [
-              'query' => [
-                  'Action' => 'DescribeCdnDomainTopData',
-                  'Version' => '2021-03-01',
-              ],
-          ]
-        ],
-
         'DescribeCdnService' => [
           'url' => '/',
           'method' => 'post',
@@ -614,14 +603,6 @@ class Cdn extends V4Curl
             $data = new \ArrayObject();
         }
         return $this->requestWithRetry("DescribeCdnRegionAndIsp", ['json' => $data]);
-    }
-
-    public function describeCdnDomainTopData(array $data = []): string
-    {
-        if (empty($data)) {
-            $data = new \ArrayObject();
-        }
-        return $this->requestWithRetry("DescribeCdnDomainTopData", ['json' => $data]);
     }
 
     public function describeCdnService(array $data = []): string
