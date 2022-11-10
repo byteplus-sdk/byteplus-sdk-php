@@ -12,7 +12,7 @@ $client->setAccessKey($config->ak);
 $client->setSecretKey($config->sk);
 
 $body = [
-    'Source' => 'volc_cert_center'
+    'Source' => 'cdn_cert_hosting'
 ];
 
 $response = $client->listCertInfo($body);
