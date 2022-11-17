@@ -538,7 +538,7 @@ class Live extends V4Curl
     protected function getConfig(string $region = 'cn-north-1'): array
     {
         return [
-            'host' => "https://byteplusapi.byted.org",
+            'host' => "https://open.byteplusapi.com",
             'config' => [
                 'timeout' => 30.0,
                 'headers' => [
