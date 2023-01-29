@@ -1,0 +1,19 @@
+{
+  "name": "yourproject/yourproject",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "bytedance"
+    }
+  ],
+  "require": {
+    "byteplus_sdk/byteplus-sdk-php": "dev-master"
+  },
+  "description": "",
+  "autoload": {
+    "psr-4": {
+      "YourProject\\": "./"
+    }
+  }
+}
