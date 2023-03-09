@@ -1,0 +1,24 @@
+<?php
+require('../../vendor/autoload.php');
+use Byteplus\Service\Sms;
+use Byteplus\Models\Vod\Request\VodApplyUploadInfoRequest;
+use Byteplus\Models\Vod\Response\VodApplyUploadInfoResponse;
+
+$client = Sms::getInstance('');// 可选ap-singapore-1 新加坡
+$client->setAccessKey("your ak");
+$client->setSecretKey("your sk");
+
+$body = [
+    "subAccount"  => "smsAccount",
+    "templateId"  => "template_id",
+    "name"        => "",
+    "area"        => "all",
+    "channelType" => "",
+    "content"     => "",
+    "pageIndex"   => 1,
+    "pageSize"    => 10,
+];
+
+$response = $client->getSmsTemplateAndOrderList(['json' => $body]);
+
+echo $response;

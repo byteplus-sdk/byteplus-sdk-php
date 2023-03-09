@@ -5,6 +5,8 @@ namespace Byteplus\Service;
 
 use Byteplus\Base\V4Curl;
 
+const ServiceVersion20210111 = "2021-01-11";
+
 class Sms extends V4Curl
 {
 
@@ -85,7 +87,57 @@ class Sms extends V4Curl
                     'Version' => '2021-01-01',
                 ],
             ]
-        ]
+        ],
+        'GetSubAccountList' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetSubAccountList',
+                    'Version' => ServiceVersion20210111,
+                ],
+            ]
+        ],
+        'GetSubAccountDetail' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetSubAccountDetail',
+                    'Version' => ServiceVersion20210111,
+                ],
+            ]
+        ],
+        'GetSmsTemplateAndOrderList' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetSmsTemplateAndOrderList',
+                    'Version' => ServiceVersion20210111,
+                ],
+            ]
+        ],
+        'ApplySmsTemplate' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'ApplySmsTemplate',
+                    'Version' => ServiceVersion20210111,
+                ],
+            ]
+        ],
+        'DeleteSmsTemplate' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'DeleteSmsTemplate',
+                    'Version' => ServiceVersion20210111,
+                ],
+            ]
+        ],
     ];
 
     public function sendSms(array $query = [])
@@ -133,4 +185,48 @@ class Sms extends V4Curl
         return $response->getBody();
     }
 
+    public function getSubAccountList(array $query = [])
+    {
+        $response = $this->request('GetSubAccountList', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('GetSubAccountList', $query);
+        }
+        return $response->getBody();
+    }
+
+    public function getSubAccountDetail(array $query = [])
+    {
+        $response = $this->request('GetSubAccountDetail', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('GetSubAccountDetail', $query);
+        }
+        return $response->getBody();
+    }
+
+    public function getSmsTemplateAndOrderList(array $query = [])
+    {
+        $response = $this->request('GetSmsTemplateAndOrderList', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('GetSmsTemplateAndOrderList', $query);
+        }
+        return $response->getBody();
+    }
+
+    public function applySmsTemplate(array $query = [])
+    {
+        $response = $this->request('ApplySmsTemplate', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('ApplySmsTemplate', $query);
+        }
+        return $response->getBody();
+    }
+
+    public function deleteSmsTemplate(array $query = [])
+    {
+        $response = $this->request('DeleteSmsTemplate', $query);
+        if ($response->getStatusCode() >= 500) {
+            $response = $this->request('DeleteSmsTemplate', $query);
+        }
+        return $response->getBody();
+    }
 }
