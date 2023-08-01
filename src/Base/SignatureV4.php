@@ -48,10 +48,15 @@ class SignatureV4
         RequestInterface $request,
         $credentials
     ) {
+
         $ldt = gmdate(self::ISO8601_BASIC);
         $sdt = substr($ldt, 0, 8);
         $parsed = $this->parseRequest($request);
         $parsed['headers']['X-Date'] = [$ldt];
+
+        if ($credentials['st'] != '') {
+            $parsed['headers']['X-Security-Token'] = [$credentials['st']];
+        }
 
         $cs = $this->createScope($sdt, $credentials['region'], $credentials['service']);
         $payload = $this->getPayload($request);
