@@ -18,6 +18,8 @@ abstract class V4Curl extends Singleton
     protected $region = '';
     protected $ak = '';
     protected $sk = '';
+    protected $st = '';
+
 
 
     public function __construct()
@@ -61,6 +63,14 @@ abstract class V4Curl extends Singleton
         }
     }
 
+    public function setSessionToken($st)
+    {
+        if ($st != "") {
+            $this->st = $st;
+        }
+    }
+
+
     protected function v4Sign()
     {
         return function (callable $handler) {
@@ -77,13 +87,20 @@ abstract class V4Curl extends Singleton
 
     private function prepareCredentials(array $credentials)
     {
+        if (!isset($credentials['st'])) {
+            $credentials['st'] = '';
+        }
         if (!isset($credentials['ak']) || !isset($credentials['sk'])) {
             if ($this->ak != "" && $this->sk != "") {
                 $credentials['ak'] = $this->ak;
                 $credentials['sk'] = $this->sk;
+                $credentials['st'] = $this->st;
             } elseif (getenv("BYTEPLUS_ACCESSKEY") != "" && getenv("BYTEPLUS_SECRETKEY") != "") {
                 $credentials['ak'] = getenv("BYTEPLUS_ACCESSKEY");
                 $credentials['sk'] = getenv("BYTEPLUS_SECRETKEY");
+                if (getenv("BYTEPLUS_SESSIONTOKEN") != "") {
+                    $credentials['st'] = getenv("BYTEPLUS_SESSIONTOKEN");
+                }
             } else {
                 $json = json_decode(file_get_contents(getenv('HOME') . '/.byteplus/config'), true);
                 if (is_array($json) && isset($json['ak']) && isset($json['sk'])) {
