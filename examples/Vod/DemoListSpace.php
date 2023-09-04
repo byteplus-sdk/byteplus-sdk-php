@@ -5,8 +5,8 @@
 require('../../vendor/autoload.php');
 
 $client = Byteplus\Service\Vod\Vod::getInstance();
-$client->setAccessKey('');
-$client->setSecretKey('');
+$client->setAccessKey('your ak');
+$client->setSecretKey('your sk');
 
 $request = new Byteplus\Service\Vod\Models\Request\VodListSpaceRequest();
 $request->setOffset(0);
