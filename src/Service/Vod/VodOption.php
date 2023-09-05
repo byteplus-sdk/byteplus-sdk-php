@@ -26,6 +26,26 @@ class VodOption
                 ],
             ]
         ],
+        'GetPrivateDrmPlayAuth' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetPrivateDrmPlayAuth',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'GetHlsDecryptionKey' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetHlsDecryptionKey',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         'GetPlayInfoWithLiveTimeShiftScene' => [
             'url' => '/',
             'method' => 'get',
@@ -39,6 +59,26 @@ class VodOption
         // **********************************************************************
         // 上传
         // **********************************************************************
+        'UploadMediaByUrl' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'UploadMediaByUrl',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'QueryUploadTaskInfo' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'QueryUploadTaskInfo',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         'ApplyUploadInfo' => [
             'url' => '/',
             'method' => 'get',
@@ -63,7 +103,149 @@ class VodOption
         // **********************************************************************
         // 媒资
         // **********************************************************************
-
+        'UpdateMediaInfo' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'UpdateMediaInfo',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'UpdateMediaPublishStatus' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'UpdateMediaPublishStatus',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'GetMediaInfos' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetMediaInfos',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'GetRecommendedPoster' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetRecommendedPoster',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DeleteMedia' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DeleteMedia',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DeleteTranscodes' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DeleteTranscodes',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'GetMediaList' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetMediaList',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'GetSubtitleInfoList' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetSubtitleInfoList',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'UpdateSubtitleStatus' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'UpdateSubtitleStatus',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'UpdateSubtitleInfo' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'UpdateSubtitleInfo',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        // **********************************************************************
+        // 转码
+        // **********************************************************************
+        'StartWorkflow' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'StartWorkflow',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'RetrieveTranscodeResult' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'RetrieveTranscodeResult',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'GetWorkflowExecution' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetWorkflowExecution',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'GetWorkflowExecutionResult' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetWorkflowExecutionResult',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         // **********************************************************************
         // 视频编辑
         // **********************************************************************
@@ -71,6 +253,16 @@ class VodOption
         // **********************************************************************
         // 空间管理
         // **********************************************************************
+        'CreateSpace' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'CreateSpace',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         'ListSpace' => [
             'url' => '/',
             'method' => 'get',
@@ -82,6 +274,16 @@ class VodOption
                 ],
             ]
         ],
+        'GetSpaceDetail' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetSpaceDetail',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         'UpdateSpaceUploadConfig' => [
             'url' => '/',
             'method' => 'get',
@@ -89,6 +291,16 @@ class VodOption
                 'timeout' => 10.0,
                 'query' => [
                     'Action' => 'UpdateSpaceUploadConfig',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeVodSpaceStorageData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodSpaceStorageData',
                     'Version' => '2023-01-01',
                 ],
             ]
@@ -107,14 +319,163 @@ class VodOption
                 ],
             ]
         ],
+        'CreateCdnRefreshTask' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'CreateCdnRefreshTask',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'CreateCdnPreloadTask' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'CreateCdnPreloadTask',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'ListCdnTasks' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'ListCdnTasks',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'ListCdnAccessLog' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'ListCdnAccessLog',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeVodDomainBandwidthData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodDomainBandwidthData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeVodDomainTrafficData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodDomainTrafficData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+
+        'ListCdnUsageData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'ListCdnUsageData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'ListCdnStatusData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'ListCdnStatusData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'ListCdnTopAccessUrl' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'ListCdnTopAccessUrl',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeIpInfo' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeIpInfo',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'ListCdnPvData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'ListCdnPvData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         // **********************************************************************
         // 回调管理
         // **********************************************************************
-
+        'AddCallbackSubscription' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'AddCallbackSubscription',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'SetCallbackEvent' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'SetCallbackEvent',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         // **********************************************************************
         // 计量计费
         // **********************************************************************
-
+        'DescribeVodSpaceTranscodeData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodSpaceTranscodeData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeVodSnapshotData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodSnapshotData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
     ];
 
     /**
