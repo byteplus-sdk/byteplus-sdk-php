@@ -145,28 +145,7 @@ class Vod extends V4Curl
         return base64_encode(json_encode($token));
     }
 
-    /**
-     * @throws Throwable
-     */
-    public function getSubtitleAuthToken(VodGetSubtitleInfoListRequest $req, int $expireSeconds): string
-    {
-        try {
-            if($req->getVid() == ""){
-                throw new Exception("empty vid");
-            }
-            $query = array("Vid"=>$req->getVid());
-            $query["Status"] = "Published";
-        } catch (Exception $e) {
-            throw $e;
-        } catch (Throwable $t) {
-            throw $t;
-        }
-        if ($expireSeconds > 0) {
-            $query["X-Expires"] = $expireSeconds;
-        }
-        $token["GetSubtitleAuthToken"] = parse_url($this->getRequestUrl("GetSubtitleInfoList", ['query' => $query]))['query'];
-        return base64_encode(json_encode($token));
-    }
+
 	
     public function getUploadVideoAuth(): array
     {
