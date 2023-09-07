@@ -11,6 +11,7 @@ $client->setSecretKey('your sk');
 $request = new Byteplus\Service\Vod\Models\Request\VodListDomainRequest();
 $request->setSpaceName("your SpaceName");
 
+
 $response = new Byteplus\Service\Vod\Models\Response\VodListDomainResponse();
 try {
     $response = $client->listDomain($request);
