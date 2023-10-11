@@ -92,31 +92,6 @@ echo $response;
 echo '<br>';
 
 $body = [
-    "Domain" => "example.com",
-    "App" => "example",
-    "Stream" => "example080601",
-    "ProtocolList" => ["RTMP", "HTTP-FLV"],
-    "StartTime" => "2022-04-21T00:00:00Z",
-    "EndTime" => "2022-04-21T10:59:59Z",
-    "Aggregation" => 60,
-];
-
-$response = $client->describeLiveStreamSessions(['json' => $body]);
-echo $response;
-echo '<br>';
-
-$body = [
-    "DomainList" => ["example.com", "example2.com"],
-    "StartTime" => "2021-08-16T00:00:00Z",
-    "EndTime" => "2021-08-16T00:01:59Z",
-    "Aggregation" => 60
-];
-
-$response = $client->describePlayResponseStatusStat(['json' => $body]);
-echo $response;
-echo '<br>';
-
-$body = [
     "DomainList" => ["example.com"],
     "ProtocolList" => ["HTTP-FLV", "RTMP"],
     "ISPList" => ["telecom"],

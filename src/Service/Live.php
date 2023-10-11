@@ -447,26 +447,6 @@ class Live extends V4Curl
                 ],
             ]
         ],
-        'DescribeLiveStreamSessions' => [
-            'url' => '/',
-            'method' => 'post',
-            'config' => [
-                'query' => [
-                    'Action' => 'DescribeLiveStreamSessions',
-                    'Version' => '2020-08-01',
-                ],
-            ]
-        ],
-        'DescribePlayResponseStatusStat' => [
-            'url' => '/',
-            'method' => 'post',
-            'config' => [
-                'query' => [
-                    'Action' => 'DescribePlayResponseStatusStat',
-                    'Version' => '2020-08-01',
-                ],
-            ]
-        ],
         'DescribeLiveMetricTrafficData' => [
             'url' => '/',
             'method' => 'post',
@@ -782,16 +762,6 @@ class Live extends V4Curl
     public function describePushStreamMetrics(array $query = []): string
     {
         return $this->requestWithRetry("DescribePushStreamMetrics", $query);
-    }
-
-    public function describeLiveStreamSessions(array $query = []): string
-    {
-        return $this->requestWithRetry("DescribeLiveStreamSessions", $query);
-    }
-
-    public function describePlayResponseStatusStat(array $query = []): string
-    {
-        return $this->requestWithRetry("DescribePlayResponseStatusStat", $query);
     }
 
     public function describeLiveMetricTrafficData(array $query = []): string
