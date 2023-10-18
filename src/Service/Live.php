@@ -515,7 +515,7 @@ class Live extends V4Curl
         parent::__construct($this->region);
     }
 
-    protected function getConfig(string $region = 'cn-north-1'): array
+    protected function getConfig(string $region = 'ap-singapore-1'): array
     {
         return [
             'host' => "https://open.byteplusapi.com",
