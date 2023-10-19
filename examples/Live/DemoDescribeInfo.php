@@ -136,17 +136,6 @@ echo $response;
 echo '<br>';
 
 $body = [
-    "Domain" => "example.com",
-    "StartTime" => "2022-04-13T00:00:00+08:00",
-    "EndTime" => "2022-04-14T00:00:00+08:00",
-];
-
-$response = $client->describePlayStreamList(['query' => $body]);
-echo $response;
-echo '<br>';
-
-
-$body = [
     "DomainList" => ["example.com"],
     "DstAddrTypeList" => ["live","Third"],
     "StartTime" => "2021-04-13T00:00:00+08:00",
