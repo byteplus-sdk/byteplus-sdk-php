@@ -447,26 +447,6 @@ class Live extends V4Curl
                 ],
             ]
         ],
-        'DescribeLiveStreamSessions' => [
-            'url' => '/',
-            'method' => 'post',
-            'config' => [
-                'query' => [
-                    'Action' => 'DescribeLiveStreamSessions',
-                    'Version' => '2020-08-01',
-                ],
-            ]
-        ],
-        'DescribePlayResponseStatusStat' => [
-            'url' => '/',
-            'method' => 'post',
-            'config' => [
-                'query' => [
-                    'Action' => 'DescribePlayResponseStatusStat',
-                    'Version' => '2020-08-01',
-                ],
-            ]
-        ],
         'DescribeLiveMetricTrafficData' => [
             'url' => '/',
             'method' => 'post',
@@ -483,16 +463,6 @@ class Live extends V4Curl
             'config' => [
                 'query' => [
                     'Action' => 'DescribeLiveMetricBandwidthData',
-                    'Version' => '2020-08-01',
-                ],
-            ]
-        ],
-        'DescribePlayStreamList' => [
-            'url' => '/',
-            'method' => 'get',
-            'config' => [
-                'query' => [
-                    'Action' => 'DescribePlayStreamList',
                     'Version' => '2020-08-01',
                 ],
             ]
@@ -535,7 +505,7 @@ class Live extends V4Curl
         parent::__construct($this->region);
     }
 
-    protected function getConfig(string $region = 'cn-north-1'): array
+    protected function getConfig(string $region = 'ap-singapore-1'): array
     {
         return [
             'host' => "https://open.byteplusapi.com",
@@ -784,16 +754,6 @@ class Live extends V4Curl
         return $this->requestWithRetry("DescribePushStreamMetrics", $query);
     }
 
-    public function describeLiveStreamSessions(array $query = []): string
-    {
-        return $this->requestWithRetry("DescribeLiveStreamSessions", $query);
-    }
-
-    public function describePlayResponseStatusStat(array $query = []): string
-    {
-        return $this->requestWithRetry("DescribePlayResponseStatusStat", $query);
-    }
-
     public function describeLiveMetricTrafficData(array $query = []): string
     {
         return $this->requestWithRetry("DescribeLiveMetricTrafficData", $query);
@@ -802,11 +762,6 @@ class Live extends V4Curl
     public function describeLiveMetricBandwidthData(array $query = []): string
     {
         return $this->requestWithRetry("DescribeLiveMetricBandwidthData", $query);
-    }
-
-    public function describePlayStreamList(array $query = []): string
-    {
-        return $this->requestWithRetry("DescribePlayStreamList", $query);
     }
 
     public function describePullToPushBandwidthData(array $query = []): string
