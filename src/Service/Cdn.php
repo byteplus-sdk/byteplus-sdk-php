@@ -789,7 +789,7 @@ class Cdn extends V4Curl
         return $this->requestWithRetry("DescribeCdnRegionAndIsp", ['json' => $data]);
     }
 
-    public function describeCdnService(): string
+    public function describeCdnService(array $data = []): string
     {
         if (empty($data)) {
             $data = new \ArrayObject();
@@ -829,7 +829,7 @@ class Cdn extends V4Curl
         return $this->requestWithRetry("DescribeContentTasks", ['json' => $data]);
     }
 
-    public function describeContentQuota(): string
+    public function describeContentQuota(array $data = []): string
     {
         if (empty($data)) {
             $data = new \ArrayObject();
