@@ -140,6 +140,17 @@ class Cdn extends V4Curl
           ]
         ],
 
+        'DescribeDistrictIspData' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeDistrictIspData',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
         'DescribeEdgeStatisticalData' => [
           'url' => '/',
           'method' => 'post',
@@ -415,6 +426,171 @@ class Cdn extends V4Curl
           ]
         ],
 
+        'DeleteCdnCertificate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DeleteCdnCertificate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeAccountingSummary' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeAccountingSummary',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeTemplates' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeTemplates',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeServiceTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeServiceTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeCipherTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeCipherTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'CreateCipherTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'CreateCipherTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'UpdateServiceTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'UpdateServiceTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'UpdateCipherTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'UpdateCipherTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DuplicateTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DuplicateTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'LockTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'LockTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DeleteTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DeleteTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeTemplateDomains' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeTemplateDomains',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'AddTemplateDomain' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'AddTemplateDomain',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'UpdateTemplateDomain' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'UpdateTemplateDomain',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'CreateServiceTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'CreateServiceTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
 
 ];
 
@@ -547,6 +723,14 @@ class Cdn extends V4Curl
             $data = new \ArrayObject();
         }
         return $this->requestWithRetry("DescribeCdnDataDetail", ['json' => $data]);
+    }
+
+    public function describeDistrictIspData(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeDistrictIspData", ['json' => $data]);
     }
 
     public function describeEdgeStatisticalData(array $data = []): string
@@ -747,6 +931,126 @@ class Cdn extends V4Curl
             $data = new \ArrayObject();
         }
         return $this->requestWithRetry("BatchDeployCert", ['json' => $data]);
+    }
+
+    public function deleteCdnCertificate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DeleteCdnCertificate", ['json' => $data]);
+    }
+
+    public function describeAccountingSummary(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeAccountingSummary", ['json' => $data]);
+    }
+
+    public function describeTemplates(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeTemplates", ['json' => $data]);
+    }
+
+    public function describeServiceTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeServiceTemplate", ['json' => $data]);
+    }
+
+    public function describeCipherTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeCipherTemplate", ['json' => $data]);
+    }
+
+    public function createCipherTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("CreateCipherTemplate", ['json' => $data]);
+    }
+
+    public function updateServiceTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("UpdateServiceTemplate", ['json' => $data]);
+    }
+
+    public function updateCipherTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("UpdateCipherTemplate", ['json' => $data]);
+    }
+
+    public function duplicateTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DuplicateTemplate", ['json' => $data]);
+    }
+
+    public function lockTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("LockTemplate", ['json' => $data]);
+    }
+
+    public function deleteTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DeleteTemplate", ['json' => $data]);
+    }
+
+    public function describeTemplateDomains(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeTemplateDomains", ['json' => $data]);
+    }
+
+    public function addTemplateDomain(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("AddTemplateDomain", ['json' => $data]);
+    }
+
+    public function updateTemplateDomain(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("UpdateTemplateDomain", ['json' => $data]);
+    }
+
+    public function createServiceTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("CreateServiceTemplate", ['json' => $data]);
     }
 
 }
