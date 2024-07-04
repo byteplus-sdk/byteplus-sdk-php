@@ -18,7 +18,12 @@ class Functions
 
     public function addStartWorkflowFunc(string $templateId)
     {
-        $this->funcs[] = new FunctionInner("StartWorkflow", new WorkflowInput($templateId));
+        $this->funcs[] = new FunctionInner("StartWorkflow", new WorkflowInput($templateId, []));
+    }
+
+    public function addStartBatchWorkflowFunc($templateIds)
+    {
+        $this->funcs[] = new FunctionInner("StartWorkflow", new WorkflowInput("", $templateIds));
     }
 
     public function addOptionInfoFunc(OptionInfo $optionInfo)
