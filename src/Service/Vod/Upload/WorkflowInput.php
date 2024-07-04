@@ -11,7 +11,7 @@ class WorkflowInput
      * WorkflowInput constructor.
      * @param $TemplateId
      */
-    public function __construct($TemplateId, $TemplateIds)
+    public function __construct($TemplateId, $TemplateIds = [])
     {
         $this->TemplateId = $TemplateId;
         $this->TemplateIds = $TemplateIds;
