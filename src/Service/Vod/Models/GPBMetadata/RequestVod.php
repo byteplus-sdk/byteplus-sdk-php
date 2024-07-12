@@ -19,8 +19,8 @@ class RequestVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodUpload::initOnce();
         $pool->internalAddGeneratedFile(
             '
-∂V
-&byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto"Ñ
+‡h
+&byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto"ô
 VodGetAllPlayInfoRequest
 Vids (	
 Formats (	
@@ -42,7 +42,8 @@ NeedThumbs	 (	
 KeyFrameAlignmentVersion (	
 
 UserAction (	
-Quality (	"‘
+Quality (	
+ForceExpire (	"È
 VodGetPlayInfoRequest
 Vid (	
 Format (	
@@ -64,7 +65,8 @@ NeedThumbs	 (	
 DrmExpireTimestamp (	
 Quality (	
 
-PlayConfig (	"g
+PlayConfig (	
+ForceExpire (	"g
 VodGetPrivateDrmPlayAuthRequest
 DrmType (	
 Vid (	
@@ -307,11 +309,9 @@ $VodGetWorkflowExecutionStatusRequest
 	SpaceName (	"4
 VodListSpaceRequest
 Offset (
-Limit ("u
+Limit ("?
 VodUpdateSpaceRequest
-	SpaceName (	
-SourceProjectName (	
-TargetProjectName (	
+	SpaceName (	
 Description (	"^
 !VodUpdateSpaceUploadConfigRequest
 	SpaceName (	
@@ -322,9 +322,42 @@ $VodGetWorkflowExecutionStatusRequest
 	StartTime (	
 EndTime (	
 Aggregation (
-Type (	")
+Type (	"i
+VodStartDomainRequest
+	SpaceName (	
+
+DomainType (	
+Domain (	
+SourceStationType ("h
+VodStopDomainRequest
+	SpaceName (	
+
+DomainType (	
+Domain (	
+SourceStationType ("c
+%VodUpdateDomainPlayRuleRequestRequest
+	SpaceName (	
+DefaultDomain (	
+PlayRule ("r
+VodAddDomainToSchedulerRequest
+	SpaceName (	
+
+DomainType (	
+Domain (	
+SourceStationType ("w
+#VodRemoveDomainFromSchedulerRequest
+	SpaceName (	
+
+DomainType (	
+Domain (	
+SourceStationType ("w
 VodListDomainRequest
-	SpaceName (	"O
+	SpaceName (	
+
+DomainType (	
+SourceStationType (
+Offset (
+Limit ("O
 VodCreateCdnRefreshTaskRequest
 	SpaceName (	
 Urls (	
@@ -360,7 +393,7 @@ DomainList (	
 EndTime (	
 Aggregation (
 BandwidthType (	
-Area (	"£
+Area (	"ä
 VodListCdnUsageDataRequest
 Domains (	
 Interval (	
@@ -369,7 +402,18 @@ DomainList (	
 DataType (	
 Metric (	
 
-NeedDetail ("§
+NeedDetail (
+Area (	
+Region	 (	
+Isp
+ (	
+Protocol (	
+	IpVersion (	
+BillingRegion (	"V
+ VodListCdnUsageDataDetailRequest
+Domain (	
+	StartTime (
+EndTime ("§
 VodListCdnStatusDataRequest
 Domains (	
 Interval (	
@@ -378,7 +422,11 @@ NeedDetail ("§
 DataType (	
 Metric (	
 
-NeedDetail ("\'
+NeedDetail ("W
+!VodListCdnStatusDataDetailRequest
+Domain (	
+	StartTime (
+EndTime ("\'
 VodDescribeIPInfoRequest
 Ips (	"ê
 VodListCdnPvDataRequest
@@ -441,7 +489,14 @@ DomainType (	
 Domain (	
 MainKey (	
 	BackupKey (	
-Status (	"X
+Status (	"Ñ
+AddOrUpdateCertificateV2Request
+	SpaceName (	
+Domain (	
+
+DomainType (	
+CertificateId (	
+HttpsStatus (	"X
 !VodAddCallbackSubscriptionRequest
 	SpaceName (	
 Url (	
@@ -538,7 +593,67 @@ DomainList (	"A
 Vids (	"B
 VodQueryMediaBlockStatusRequest
 	SpaceName (	
-Vids (	B‘
+Vids (	"ù
+VodCreatePlaylistRequest
+Name (	
+Format (	
+Codec (	
+
+Definition (	
+Vids (	
+	StartTime (	
+EndTime (	
+Cycles (	"D
+VodGetPlaylistsRequest
+Ids (	
+Limit (
+Offset ("ô
+VodUpdatePlaylistRequest
+
+Id (	*
+Name (2.google.protobuf.StringValue,
+Format (2.google.protobuf.StringValue+
+Codec (2.google.protobuf.StringValue0
+
+Definition (2.google.protobuf.StringValue*
+Vids (2.google.protobuf.StringValue/
+	StartTime (2.google.protobuf.StringValue-
+EndTime (2.google.protobuf.StringValue,
+Cycles	 (2.google.protobuf.StringValue"&
+VodDeletePlaylistRequest
+
+Id (	"B
+VodSetIntertrustApiKeyRequest
+	SpaceName (	
+ApiKey (	"2
+VodGetIntertrustApiKeyRequest
+	SpaceName (	"5
+ VodDeleteIntertrustApiKeyRequest
+	SpaceName (	"±
+VodSetFairPlayCertInfoRequest
+	SpaceName (	
+CertName (	
+CertFile (	
+PkFile (	
+CertFileName (	
+
+PkFileName (	
+
+PkPassword (	
+Ask (	"2
+VodGetFairPlayCertInfoRequest
+	SpaceName (	"5
+ VodDeleteFairPlayCertInfoRequest
+	SpaceName (	"+
+VodGetFairPlayCertRequest
+CertId (	"{
+VodGetDrmLicenseRequest
+Vid (	
+Kid (	
+ThirdPartyDrmType (	
+
+Persistent (
+LicenseDuration (B‘
 &com.byteplus.service.vod.model.requestB
 VodRequestPZFgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/request†ÿ #Byteplus\\Service\\Vod\\Models\\Request‚\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);

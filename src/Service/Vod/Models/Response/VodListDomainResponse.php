@@ -9,10 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * **********************************************************************
- * 分发加速管理
- * **********************************************************************
- *
  * Generated from protobuf message <code>Byteplus.Vod.Models.Response.VodListDomainResponse</code>
  */
 class VodListDomainResponse extends \Google\Protobuf\Internal\Message
