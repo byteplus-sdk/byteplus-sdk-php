@@ -151,6 +151,18 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodVolumeInfo Volume = 23;</code>
      */
     protected $Volume = null;
+    /**
+     * drm类型，商业or私有
+     *
+     * Generated from protobuf field <code>string DrmType = 24;</code>
+     */
+    protected $DrmType = '';
+    /**
+     * 商业drm pssh
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.DrmPssh EncryptionPssh = 25;</code>
+     */
+    protected $EncryptionPssh = null;
 
     /**
      * Constructor.
@@ -204,6 +216,10 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
      *           在转对齐,使用的帧对齐转码版本
      *     @type \Byteplus\Service\Vod\Models\Business\VodVolumeInfo $Volume
      *          响度信息
+     *     @type string $DrmType
+     *           drm类型，商业or私有
+     *     @type \Byteplus\Service\Vod\Models\Business\DrmPssh $EncryptionPssh
+     *           商业drm pssh
      * }
      */
     public function __construct($data = NULL) {
@@ -815,6 +831,68 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Byteplus\Service\Vod\Models\Business\VodVolumeInfo::class);
         $this->Volume = $var;
+
+        return $this;
+    }
+
+    /**
+     * drm类型，商业or私有
+     *
+     * Generated from protobuf field <code>string DrmType = 24;</code>
+     * @return string
+     */
+    public function getDrmType()
+    {
+        return $this->DrmType;
+    }
+
+    /**
+     * drm类型，商业or私有
+     *
+     * Generated from protobuf field <code>string DrmType = 24;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDrmType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->DrmType = $var;
+
+        return $this;
+    }
+
+    /**
+     * 商业drm pssh
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.DrmPssh EncryptionPssh = 25;</code>
+     * @return \Byteplus\Service\Vod\Models\Business\DrmPssh|null
+     */
+    public function getEncryptionPssh()
+    {
+        return $this->EncryptionPssh;
+    }
+
+    public function hasEncryptionPssh()
+    {
+        return isset($this->EncryptionPssh);
+    }
+
+    public function clearEncryptionPssh()
+    {
+        unset($this->EncryptionPssh);
+    }
+
+    /**
+     * 商业drm pssh
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.DrmPssh EncryptionPssh = 25;</code>
+     * @param \Byteplus\Service\Vod\Models\Business\DrmPssh $var
+     * @return $this
+     */
+    public function setEncryptionPssh($var)
+    {
+        GPBUtil::checkMessage($var, \Byteplus\Service\Vod\Models\Business\DrmPssh::class);
+        $this->EncryptionPssh = $var;
 
         return $this;
     }

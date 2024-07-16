@@ -9,10 +9,6 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * **********************************************************************
- * 分发加速管理
- * **********************************************************************
- *
  * Generated from protobuf message <code>Byteplus.Vod.Models.Request.VodListDomainRequest</code>
  */
 class VodListDomainRequest extends \Google\Protobuf\Internal\Message
@@ -23,6 +19,34 @@ class VodListDomainRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string SpaceName = 1;</code>
      */
     protected $SpaceName = '';
+    /**
+     *域名类型
+     *播放域名:play
+     *封面域名:image
+     *
+     * Generated from protobuf field <code>string DomainType = 2;</code>
+     */
+    protected $DomainType = '';
+    /**
+     *源站类型
+     *回点播源站:1
+     *第三方源站:2
+     *
+     * Generated from protobuf field <code>int32 SourceStationType = 3;</code>
+     */
+    protected $SourceStationType = 0;
+    /**
+     *跳过域名组的游标
+     *
+     * Generated from protobuf field <code>int32 Offset = 4;</code>
+     */
+    protected $Offset = 0;
+    /**
+     *单次查询域名组数量
+     *
+     * Generated from protobuf field <code>int32 Limit = 5;</code>
+     */
+    protected $Limit = 0;
 
     /**
      * Constructor.
@@ -32,6 +56,18 @@ class VodListDomainRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $SpaceName
      *           空间名 
+     *     @type string $DomainType
+     *          域名类型
+     *          播放域名:play
+     *          封面域名:image
+     *     @type int $SourceStationType
+     *          源站类型
+     *          回点播源站:1
+     *          第三方源站:2
+     *     @type int $Offset
+     *          跳过域名组的游标
+     *     @type int $Limit
+     *          单次查询域名组数量
      * }
      */
     public function __construct($data = NULL) {
@@ -61,6 +97,118 @@ class VodListDomainRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->SpaceName = $var;
+
+        return $this;
+    }
+
+    /**
+     *域名类型
+     *播放域名:play
+     *封面域名:image
+     *
+     * Generated from protobuf field <code>string DomainType = 2;</code>
+     * @return string
+     */
+    public function getDomainType()
+    {
+        return $this->DomainType;
+    }
+
+    /**
+     *域名类型
+     *播放域名:play
+     *封面域名:image
+     *
+     * Generated from protobuf field <code>string DomainType = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDomainType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->DomainType = $var;
+
+        return $this;
+    }
+
+    /**
+     *源站类型
+     *回点播源站:1
+     *第三方源站:2
+     *
+     * Generated from protobuf field <code>int32 SourceStationType = 3;</code>
+     * @return int
+     */
+    public function getSourceStationType()
+    {
+        return $this->SourceStationType;
+    }
+
+    /**
+     *源站类型
+     *回点播源站:1
+     *第三方源站:2
+     *
+     * Generated from protobuf field <code>int32 SourceStationType = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setSourceStationType($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->SourceStationType = $var;
+
+        return $this;
+    }
+
+    /**
+     *跳过域名组的游标
+     *
+     * Generated from protobuf field <code>int32 Offset = 4;</code>
+     * @return int
+     */
+    public function getOffset()
+    {
+        return $this->Offset;
+    }
+
+    /**
+     *跳过域名组的游标
+     *
+     * Generated from protobuf field <code>int32 Offset = 4;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOffset($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->Offset = $var;
+
+        return $this;
+    }
+
+    /**
+     *单次查询域名组数量
+     *
+     * Generated from protobuf field <code>int32 Limit = 5;</code>
+     * @return int
+     */
+    public function getLimit()
+    {
+        return $this->Limit;
+    }
+
+    /**
+     *单次查询域名组数量
+     *
+     * Generated from protobuf field <code>int32 Limit = 5;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setLimit($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->Limit = $var;
 
         return $this;
     }

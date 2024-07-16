@@ -130,6 +130,12 @@ class VodGetAllPlayInfoRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string Quality = 18;</code>
      */
     protected $Quality = '';
+    /**
+     *强行指定本次请求的时间戳防盗链 单位秒
+     *
+     * Generated from protobuf field <code>string ForceExpire = 19;</code>
+     */
+    protected $ForceExpire = '';
 
     /**
      * Constructor.
@@ -178,6 +184,8 @@ class VodGetAllPlayInfoRequest extends \Google\Protobuf\Internal\Message
      *     @type string $Quality
      *           音频音质。当 FileType 为
      *           audio时起作用，表示音频音质参数。支持：medium、higher、highest.默认返回所有音频流
+     *     @type string $ForceExpire
+     *          强行指定本次请求的时间戳防盗链 单位秒
      * }
      */
     public function __construct($data = NULL) {
@@ -659,6 +667,32 @@ class VodGetAllPlayInfoRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->Quality = $var;
+
+        return $this;
+    }
+
+    /**
+     *强行指定本次请求的时间戳防盗链 单位秒
+     *
+     * Generated from protobuf field <code>string ForceExpire = 19;</code>
+     * @return string
+     */
+    public function getForceExpire()
+    {
+        return $this->ForceExpire;
+    }
+
+    /**
+     *强行指定本次请求的时间戳防盗链 单位秒
+     *
+     * Generated from protobuf field <code>string ForceExpire = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setForceExpire($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ForceExpire = $var;
 
         return $this;
     }

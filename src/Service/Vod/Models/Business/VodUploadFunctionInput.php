@@ -81,6 +81,10 @@ class VodUploadFunctionInput extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string ActionType = 17;</code>
      */
     protected $ActionType = '';
+    /**
+     * Generated from protobuf field <code>repeated string TemplateIds = 99;</code>
+     */
+    private $TemplateIds;
 
     /**
      * Constructor.
@@ -105,6 +109,7 @@ class VodUploadFunctionInput extends \Google\Protobuf\Internal\Message
      *     @type string $Tag
      *     @type bool $AutoPublish
      *     @type string $ActionType
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $TemplateIds
      * }
      */
     public function __construct($data = NULL) {
@@ -482,6 +487,28 @@ class VodUploadFunctionInput extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ActionType = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string TemplateIds = 99;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getTemplateIds()
+    {
+        return $this->TemplateIds;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string TemplateIds = 99;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setTemplateIds($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->TemplateIds = $arr;
 
         return $this;
     }
