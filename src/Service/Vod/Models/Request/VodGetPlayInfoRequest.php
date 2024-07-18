@@ -118,6 +118,12 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string PlayConfig = 17;</code>
      */
     protected $PlayConfig = '';
+    /**
+     *强行指定本次请求的时间戳防盗链 单位秒
+     *
+     * Generated from protobuf field <code>string ForceExpire = 18;</code>
+     */
+    protected $ForceExpire = '';
 
     /**
      * Constructor.
@@ -162,6 +168,8 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
      *           higher, highest.默认返回所有音频流
      *     @type string $PlayConfig
      *          播放配置,可指定播放域名
+     *     @type string $ForceExpire
+     *          强行指定本次请求的时间戳防盗链 单位秒
      * }
      */
     public function __construct($data = NULL) {
@@ -613,6 +621,32 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->PlayConfig = $var;
+
+        return $this;
+    }
+
+    /**
+     *强行指定本次请求的时间戳防盗链 单位秒
+     *
+     * Generated from protobuf field <code>string ForceExpire = 18;</code>
+     * @return string
+     */
+    public function getForceExpire()
+    {
+        return $this->ForceExpire;
+    }
+
+    /**
+     *强行指定本次请求的时间戳防盗链 单位秒
+     *
+     * Generated from protobuf field <code>string ForceExpire = 18;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setForceExpire($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ForceExpire = $var;
 
         return $this;
     }

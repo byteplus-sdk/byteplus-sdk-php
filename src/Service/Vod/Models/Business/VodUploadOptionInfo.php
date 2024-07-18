@@ -17,6 +17,10 @@ class VodUploadOptionInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string TemplateId = 1;</code>
      */
     protected $TemplateId = '';
+    /**
+     * Generated from protobuf field <code>repeated string TemplateIds = 99;</code>
+     */
+    private $TemplateIds;
 
     /**
      * Constructor.
@@ -25,6 +29,7 @@ class VodUploadOptionInfo extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $TemplateId
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $TemplateIds
      * }
      */
     public function __construct($data = NULL) {
@@ -50,6 +55,28 @@ class VodUploadOptionInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->TemplateId = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string TemplateIds = 99;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getTemplateIds()
+    {
+        return $this->TemplateIds;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated string TemplateIds = 99;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setTemplateIds($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->TemplateIds = $arr;
 
         return $this;
     }

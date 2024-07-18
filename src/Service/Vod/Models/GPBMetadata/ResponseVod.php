@@ -28,7 +28,7 @@ class ResponseVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodMeasure::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ín
+ª„
 (byteplus/vod/response/response_vod.protoByteplus.Vod.Models.Response$byteplus/vod/business/vod_play.proto%byteplus/vod/business/vod_media.proto&byteplus/vod/business/vod_upload.proto(byteplus/vod/business/vod_workflow.proto$byteplus/vod/business/vod_edit.proto%byteplus/vod/business/vod_space.proto#byteplus/vod/business/vod_cdn.proto&byteplus/vod/business/vod_common.proto.byteplus/vod/business/vod_smart_strategy.proto+byteplus/vod/business/vod_apps_manage.proto\'byteplus/vod/business/vod_measure.proto"¦
 VodGetAllPlayInfoResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataB
@@ -170,7 +170,17 @@ $VodSubmitDirectEditTaskAsyncResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"Ã
 &VodDescribeVodSpaceStorageDataResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataR
-Result (2B.Byteplus.Vod.Models.Business.VodDescribeVodSpaceStorageDataResult"¡
+Result (2B.Byteplus.Vod.Models.Business.VodDescribeVodSpaceStorageDataResult"_
+VodStartDomainResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"^
+VodStopDomainResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"h
+VodUpdateDomainPlayRuleResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"h
+VodAddDomainToSchedulerResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"m
+$VodRemoveDomainFromSchedulerResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"¡
 VodListDomainResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataA
 Result (21.Byteplus.Vod.Models.Business.VodDomainConfigInfo"®
@@ -194,7 +204,13 @@ $VodSubmitDirectEditTaskAsyncResponseE
 Result (2E.Byteplus.Vod.Models.Business.VodDescribeVodDomainBandwidthDataResult"³
 VodCdnStatisticsCommonResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataJ
-Result (2:.Byteplus.Vod.Models.Business.VodCdnStatisticsCommonResult"ž
+Result (2:.Byteplus.Vod.Models.Business.VodCdnStatisticsCommonResult"¹
+!VodListCdnUsageDataDetailResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataM
+Result (2=.Byteplus.Vod.Models.Business.VodListCdnUsageDataDetailResult"»
+"VodListCdnStatusDataDetailResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataN
+Result (2>.Byteplus.Vod.Models.Business.VodListCdnStatusDataDetailResult"ž
 VodDescribeIPInfoResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata:
 Result (2*.Byteplus.Vod.Models.Business.VodCdnIpInfo"Å
@@ -212,6 +228,8 @@ $VodSubmitDirectEditTaskAsyncResponseE
 VodUpdateDomainExpireV2ResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"l
 #VodUpdateDomainAuthConfigV2ResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"i
+ AddOrUpdateCertificateV2ResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"k
 "VodAddCallbackSubscriptionResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"d
@@ -255,7 +273,38 @@ $DescribeVodSpaceAIStatisDataResponseE
 Result (2=.Byteplus.Vod.Models.Business.VodSubmitUnblockMediaTaskResult"·
  VodQueryMediaBlockStatusResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataL
-Result (2<.Byteplus.Vod.Models.Business.VodQueryMediaBlockStatusResultBØ
+Result (2<.Byteplus.Vod.Models.Business.VodQueryMediaBlockStatusResult"©
+VodCreatePlaylistResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataE
+Result (25.Byteplus.Vod.Models.Business.VodCreatePlaylistResult"¥
+VodGetPlaylistsResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataC
+Result (23.Byteplus.Vod.Models.Business.VodGetPlaylistsResult"b
+VodUpdatePlaylistResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"b
+VodDeletePlaylistResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"³
+VodGetIntertrustApiKeyResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataJ
+Result (2:.Byteplus.Vod.Models.Business.VodGetIntertrustApiKeyResult"g
+VodSetIntertrustApiKeyResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"j
+!VodDeleteIntertrustApiKeyResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"³
+VodGetFairPlayCertInfoResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataJ
+Result (2:.Byteplus.Vod.Models.Business.VodGetFairPlayCertInfoResult"³
+VodSetFairPlayCertInfoResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataJ
+Result (2:.Byteplus.Vod.Models.Business.VodSetFairPlayCertInfoResult"j
+!VodDeleteFairPlayCertInfoResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"«
+VodGetFairPlayCertResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataF
+Result (26.Byteplus.Vod.Models.Business.VodGetFairPlayCertResult"¤
+VodGetDrmLicenseResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataA
+Result (21.Byteplus.Vod.Models.Business.VodDrmLicenseResultBØ
 \'com.byteplus.service.vod.model.responseBVodResponsePZGgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/response ØÊ$Byteplus\\Service\\Vod\\Models\\Responseâ\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);
 

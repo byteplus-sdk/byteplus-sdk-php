@@ -92,7 +92,7 @@ class VodPlayInfoModel extends \Google\Protobuf\Internal\Message
      */
     private $SubtitleInfoList;
     /**
-     *蒙板弹幕
+     * 蒙板弹幕
      *
      * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.BarrageMaskInfo BarrageMaskInfo = 14;</code>
      */
@@ -131,7 +131,7 @@ class VodPlayInfoModel extends \Google\Protobuf\Internal\Message
      *     @type \Byteplus\Service\Vod\Models\Business\VodSubtitleInfo[]|\Google\Protobuf\Internal\RepeatedField $SubtitleInfoList
      *           字幕信息列表
      *     @type \Byteplus\Service\Vod\Models\Business\BarrageMaskInfo $BarrageMaskInfo
-     *          蒙板弹幕
+     *           蒙板弹幕
      * }
      */
     public function __construct($data = NULL) {
@@ -488,7 +488,7 @@ class VodPlayInfoModel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *蒙板弹幕
+     * 蒙板弹幕
      *
      * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.BarrageMaskInfo BarrageMaskInfo = 14;</code>
      * @return \Byteplus\Service\Vod\Models\Business\BarrageMaskInfo|null
@@ -509,7 +509,7 @@ class VodPlayInfoModel extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *蒙板弹幕
+     * 蒙板弹幕
      *
      * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.BarrageMaskInfo BarrageMaskInfo = 14;</code>
      * @param \Byteplus\Service\Vod\Models\Business\BarrageMaskInfo $var

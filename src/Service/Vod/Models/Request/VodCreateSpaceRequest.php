@@ -24,7 +24,7 @@ class VodCreateSpaceRequest extends \Google\Protobuf\Internal\Message
      */
     protected $SpaceName = '';
     /**
-     * 项目名 
+     *    string ProjectName = 2 ;
      *
      * Generated from protobuf field <code>string ProjectName = 2;</code>
      */
@@ -57,7 +57,7 @@ class VodCreateSpaceRequest extends \Google\Protobuf\Internal\Message
      *     @type string $SpaceName
      *           空间名 
      *     @type string $ProjectName
-     *           项目名 
+     *              string ProjectName = 2 ;
      *     @type string $Description
      *           描述 
      *     @type string $Region
@@ -98,7 +98,7 @@ class VodCreateSpaceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 项目名 
+     *    string ProjectName = 2 ;
      *
      * Generated from protobuf field <code>string ProjectName = 2;</code>
      * @return string
@@ -109,7 +109,7 @@ class VodCreateSpaceRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 项目名 
+     *    string ProjectName = 2 ;
      *
      * Generated from protobuf field <code>string ProjectName = 2;</code>
      * @param string $var

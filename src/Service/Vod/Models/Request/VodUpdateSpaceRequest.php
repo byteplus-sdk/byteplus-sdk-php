@@ -20,18 +20,6 @@ class VodUpdateSpaceRequest extends \Google\Protobuf\Internal\Message
      */
     protected $SpaceName = '';
     /**
-     * 原项目 
-     *
-     * Generated from protobuf field <code>string SourceProjectName = 2;</code>
-     */
-    protected $SourceProjectName = '';
-    /**
-     * 变更目标项目 
-     *
-     * Generated from protobuf field <code>string TargetProjectName = 3;</code>
-     */
-    protected $TargetProjectName = '';
-    /**
      * 描述 
      *
      * Generated from protobuf field <code>string Description = 4;</code>
@@ -46,10 +34,6 @@ class VodUpdateSpaceRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $SpaceName
      *           空间名 
-     *     @type string $SourceProjectName
-     *           原项目 
-     *     @type string $TargetProjectName
-     *           变更目标项目 
      *     @type string $Description
      *           描述 
      * }
@@ -81,58 +65,6 @@ class VodUpdateSpaceRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->SpaceName = $var;
-
-        return $this;
-    }
-
-    /**
-     * 原项目 
-     *
-     * Generated from protobuf field <code>string SourceProjectName = 2;</code>
-     * @return string
-     */
-    public function getSourceProjectName()
-    {
-        return $this->SourceProjectName;
-    }
-
-    /**
-     * 原项目 
-     *
-     * Generated from protobuf field <code>string SourceProjectName = 2;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setSourceProjectName($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->SourceProjectName = $var;
-
-        return $this;
-    }
-
-    /**
-     * 变更目标项目 
-     *
-     * Generated from protobuf field <code>string TargetProjectName = 3;</code>
-     * @return string
-     */
-    public function getTargetProjectName()
-    {
-        return $this->TargetProjectName;
-    }
-
-    /**
-     * 变更目标项目 
-     *
-     * Generated from protobuf field <code>string TargetProjectName = 3;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setTargetProjectName($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->TargetProjectName = $var;
 
         return $this;
     }

@@ -203,6 +203,46 @@ class VodOption
                 ],
             ]
         ],
+        'CreatePlaylist' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'CreatePlaylist',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'GetPlaylists' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetPlaylists',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'UpdatePlaylist' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'UpdatePlaylist',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DeletePlaylist' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DeletePlaylist',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         // **********************************************************************
         // 转码
         // **********************************************************************
@@ -472,6 +512,19 @@ class VodOption
             'config' => [
                 'query' => [
                     'Action' => 'DescribeVodSnapshotData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        // **********************************************************************
+        // 商业drm
+        // **********************************************************************
+        'GetDrmLicense' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetDrmLicense',
                     'Version' => '2023-01-01',
                 ],
             ]
