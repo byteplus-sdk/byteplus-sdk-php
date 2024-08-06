@@ -12,7 +12,7 @@ $client->setSecretKey("your sk");
 
 $vid = "your vid";
 $drmType = "your drmType";
-$expire = 60q; // Sign Expire
+$expire = 60; // Sign Expire
 
 echo "\nGenerate ThirdPartyDrmToken\n";
 $req = new VodGetDrmLicenseRequest();
