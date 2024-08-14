@@ -540,6 +540,7 @@ class VodOption
             case 'ap-singapore-1':
                 $config = [
                     'host' => 'https://vod.byteplusapi.com',
+                    'scheme' => 'https',
                     'config' => [
                         'timeout' => 5.0,
                         'headers' => [
