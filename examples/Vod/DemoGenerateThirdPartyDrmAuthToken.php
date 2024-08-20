@@ -7,21 +7,17 @@ use Byteplus\Service\Vod\Vod;
 
 
 $client = Vod::getInstance();
-// $client->setAccessKey("");
-// $client->setSecretKey("");
+$client->setAccessKey("your ak");
+$client->setSecretKey("your sk");
 
 $vid = "your vid";
-$drmType = "your drm type";
-$persistent = 0;
-$licenseDuration = 0;
-$expire = 6000000; // Sign Expire
+$drmType = "your drmType";
+$expire = 60; // Sign Expire
 
 echo "\nGenerate ThirdPartyDrmToken\n";
 $req = new VodGetDrmLicenseRequest();
 $req->setVid($vid);
 $req->setThirdPartyDrmType($drmType);
-$req->setPersistent($persistent);
-$req->setLicenseDuration($licenseDuration);
 try {
     $response = $client->getThirdPartyDrmAuthToken($req, $expire);
     echo $response;
