@@ -11,7 +11,7 @@ $client->setAccessKey("your ak");
 $client->setSecretKey("your sk");
 
 $vid = "your vid";
-$drmType = "your drmType";
+$drmType = "your drmType"; // widevine or fairplay
 $expire = 60; // Sign Expire
 
 echo "\nGenerate ThirdPartyDrmToken\n";
