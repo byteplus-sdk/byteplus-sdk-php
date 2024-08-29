@@ -19,7 +19,7 @@ class RequestVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodUpload::initOnce();
         $pool->internalAddGeneratedFile(
             '
-àh
+³h
 &byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto"™
 VodGetAllPlayInfoRequest
 Vids (	
@@ -646,14 +646,11 @@ PkPassword (	
  VodDeleteFairPlayCertInfoRequest
 	SpaceName (	"+
 VodGetFairPlayCertRequest
-CertId (	"{
+CertId (	"N
 VodGetDrmLicenseRequest
 Vid (	
 Kid (	
-ThirdPartyDrmType (	
-
-Persistent (
-LicenseDuration (BÔ
+ThirdPartyDrmType (	BÔ
 &com.byteplus.service.vod.model.requestB
 VodRequestPZFgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/request ØÊ#Byteplus\\Service\\Vod\\Models\\Requestâ\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);
