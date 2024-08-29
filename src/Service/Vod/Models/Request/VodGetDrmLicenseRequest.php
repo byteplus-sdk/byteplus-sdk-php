@@ -25,14 +25,6 @@ class VodGetDrmLicenseRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string ThirdPartyDrmType = 3;</code>
      */
     protected $ThirdPartyDrmType = '';
-    /**
-     * Generated from protobuf field <code>int64 Persistent = 4;</code>
-     */
-    protected $Persistent = 0;
-    /**
-     * Generated from protobuf field <code>int64 LicenseDuration = 5;</code>
-     */
-    protected $LicenseDuration = 0;
 
     /**
      * Constructor.
@@ -43,8 +35,6 @@ class VodGetDrmLicenseRequest extends \Google\Protobuf\Internal\Message
      *     @type string $Vid
      *     @type string $Kid
      *     @type string $ThirdPartyDrmType
-     *     @type int|string $Persistent
-     *     @type int|string $LicenseDuration
      * }
      */
     public function __construct($data = NULL) {
@@ -114,50 +104,6 @@ class VodGetDrmLicenseRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ThirdPartyDrmType = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>int64 Persistent = 4;</code>
-     * @return int|string
-     */
-    public function getPersistent()
-    {
-        return $this->Persistent;
-    }
-
-    /**
-     * Generated from protobuf field <code>int64 Persistent = 4;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setPersistent($var)
-    {
-        GPBUtil::checkInt64($var);
-        $this->Persistent = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>int64 LicenseDuration = 5;</code>
-     * @return int|string
-     */
-    public function getLicenseDuration()
-    {
-        return $this->LicenseDuration;
-    }
-
-    /**
-     * Generated from protobuf field <code>int64 LicenseDuration = 5;</code>
-     * @param int|string $var
-     * @return $this
-     */
-    public function setLicenseDuration($var)
-    {
-        GPBUtil::checkInt64($var);
-        $this->LicenseDuration = $var;
 
         return $this;
     }
