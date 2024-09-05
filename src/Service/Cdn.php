@@ -591,6 +591,204 @@ class Cdn extends V4Curl
           ]
         ],
 
+        'DescribeDistrictData' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeDistrictData',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeEdgeData' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeEdgeData',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeDistrictSummary' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeDistrictSummary',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeEdgeSummary' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeEdgeSummary',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeOriginData' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeOriginData',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeOriginSummary' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeOriginSummary',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeUserData' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeUserData',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeDistrictRanking' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeDistrictRanking',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeEdgeRanking' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeEdgeRanking',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeOriginRanking' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeOriginRanking',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeEdgeStatusCodeRanking' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeEdgeStatusCodeRanking',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeOriginStatusCodeRanking' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeOriginStatusCodeRanking',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeStatisticalRanking' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeStatisticalRanking',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'BatchUpdateCdnConfig' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'BatchUpdateCdnConfig',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'AddCertificate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'AddCertificate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DeleteUsageReport' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DeleteUsageReport',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'CreateUsageReport' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'CreateUsageReport',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'ListUsageReports' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'ListUsageReports',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
 
 ];
 
@@ -1051,6 +1249,150 @@ class Cdn extends V4Curl
             $data = new \ArrayObject();
         }
         return $this->requestWithRetry("CreateServiceTemplate", ['json' => $data]);
+    }
+
+    public function describeDistrictData(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeDistrictData", ['json' => $data]);
+    }
+
+    public function describeEdgeData(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeEdgeData", ['json' => $data]);
+    }
+
+    public function describeDistrictSummary(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeDistrictSummary", ['json' => $data]);
+    }
+
+    public function describeEdgeSummary(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeEdgeSummary", ['json' => $data]);
+    }
+
+    public function describeOriginData(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeOriginData", ['json' => $data]);
+    }
+
+    public function describeOriginSummary(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeOriginSummary", ['json' => $data]);
+    }
+
+    public function describeUserData(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeUserData", ['json' => $data]);
+    }
+
+    public function describeDistrictRanking(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeDistrictRanking", ['json' => $data]);
+    }
+
+    public function describeEdgeRanking(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeEdgeRanking", ['json' => $data]);
+    }
+
+    public function describeOriginRanking(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeOriginRanking", ['json' => $data]);
+    }
+
+    public function describeEdgeStatusCodeRanking(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeEdgeStatusCodeRanking", ['json' => $data]);
+    }
+
+    public function describeOriginStatusCodeRanking(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeOriginStatusCodeRanking", ['json' => $data]);
+    }
+
+    public function describeStatisticalRanking(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeStatisticalRanking", ['json' => $data]);
+    }
+
+    public function batchUpdateCdnConfig(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("BatchUpdateCdnConfig", ['json' => $data]);
+    }
+
+    public function addCertificate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("AddCertificate", ['json' => $data]);
+    }
+
+    public function deleteUsageReport(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DeleteUsageReport", ['json' => $data]);
+    }
+
+    public function createUsageReport(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("CreateUsageReport", ['json' => $data]);
+    }
+
+    public function listUsageReports(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("ListUsageReports", ['json' => $data]);
     }
 
 }
