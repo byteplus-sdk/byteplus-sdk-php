@@ -516,6 +516,16 @@ class VodOption
                 ],
             ]
         ],
+        'DescribeVodSpaceStorageDataFD' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodSpaceStorageDataFD',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         // **********************************************************************
         // 商业drm
         // **********************************************************************
