@@ -206,7 +206,7 @@ class Vod extends V4Curl
             $query["X-Expires"] = $expireSeconds;
         }
         $token = ["TokenVersion" => "V2"];
-        $token["GetDrmLicenseToken"] = parse_url($this->getRequestUrl("GetDrmLicense", ['query' => $query]))['query'];
+        $token["GetThirdPartyDrmAuthToken"] = parse_url($this->getRequestUrl("GetDrmLicense", ['query' => $query]))['query'];
         return base64_encode(json_encode($token));
     }
 
