@@ -16,7 +16,7 @@ class VodMeasure
         }
         $pool->internalAddGeneratedFile(
             '
-—,
+”.
 \'byteplus/vod/business/vod_measure.protoByteplus.Vod.Models.Business"<
 DescribeVodSpaceTranscodeItem
 Name (	
@@ -195,7 +195,15 @@ $DescribeVodPlayFileLogByDomainResult
 EndTime (	
 
 DomainList (	R
-FileList (2@.Byteplus.Vod.Models.Business.DescribeVodPlayFileLogByDomainItemB×
+FileList (2@.Byteplus.Vod.Models.Business.DescribeVodPlayFileLogByDomainItem"B
+!DescribeVodSpaceStorageDataFDItem
+Time (	
+Storage ("¶
+#DescribeVodSpaceStorageDataFDResult
+	SpaceList (	
+	StartTime (	
+EndTime (	X
+StorageDataList (2?.Byteplus.Vod.Models.Business.DescribeVodSpaceStorageDataFDItemB×
 \'com.byteplus.service.vod.model.businessB
 VodMeasurePZGgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/business ØÊ$Byteplus\\Service\\Vod\\Models\\Businessâ\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);
