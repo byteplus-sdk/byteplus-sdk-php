@@ -16,7 +16,7 @@ class Singleton
         throw new Exception('Cannot unserialize');
     }
 
-    public static function getInstance(string $region = 'cn-north-1')
+    public static function getInstance(string $region = 'ap-singapore-1')
     {
         $cls = get_called_class();
         if (!isset(self::$instances[$cls])) {
