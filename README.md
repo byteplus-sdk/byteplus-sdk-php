@@ -25,7 +25,7 @@ composer require byteplus_sdk/byteplus-sdk-php
 Above will take precedence from high to low
 
 #### More examples:
-example
+You can find examples for every service under the examples folder.
 
 
 
