@@ -1,11 +1,17 @@
 {
-  "name": "byteplus_sdk/byteplus-sdk-php",
+  "name": "haydarsahin/byteplus-sdk-php",
+  "description": "Byteplus PHP SDK community edition",
   "type": "library",
   "license": "MIT",
   "authors": [
-  
     {
       "name": "bytedance"
+    },
+    {
+      "name": "Haydar ŞAHİN",
+      "email": "mail@haydarsahin.com",
+      "homepage": "http://haydarsahin.com",
+      "role": "Developer"
     }
   ],
   "require": {
@@ -21,6 +27,5 @@
       "Byteplus\\": "src/",
       "Test\\": "tests/"
     }
-  },
-  "description": ""
+  }
 }
