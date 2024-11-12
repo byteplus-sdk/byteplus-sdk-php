@@ -539,6 +539,16 @@ class VodOption
                 ],
             ]
         ],
+        'GetFairPlayCert' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetFairPlayCert',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
     ];
 
     /**
