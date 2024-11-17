@@ -3,7 +3,6 @@
   "description": "Byteplus PHP SDK community edition",
   "type": "library",
   "license": "MIT",
-  "version": "1.0.0",
   "authors": [
     {
       "name": "bytedance"
