@@ -789,6 +789,28 @@ class Cdn extends V4Curl
           ]
         ],
 
+        'TagResources' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'TagResources',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'UntagResources' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'UntagResources',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
 
 ];
 
@@ -1393,6 +1415,22 @@ class Cdn extends V4Curl
             $data = new \ArrayObject();
         }
         return $this->requestWithRetry("ListUsageReports", ['json' => $data]);
+    }
+
+    public function tagResources(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("TagResources", ['json' => $data]);
+    }
+
+    public function untagResources(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("UntagResources", ['json' => $data]);
     }
 
 }
