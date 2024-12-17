@@ -16,7 +16,7 @@ class VodMeasure
         }
         $pool->internalAddGeneratedFile(
             '
-”.
+Œ<
 \'byteplus/vod/business/vod_measure.protoByteplus.Vod.Models.Business"<
 DescribeVodSpaceTranscodeItem
 Name (	
@@ -203,7 +203,76 @@ DomainList (	R
 	SpaceList (	
 	StartTime (	
 EndTime (	X
-StorageDataList (2?.Byteplus.Vod.Models.Business.DescribeVodSpaceStorageDataFDItemB×
+StorageDataList (2?.Byteplus.Vod.Models.Business.DescribeVodSpaceStorageDataFDItem"‚
+DescribeVodEnhanceImageDataItem
+Time (	
+
+SR (
+VFI (
+
+SDREnhance (
+SDR2HDR (
+AudioDenose ("§
+!DescribeVodEnhanceImageDataResult
+	SpaceList (	
+	StartTime (	
+EndTime (	
+TaskTypeList (	
+TaskStageList (	
+Aggregation (
+
+RegionList (	
+TotalEnhanceImagData (W
+EnhanceImageList	 (2=.Byteplus.Vod.Models.Business.DescribeVodEnhanceImageDataItem"”
+DescribeVodPlayedStatisDataItem
+Vid (	
+Name (	
+Size (
+Duration (
+
+CreateTime (	
+	PlayCount (
+Traffic ("Ð
+!DescribeVodPlayedStatisDataResult
+Space (	
+	StartTime (	
+EndTime (	
+VidList (	
+	OrderType (	T
+PlayStatInfos (2=.Byteplus.Vod.Models.Business.DescribeVodPlayedStatisDataItem"˜
+#DescribeVodMostPlayedStatisDataItem
+Vid (	
+Name (	
+Size (
+Duration (
+
+CreateTime (	
+	PlayCount (
+Traffic ("Õ
+%DescribeVodMostPlayedStatisDataResult
+Space (	
+	StartTime (	
+EndTime (	
+	OrderType (	
+TopN (X
+PlayStatInfos (2A.Byteplus.Vod.Models.Business.DescribeVodMostPlayedStatisDataItem"?
+ DescribeVodRealtimeMediaDataItem
+Time (	
+Count ("¡
+"DescribeVodRealtimeMediaDataDetail
+Space (	
+Total (]
+RealtimeMediaDataList (2>.Byteplus.Vod.Models.Business.DescribeVodRealtimeMediaDataItem"„
+"DescribeVodRealtimeMediaDataResult
+	SpaceList (	
+	StartTime (	
+EndTime (	
+ProcessType (	
+Aggregation (
+DetailFieldList (	
+TotalRealtimeMediaData (]
+RealtimeMediaDataList (2>.Byteplus.Vod.Models.Business.DescribeVodRealtimeMediaDataIteme
+RealtimeMediaDetailDataList	 (2@.Byteplus.Vod.Models.Business.DescribeVodRealtimeMediaDataDetailB×
 \'com.byteplus.service.vod.model.businessB
 VodMeasurePZGgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/business ØÊ$Byteplus\\Service\\Vod\\Models\\Businessâ\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);
