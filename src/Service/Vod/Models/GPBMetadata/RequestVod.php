@@ -19,7 +19,7 @@ class RequestVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodUpload::initOnce();
         $pool->internalAddGeneratedFile(
             '
-’i
+ãm
 &byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto"™
 VodGetAllPlayInfoRequest
 Vids (	
@@ -588,7 +588,35 @@ DomainList (	"]
 $DescribeVodSpaceStorageDataFDRequest
 	SpaceList (	
 	StartTime (	
-EndTime (	"A
+EndTime (	"±
+"DescribeVodEnhanceImageDataRequest
+	SpaceList (	
+	StartTime (	
+EndTime (	
+TaskTypeList (	
+TaskStageList (	
+Aggregation (
+
+RegionList (	"{
+"DescribeVodPlayedStatisDataRequest
+Space (	
+	StartTime (	
+EndTime (	
+VidList (	
+	OrderType (	"|
+&DescribeVodMostPlayedStatisDataRequest
+Space (	
+	StartTime (	
+EndTime (	
+	OrderType (	
+TopN ("Ÿ
+#DescribeVodRealtimeMediaDataRequest
+	SpaceList (	
+	StartTime (	
+EndTime (	
+ProcessType (	
+Aggregation (
+DetailFieldList (	"A
 VodSubmitBlockMediaTaskRequest
 	SpaceName (	
 Vids (	"C

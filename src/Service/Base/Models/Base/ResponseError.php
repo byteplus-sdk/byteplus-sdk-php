@@ -44,7 +44,7 @@ class ResponseError extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ErrorCode
+     * 错误码
      *
      * Generated from protobuf field <code>string Code = 1;</code>
      * @return string
@@ -55,7 +55,7 @@ class ResponseError extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ErrorCode
+     * 错误码
      *
      * Generated from protobuf field <code>string Code = 1;</code>
      * @param string $var
@@ -70,7 +70,7 @@ class ResponseError extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * ErrorDetail
+     * 详细错误信息
      *
      * Generated from protobuf field <code>string Message = 2;</code>
      * @return string
