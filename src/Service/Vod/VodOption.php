@@ -61,7 +61,7 @@ class VodOption
         // **********************************************************************
         'UploadMediaByUrl' => [
             'url' => '/',
-            'method' => 'get',
+            'method' => 'post',
             'config' => [
                 'query' => [
                     'Action' => 'UploadMediaByUrl',
