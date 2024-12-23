@@ -526,6 +526,56 @@ class VodOption
                 ],
             ]
         ],
+        'DescribeVodEnhanceImageData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodEnhanceImageData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeVodSpaceSubtitleStatisData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodSpaceSubtitleStatisData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeVodPlayedStatisData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodPlayedStatisData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeVodMostPlayedStatisData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodMostPlayedStatisData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'DescribeVodRealtimeMediaData' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'DescribeVodRealtimeMediaData',
+                    'Version' => '2023-01-01',
+                ],
+            ]
+        ],
         // **********************************************************************
         // 商业drm
         // **********************************************************************
