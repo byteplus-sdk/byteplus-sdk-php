@@ -410,7 +410,7 @@ class Vod extends V4Curl
 	{
 		try {
 			$query = VodUtils::formatRequestParam($req);
-			$response = $this->request('UploadMediaByUrl', ['query' => $query]);
+			$response = $this->request('UploadMediaByUrl', ['form_params' => $query]);
 		} catch (Exception $e) {
             throw $e;
         } catch (Throwable $t) {
