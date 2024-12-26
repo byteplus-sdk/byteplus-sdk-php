@@ -2,6 +2,7 @@
 namespace Byteplus\Base;
 
 use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Query;
 use Psr\Http\Message\RequestInterface;
 
 class SignatureV4
@@ -93,7 +94,7 @@ class SignatureV4
         }
 
         try {
-            return Psr7\hash($request->getBody(), 'sha256');
+            return Psr7\Utils::hash($request->getBody(), 'sha256');
         } catch (\Exception $e) {
             throw new CouldNotCreateChecksumException('sha256', $e);
         }
@@ -232,7 +233,7 @@ class SignatureV4
         return [
             'method'  => $request->getMethod(),
             'path'    => $uri->getPath(),
-            'query'   => Psr7\parse_query($uri->getQuery()),
+            'query'   => Query::parse($uri->getQuery()),
             'uri'     => $uri,
             'headers' => $request->getHeaders(),
             'body'    => $request->getBody(),
@@ -243,7 +244,7 @@ class SignatureV4
     private function buildRequest(array $req)
     {
         if ($req['query']) {
-            $req['uri'] = $req['uri']->withQuery(Psr7\build_query($req['query']));
+            $req['uri'] = $req['uri']->withQuery(Psr7\Query::build($req['query']));
         }
 
         return new Psr7\Request(
@@ -258,7 +259,7 @@ class SignatureV4
     private function buildRequestString(array $req)
     {
         if ($req['query']) {
-            $req['uri'] = $req['uri']->withQuery(Psr7\build_query($req['query']));
+            $req['uri'] = $req['uri']->withQuery(Psr7\Query::build($req['query']));
         }
         return (string)$req['uri'];
     }
