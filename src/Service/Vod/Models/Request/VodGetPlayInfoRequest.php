@@ -124,6 +124,12 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string ForceExpire = 18;</code>
      */
     protected $ForceExpire = '';
+    /**
+     *format=dash时,指定下发video model还是mpd文件
+     *
+     * Generated from protobuf field <code>string DashMode = 19;</code>
+     */
+    protected $DashMode = '';
 
     /**
      * Constructor.
@@ -170,6 +176,8 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
      *          播放配置,可指定播放域名
      *     @type string $ForceExpire
      *          强行指定本次请求的时间戳防盗链 单位秒
+     *     @type string $DashMode
+     *          format=dash时,指定下发video model还是mpd文件
      * }
      */
     public function __construct($data = NULL) {
@@ -647,6 +655,32 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->ForceExpire = $var;
+
+        return $this;
+    }
+
+    /**
+     *format=dash时,指定下发video model还是mpd文件
+     *
+     * Generated from protobuf field <code>string DashMode = 19;</code>
+     * @return string
+     */
+    public function getDashMode()
+    {
+        return $this->DashMode;
+    }
+
+    /**
+     *format=dash时,指定下发video model还是mpd文件
+     *
+     * Generated from protobuf field <code>string DashMode = 19;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDashMode($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->DashMode = $var;
 
         return $this;
     }
