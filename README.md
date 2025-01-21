@@ -2,7 +2,7 @@
 
 ### composer require
 ```
-composer require haydarsahin/byteplus-sdk-php
+composer require haydar/byteplus-sdk-php
 ```
 
 ### Region Setting
