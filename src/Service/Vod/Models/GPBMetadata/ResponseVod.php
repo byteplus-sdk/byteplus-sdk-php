@@ -28,7 +28,7 @@ class ResponseVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodMeasure::initOnce();
         $pool->internalAddGeneratedFile(
             '
-î…
+ø‹
 (byteplus/vod/response/response_vod.protoByteplus.Vod.Models.Response$byteplus/vod/business/vod_play.proto%byteplus/vod/business/vod_media.proto&byteplus/vod/business/vod_upload.proto(byteplus/vod/business/vod_workflow.proto$byteplus/vod/business/vod_edit.proto%byteplus/vod/business/vod_space.proto#byteplus/vod/business/vod_cdn.proto&byteplus/vod/business/vod_common.proto.byteplus/vod/business/vod_smart_strategy.proto+byteplus/vod/business/vod_apps_manage.proto\'byteplus/vod/business/vod_measure.proto"¦
 VodGetAllPlayInfoResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataB
@@ -267,7 +267,19 @@ $DescribeVodSpaceAIStatisDataResponseE
 Result (2B.Byteplus.Vod.Models.Business.DescribeVodPlayFileLogByDomainResult"Á
 %DescribeVodSpaceStorageDataFDResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataQ
-Result (2A.Byteplus.Vod.Models.Business.DescribeVodSpaceStorageDataFDResult"µ
+Result (2A.Byteplus.Vod.Models.Business.DescribeVodSpaceStorageDataFDResult"½
+#DescribeVodEnhanceImageDataResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataO
+Result (2?.Byteplus.Vod.Models.Business.DescribeVodEnhanceImageDataResult"½
+#DescribeVodPlayedStatisDataResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataO
+Result (2?.Byteplus.Vod.Models.Business.DescribeVodPlayedStatisDataResult"Å
+\'DescribeVodMostPlayedStatisDataResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataS
+Result (2C.Byteplus.Vod.Models.Business.DescribeVodMostPlayedStatisDataResult"¿
+$DescribeVodRealtimeMediaDataResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataP
+Result (2@.Byteplus.Vod.Models.Business.DescribeVodRealtimeMediaDataResult"µ
 VodSubmitBlockMediaTaskResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataK
 Result (2;.Byteplus.Vod.Models.Business.VodSubmitBlockMediaTaskResult"¹
