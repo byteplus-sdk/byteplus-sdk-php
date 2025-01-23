@@ -40,6 +40,14 @@ class AdaptiveBitrateStreamingInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string AbrFormat = 3;</code>
      */
     protected $AbrFormat = '';
+    /**
+     * Generated from protobuf field <code>string PlayAuth = 4;</code>
+     */
+    protected $PlayAuth = '';
+    /**
+     * Generated from protobuf field <code>string PlayAuthId = 5;</code>
+     */
+    protected $PlayAuthId = '';
 
     /**
      * Constructor.
@@ -62,6 +70,8 @@ class AdaptiveBitrateStreamingInfo extends \Google\Protobuf\Internal\Message
      *          下发Abr hls时，AbrFormat=hls
      *          下发Abr Dash时，AbrFormat=dash
      *          没有别的场景
+     *     @type string $PlayAuth
+     *     @type string $PlayAuthId
      * }
      */
     public function __construct($data = NULL) {
@@ -161,6 +171,50 @@ class AdaptiveBitrateStreamingInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->AbrFormat = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string PlayAuth = 4;</code>
+     * @return string
+     */
+    public function getPlayAuth()
+    {
+        return $this->PlayAuth;
+    }
+
+    /**
+     * Generated from protobuf field <code>string PlayAuth = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPlayAuth($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->PlayAuth = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string PlayAuthId = 5;</code>
+     * @return string
+     */
+    public function getPlayAuthId()
+    {
+        return $this->PlayAuthId;
+    }
+
+    /**
+     * Generated from protobuf field <code>string PlayAuthId = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setPlayAuthId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->PlayAuthId = $var;
 
         return $this;
     }

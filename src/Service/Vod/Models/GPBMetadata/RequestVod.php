@@ -19,7 +19,7 @@ class RequestVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodUpload::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ãm
+õm
 &byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto"™
 VodGetAllPlayInfoRequest
 Vids (	
@@ -43,7 +43,7 @@ NeedThumbs	 (	
 
 UserAction (	
 Quality (	
-ForceExpire (	"é
+ForceExpire (	"û
 VodGetPlayInfoRequest
 Vid (	
 Format (	
@@ -66,7 +66,8 @@ NeedThumbs	 (	
 Quality (	
 
 PlayConfig (	
-ForceExpire (	"g
+ForceExpire (	
+DashMode (	"g
 VodGetPrivateDrmPlayAuthRequest
 DrmType (	
 Vid (	
