@@ -1,4 +1,7 @@
-Change log
+Change logs
+
+2024-11-04 Bumped to version v1.1.0
+- The Guzzle version has been upgraded to ensure compatibility with modern systems.
 
 2020-12-11 Bumped to version v1.0.0
 - Add iam sdk.
