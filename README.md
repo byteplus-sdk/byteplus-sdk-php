@@ -1,7 +1,7 @@
 ## Usage
 
 ### composer require
-```
+```sh
 composer require byteplus_sdk/byteplus-sdk-php
 ```
 
@@ -11,7 +11,7 @@ composer require byteplus_sdk/byteplus-sdk-php
   - ap-singapore-1
   ```
 - Default ap-singapore-1, Specify region as param in init function if needed：
-  ```
+  ```php
   $client = Iam::getInstance('us-east-1');
   ```
 
@@ -25,7 +25,4 @@ composer require byteplus_sdk/byteplus-sdk-php
 Above will take precedence from high to low
 
 #### More examples:
-example
-
-
-
+[example](examples)
