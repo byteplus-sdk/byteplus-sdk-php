@@ -4,3 +4,4 @@ vendor/ export-ignore
 .gitignore export-ignore
 Changelog export-ignore
 README.md export-ignore
+composer.lock export-ignore
