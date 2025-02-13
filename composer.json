@@ -1,12 +1,17 @@
 {
   "name": "byteplus_sdk/byteplus-sdk-php",
+  "keywords": ["BytePlus","SDK","PHP"],
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "bytedance"
+      "name": "bytedance",
+      "homepage": "https://www.byteplus.com/"
     }
   ],
+  "support": {
+    "issues": "https://github.com/byteplus-sdk/byteplus-sdk-php/issues"
+  },
   "require": {
     "php": ">=7.1",
     "guzzlehttp/guzzle": "^7.0",
@@ -14,13 +19,12 @@
     "google/protobuf": "*",
     "google/gax": "*",
     "ext-openssl": "*",
-    "guzzlehttp/psr7": "v1.9.0"
+    "guzzlehttp/psr7": "^v1.9.0"
   },
   "autoload": {
     "psr-4": {
-      "Byteplus\\": "src/",
-      "Test\\": "tests/"
+      "Byteplus\\": "src/"
     }
   },
-  "description": ""
+  "description": "BytePlus SDK for PHP"
 }
