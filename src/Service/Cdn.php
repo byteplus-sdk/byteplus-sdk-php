@@ -789,6 +789,50 @@ class Cdn extends V4Curl
           ]
         ],
 
+        'DescribeSharedConfig' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeSharedConfig',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'ListSharedConfig' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'ListSharedConfig',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DeleteSharedConfig' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DeleteSharedConfig',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'UpdateSharedConfig' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'UpdateSharedConfig',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
         'TagResources' => [
           'url' => '/',
           'method' => 'post',
@@ -1415,6 +1459,38 @@ class Cdn extends V4Curl
             $data = new \ArrayObject();
         }
         return $this->requestWithRetry("ListUsageReports", ['json' => $data]);
+    }
+
+    public function describeSharedConfig(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeSharedConfig", ['json' => $data]);
+    }
+
+    public function listSharedConfig(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("ListSharedConfig", ['json' => $data]);
+    }
+
+    public function deleteSharedConfig(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DeleteSharedConfig", ['json' => $data]);
+    }
+
+    public function updateSharedConfig(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("UpdateSharedConfig", ['json' => $data]);
     }
 
     public function tagResources(array $data = []): string
