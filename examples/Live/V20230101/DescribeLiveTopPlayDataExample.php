@@ -11,5 +11,5 @@ $client->setSecretKey("sk");
 
 $body = [];
 
-$response = $client->describeIPAccessRule($body);
+$response = $client->describeLiveTopPlayData($body);
 print_r($response);

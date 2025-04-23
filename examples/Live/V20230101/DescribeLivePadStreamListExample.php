@@ -11,5 +11,5 @@ $client->setSecretKey("sk");
 
 $body = [];
 
-$response = $client->describeIPAccessRule($body);
+$response = $client->describeLivePadStreamList($body);
 print_r($response);
