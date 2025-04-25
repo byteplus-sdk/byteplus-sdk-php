@@ -72,6 +72,7 @@ namespace Byteplus\Service\Live\V20230101;
  * @method array ResumeStream(array $json)
  * @method array GeneratePlayURL(array $json)
  * @method array GeneratePushURL(array $json)
+ * @method array DescribeLiveTopPlayData(array $json)
  * @method array DescribeLiveRegionData()
  * @method array DescribeLiveSourceStreamMetrics(array $json)
  * @method array DescribeLivePushStreamMetrics(array $json)
@@ -84,6 +85,7 @@ namespace Byteplus\Service\Live\V20230101;
  * @method array DescribeLiveSourceTrafficData(array $json)
  * @method array DescribeLiveMetricBandwidthData(array $json)
  * @method array DescribeLiveMetricTrafficData(array $json)
+ * @method array DescribeLiveEdgeStatData(array $json)
  * @method array DescribeLiveISPData()
  * @method array DescribeLiveP95PeakBandwidthData(array $json)
  * @method array DescribeLiveASRDurationData(array $json)
@@ -118,6 +120,8 @@ namespace Byteplus\Service\Live\V20230101;
  * @method array BindEncryptDRM(array $json)
  * @method array UnBindEncryptDRM(array $json)
  * @method array ListBindEncryptDRM(array $json)
+ * @method array CreateTranscodePresetBatch(array $json)
+ * @method array DeleteTranscodePresetBatch(array $json)
  * @method array DeleteIPAccessRule(array $json)
  * @method array DeleteRegionAccessRule(array $json)
  * @method array UpdateIPAccessRule(array $json)
@@ -148,6 +152,12 @@ namespace Byteplus\Service\Live\V20230101;
  * @method array UpdateSubtitleTranscodePreset(array $json)
  * @method array ListVhostSubtitleTranscodePreset(array $json)
  * @method array CreateSubtitleTranscodePreset(array $json)
+ * @method array CreateLivePadPreset(array $json)
+ * @method array DeleteLivePadPreset(array $json)
+ * @method array StopLivePadStream(array $json)
+ * @method array UpdateLivePadPreset(array $json)
+ * @method array DescribeLivePadStreamList(array $json)
+ * @method array DescribeLivePadPresetDetail(array $json)
  */
 trait LiveTrait
 {
