@@ -1,7 +1,9 @@
 <?php
 namespace Byteplus\Base;
 
-use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Query;
+use GuzzleHttp\Psr7\Utils;
+use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
 
 class SignatureV4
@@ -89,13 +91,22 @@ class SignatureV4
         }
 
         if (!$request->getBody()->isSeekable()) {
-            throw new CouldNotCreateChecksumException('sha256');
+            throw new \Exception(
+                'A sha256 checksum could not be calculated for the provided upload body, because it was not '
+                . 'seekable. To prevent this error you can either 1) include the ContentSHA256 parameter with '
+                . 'your request, 2) use a seekable stream for the body, or 3) wrap the non-seekable stream in '
+                . 'a GuzzleHttp\\Psr7\\CachingStream object.'
+            );
         }
 
         try {
-            return Psr7\hash($request->getBody(), 'sha256');
+            return Utils::hash($request->getBody(), 'sha256');
         } catch (\Exception $e) {
-            throw new CouldNotCreateChecksumException('sha256', $e);
+            throw new \Exception(
+                'A sha256 checksum could not be calculated. Verify that the hash extension is installed.',
+                0,
+                $e
+            );
         }
     }
 
@@ -232,7 +243,7 @@ class SignatureV4
         return [
             'method'  => $request->getMethod(),
             'path'    => $uri->getPath(),
-            'query'   => Psr7\parse_query($uri->getQuery()),
+            'query'   => Query::parse($uri->getQuery()),
             'uri'     => $uri,
             'headers' => $request->getHeaders(),
             'body'    => $request->getBody(),
@@ -243,10 +254,10 @@ class SignatureV4
     private function buildRequest(array $req)
     {
         if ($req['query']) {
-            $req['uri'] = $req['uri']->withQuery(Psr7\build_query($req['query']));
+            $req['uri'] = $req['uri']->withQuery(Query::build($req['query']));
         }
 
-        return new Psr7\Request(
+        return new Request(
             $req['method'],
             $req['uri'],
             $req['headers'],
