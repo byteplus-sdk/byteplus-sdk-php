@@ -310,7 +310,7 @@ class VodOption
                 'timeout' => 10.0,
                 'query' => [
                     'Action' => 'ListSpace',
-                    'Version' => '2023-01-01',
+                    'Version' => '2023-07-01',
                 ],
             ]
         ],
@@ -320,7 +320,7 @@ class VodOption
             'config' => [
                 'query' => [
                     'Action' => 'GetSpaceDetail',
-                    'Version' => '2023-01-01',
+                    'Version' => '2023-07-01',
                 ],
             ]
         ],
@@ -859,7 +859,7 @@ class VodOption
                 'timeout' => 10.0,
                 'query' => [
                     'Action' => 'ListSpace',
-                    'Version' => '2023-01-01',
+                    'Version' => '2023-07-01',
                 ],
             ]
         ],
@@ -869,7 +869,7 @@ class VodOption
             'config' => [
                 'query' => [
                     'Action' => 'GetSpaceDetail',
-                    'Version' => '2023-01-01',
+                    'Version' => '2023-07-01',
                 ],
             ]
         ],
