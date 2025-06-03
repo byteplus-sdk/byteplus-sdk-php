@@ -49,6 +49,14 @@ class VodPlaylistInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.VodPlaylistVideoInfo VideoInfos = 9;</code>
      */
     private $VideoInfos;
+    /**
+     * Generated from protobuf field <code>int64 CreatedAt = 10;</code>
+     */
+    protected $CreatedAt = 0;
+    /**
+     * Generated from protobuf field <code>int64 UpdatedAt = 11;</code>
+     */
+    protected $UpdatedAt = 0;
 
     /**
      * Constructor.
@@ -65,6 +73,8 @@ class VodPlaylistInfo extends \Google\Protobuf\Internal\Message
      *     @type string $EndTime
      *     @type string $Cycles
      *     @type \Byteplus\Service\Vod\Models\Business\VodPlaylistVideoInfo[]|\Google\Protobuf\Internal\RepeatedField $VideoInfos
+     *     @type int|string $CreatedAt
+     *     @type int|string $UpdatedAt
      * }
      */
     public function __construct($data = NULL) {
@@ -266,6 +276,50 @@ class VodPlaylistInfo extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Byteplus\Service\Vod\Models\Business\VodPlaylistVideoInfo::class);
         $this->VideoInfos = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 CreatedAt = 10;</code>
+     * @return int|string
+     */
+    public function getCreatedAt()
+    {
+        return $this->CreatedAt;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 CreatedAt = 10;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setCreatedAt($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->CreatedAt = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 UpdatedAt = 11;</code>
+     * @return int|string
+     */
+    public function getUpdatedAt()
+    {
+        return $this->UpdatedAt;
+    }
+
+    /**
+     * Generated from protobuf field <code>int64 UpdatedAt = 11;</code>
+     * @param int|string $var
+     * @return $this
+     */
+    public function setUpdatedAt($var)
+    {
+        GPBUtil::checkInt64($var);
+        $this->UpdatedAt = $var;
 
         return $this;
     }
