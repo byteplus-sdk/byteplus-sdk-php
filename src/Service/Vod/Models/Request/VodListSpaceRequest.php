@@ -25,6 +25,12 @@ class VodListSpaceRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>double Limit = 2;</code>
      */
     protected $Limit = 0.0;
+    /**
+     * 项目名称 
+     *
+     * Generated from protobuf field <code>string ProjectName = 3;</code>
+     */
+    protected $ProjectName = '';
 
     /**
      * Constructor.
@@ -36,6 +42,8 @@ class VodListSpaceRequest extends \Google\Protobuf\Internal\Message
      *           查询游标 
      *     @type float $Limit
      *           查询数量 
+     *     @type string $ProjectName
+     *           项目名称 
      * }
      */
     public function __construct($data = NULL) {
@@ -91,6 +99,32 @@ class VodListSpaceRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkDouble($var);
         $this->Limit = $var;
+
+        return $this;
+    }
+
+    /**
+     * 项目名称 
+     *
+     * Generated from protobuf field <code>string ProjectName = 3;</code>
+     * @return string
+     */
+    public function getProjectName()
+    {
+        return $this->ProjectName;
+    }
+
+    /**
+     * 项目名称 
+     *
+     * Generated from protobuf field <code>string ProjectName = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setProjectName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->ProjectName = $var;
 
         return $this;
     }

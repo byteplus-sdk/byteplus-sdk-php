@@ -14,17 +14,25 @@ use Google\Protobuf\Internal\GPBUtil;
 class VodGetPlaylistsRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Generated from protobuf field <code>string SpaceName = 1;</code>
+     */
+    protected $SpaceName = '';
+    /**
      * 以,分隔
      *
-     * Generated from protobuf field <code>string Ids = 1;</code>
+     * Generated from protobuf field <code>string Ids = 2;</code>
      */
     protected $Ids = '';
     /**
-     * Generated from protobuf field <code>uint32 Limit = 2;</code>
+     * Generated from protobuf field <code>string Name = 3;</code>
+     */
+    protected $Name = '';
+    /**
+     * Generated from protobuf field <code>uint32 Limit = 4;</code>
      */
     protected $Limit = 0;
     /**
-     * Generated from protobuf field <code>uint32 Offset = 3;</code>
+     * Generated from protobuf field <code>uint32 Offset = 5;</code>
      */
     protected $Offset = 0;
 
@@ -34,8 +42,10 @@ class VodGetPlaylistsRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $SpaceName
      *     @type string $Ids
      *           以,分隔
+     *     @type string $Name
      *     @type int $Limit
      *     @type int $Offset
      * }
@@ -46,9 +56,31 @@ class VodGetPlaylistsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>string SpaceName = 1;</code>
+     * @return string
+     */
+    public function getSpaceName()
+    {
+        return $this->SpaceName;
+    }
+
+    /**
+     * Generated from protobuf field <code>string SpaceName = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSpaceName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->SpaceName = $var;
+
+        return $this;
+    }
+
+    /**
      * 以,分隔
      *
-     * Generated from protobuf field <code>string Ids = 1;</code>
+     * Generated from protobuf field <code>string Ids = 2;</code>
      * @return string
      */
     public function getIds()
@@ -59,7 +91,7 @@ class VodGetPlaylistsRequest extends \Google\Protobuf\Internal\Message
     /**
      * 以,分隔
      *
-     * Generated from protobuf field <code>string Ids = 1;</code>
+     * Generated from protobuf field <code>string Ids = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -72,7 +104,29 @@ class VodGetPlaylistsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 Limit = 2;</code>
+     * Generated from protobuf field <code>string Name = 3;</code>
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->Name;
+    }
+
+    /**
+     * Generated from protobuf field <code>string Name = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->Name = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>uint32 Limit = 4;</code>
      * @return int
      */
     public function getLimit()
@@ -81,7 +135,7 @@ class VodGetPlaylistsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 Limit = 2;</code>
+     * Generated from protobuf field <code>uint32 Limit = 4;</code>
      * @param int $var
      * @return $this
      */
@@ -94,7 +148,7 @@ class VodGetPlaylistsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 Offset = 3;</code>
+     * Generated from protobuf field <code>uint32 Offset = 5;</code>
      * @return int
      */
     public function getOffset()
@@ -103,7 +157,7 @@ class VodGetPlaylistsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>uint32 Offset = 3;</code>
+     * Generated from protobuf field <code>uint32 Offset = 5;</code>
      * @param int $var
      * @return $this
      */

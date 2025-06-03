@@ -18,13 +18,23 @@ class VodPlaylistVideoInfo extends \Google\Protobuf\Internal\Message
      */
     protected $Vid = '';
     /**
-     * Generated from protobuf field <code>double Duration = 2;</code>
+     * Generated from protobuf field <code>string Title = 2;</code>
+     */
+    protected $Title = '';
+    /**
+     * Generated from protobuf field <code>double Duration = 3;</code>
      */
     protected $Duration = 0.0;
     /**
-     * Generated from protobuf field <code>string PosterUrl = 3;</code>
+     * Generated from protobuf field <code>string PosterUrl = 4;</code>
      */
     protected $PosterUrl = '';
+    /**
+     * 视频状态: Published, Unpublished, Deleted
+     *
+     * Generated from protobuf field <code>string VideoStatus = 5;</code>
+     */
+    protected $VideoStatus = '';
 
     /**
      * Constructor.
@@ -33,8 +43,11 @@ class VodPlaylistVideoInfo extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $Vid
+     *     @type string $Title
      *     @type float $Duration
      *     @type string $PosterUrl
+     *     @type string $VideoStatus
+     *           视频状态: Published, Unpublished, Deleted
      * }
      */
     public function __construct($data = NULL) {
@@ -65,7 +78,29 @@ class VodPlaylistVideoInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double Duration = 2;</code>
+     * Generated from protobuf field <code>string Title = 2;</code>
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->Title;
+    }
+
+    /**
+     * Generated from protobuf field <code>string Title = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setTitle($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->Title = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>double Duration = 3;</code>
      * @return float
      */
     public function getDuration()
@@ -74,7 +109,7 @@ class VodPlaylistVideoInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>double Duration = 2;</code>
+     * Generated from protobuf field <code>double Duration = 3;</code>
      * @param float $var
      * @return $this
      */
@@ -87,7 +122,7 @@ class VodPlaylistVideoInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string PosterUrl = 3;</code>
+     * Generated from protobuf field <code>string PosterUrl = 4;</code>
      * @return string
      */
     public function getPosterUrl()
@@ -96,7 +131,7 @@ class VodPlaylistVideoInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string PosterUrl = 3;</code>
+     * Generated from protobuf field <code>string PosterUrl = 4;</code>
      * @param string $var
      * @return $this
      */
@@ -104,6 +139,32 @@ class VodPlaylistVideoInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->PosterUrl = $var;
+
+        return $this;
+    }
+
+    /**
+     * 视频状态: Published, Unpublished, Deleted
+     *
+     * Generated from protobuf field <code>string VideoStatus = 5;</code>
+     * @return string
+     */
+    public function getVideoStatus()
+    {
+        return $this->VideoStatus;
+    }
+
+    /**
+     * 视频状态: Published, Unpublished, Deleted
+     *
+     * Generated from protobuf field <code>string VideoStatus = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setVideoStatus($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->VideoStatus = $var;
 
         return $this;
     }

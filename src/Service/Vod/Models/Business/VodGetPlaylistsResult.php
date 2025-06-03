@@ -21,6 +21,10 @@ class VodGetPlaylistsResult extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.InvalidPlaylist InvalidPlaylists = 2;</code>
      */
     private $InvalidPlaylists;
+    /**
+     * Generated from protobuf field <code>int32 Total = 3;</code>
+     */
+    protected $Total = 0;
 
     /**
      * Constructor.
@@ -30,6 +34,7 @@ class VodGetPlaylistsResult extends \Google\Protobuf\Internal\Message
      *
      *     @type \Byteplus\Service\Vod\Models\Business\VodPlaylistInfo[]|\Google\Protobuf\Internal\RepeatedField $Playlists
      *     @type \Byteplus\Service\Vod\Models\Business\InvalidPlaylist[]|\Google\Protobuf\Internal\RepeatedField $InvalidPlaylists
+     *     @type int $Total
      * }
      */
     public function __construct($data = NULL) {
@@ -77,6 +82,28 @@ class VodGetPlaylistsResult extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Byteplus\Service\Vod\Models\Business\InvalidPlaylist::class);
         $this->InvalidPlaylists = $arr;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 Total = 3;</code>
+     * @return int
+     */
+    public function getTotal()
+    {
+        return $this->Total;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 Total = 3;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setTotal($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->Total = $var;
 
         return $this;
     }
