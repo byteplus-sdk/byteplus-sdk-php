@@ -855,7 +855,49 @@ class Cdn extends V4Curl
           ]
         ],
 
+        'ReleaseTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'ReleaseTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
 
+        'CreateRuleEngineTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'CreateRuleEngineTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'UpdateRuleEngineTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'UpdateRuleEngineTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeRuleEngineTemplate' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeRuleEngineTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
 ];
 
     public function __construct()
@@ -1509,4 +1551,35 @@ class Cdn extends V4Curl
         return $this->requestWithRetry("UntagResources", ['json' => $data]);
     }
 
+    public function releaseTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("ReleaseTemplate", ['json' => $data]);
+    }
+
+    public function createRuleEngineTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("CreateRuleEngineTemplate", ['json' => $data]);
+    }
+
+    public function updateRuleEngineTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("UpdateRuleEngineTemplate", ['json' => $data]);
+    }
+
+    public function describeRuleEngineTemplate(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeRuleEngineTemplate", ['json' => $data]);
+    }
 }
