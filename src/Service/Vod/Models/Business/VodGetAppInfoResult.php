@@ -37,6 +37,12 @@ class VodGetAppInfoResult extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string AppCnName = 4;</code>
      */
     protected $AppCnName = '';
+    /**
+     * 项目名
+     *
+     * Generated from protobuf field <code>string Project = 5;</code>
+     */
+    protected $Project = '';
 
     /**
      * Constructor.
@@ -52,6 +58,8 @@ class VodGetAppInfoResult extends \Google\Protobuf\Internal\Message
      *           App英文名
      *     @type string $AppCnName
      *           App中文名
+     *     @type string $Project
+     *           项目名
      * }
      */
     public function __construct($data = NULL) {
@@ -159,6 +167,32 @@ class VodGetAppInfoResult extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->AppCnName = $var;
+
+        return $this;
+    }
+
+    /**
+     * 项目名
+     *
+     * Generated from protobuf field <code>string Project = 5;</code>
+     * @return string
+     */
+    public function getProject()
+    {
+        return $this->Project;
+    }
+
+    /**
+     * 项目名
+     *
+     * Generated from protobuf field <code>string Project = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setProject($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->Project = $var;
 
         return $this;
     }

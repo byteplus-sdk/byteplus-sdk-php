@@ -14,55 +14,59 @@ use Google\Protobuf\Internal\GPBUtil;
 class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 {
     /**
+     * Generated from protobuf field <code>string SpaceName = 1;</code>
+     */
+    protected $SpaceName = '';
+    /**
      * 播放列表Id
      *
-     * Generated from protobuf field <code>string Id = 1;</code>
+     * Generated from protobuf field <code>string Id = 2;</code>
      */
     protected $Id = '';
     /**
-     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 3;</code>
      */
     protected $Name = null;
     /**
      * 封装格式，支持 mp4、dash、hls、mp3、m4a、ogg, 默认mp4
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 4;</code>
      */
     protected $Format = null;
     /**
      * 编码格式，支持 mp3、aac、opus、H264、H265、H266, 视频默认H264
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 4;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 5;</code>
      */
     protected $Codec = null;
     /**
      * 视频流清晰度，支持：240p,360p,480p,540p,720p,1080p,2k,4k,od,oe.
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 6;</code>
      */
     protected $Definition = null;
     /**
      * 以,分隔，最多100个
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 6;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 7;</code>
      */
     protected $Vids = null;
     /**
      * 以秒为单位的时间戳
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 7;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 8;</code>
      */
     protected $StartTime = null;
     /**
      * 以秒为单位的时间戳，大于StartTime
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 8;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 9;</code>
      */
     protected $EndTime = null;
     /**
      * 0代表无限循环
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 9;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 10;</code>
      */
     protected $Cycles = null;
 
@@ -72,6 +76,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $SpaceName
      *     @type string $Id
      *           播放列表Id
      *     @type \Google\Protobuf\StringValue $Name
@@ -97,9 +102,31 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     * Generated from protobuf field <code>string SpaceName = 1;</code>
+     * @return string
+     */
+    public function getSpaceName()
+    {
+        return $this->SpaceName;
+    }
+
+    /**
+     * Generated from protobuf field <code>string SpaceName = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSpaceName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->SpaceName = $var;
+
+        return $this;
+    }
+
+    /**
      * 播放列表Id
      *
-     * Generated from protobuf field <code>string Id = 1;</code>
+     * Generated from protobuf field <code>string Id = 2;</code>
      * @return string
      */
     public function getId()
@@ -110,7 +137,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 播放列表Id
      *
-     * Generated from protobuf field <code>string Id = 1;</code>
+     * Generated from protobuf field <code>string Id = 2;</code>
      * @param string $var
      * @return $this
      */
@@ -123,7 +150,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 3;</code>
      * @return \Google\Protobuf\StringValue|null
      */
     public function getName()
@@ -144,7 +171,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * Returns the unboxed value from <code>getName()</code>
 
-     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 3;</code>
      * @return string|null
      */
     public function getNameUnwrapped()
@@ -153,7 +180,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 3;</code>
      * @param \Google\Protobuf\StringValue $var
      * @return $this
      */
@@ -168,7 +195,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * Sets the field by wrapping a primitive type in a Google\Protobuf\StringValue object.
 
-     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 2;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Name = 3;</code>
      * @param string|null $var
      * @return $this
      */
@@ -180,7 +207,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 封装格式，支持 mp4、dash、hls、mp3、m4a、ogg, 默认mp4
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 4;</code>
      * @return \Google\Protobuf\StringValue|null
      */
     public function getFormat()
@@ -203,7 +230,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 封装格式，支持 mp4、dash、hls、mp3、m4a、ogg, 默认mp4
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 4;</code>
      * @return string|null
      */
     public function getFormatUnwrapped()
@@ -214,7 +241,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 封装格式，支持 mp4、dash、hls、mp3、m4a、ogg, 默认mp4
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 4;</code>
      * @param \Google\Protobuf\StringValue $var
      * @return $this
      */
@@ -231,7 +258,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 封装格式，支持 mp4、dash、hls、mp3、m4a、ogg, 默认mp4
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Format = 4;</code>
      * @param string|null $var
      * @return $this
      */
@@ -243,7 +270,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 编码格式，支持 mp3、aac、opus、H264、H265、H266, 视频默认H264
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 4;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 5;</code>
      * @return \Google\Protobuf\StringValue|null
      */
     public function getCodec()
@@ -266,7 +293,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 编码格式，支持 mp3、aac、opus、H264、H265、H266, 视频默认H264
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 4;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 5;</code>
      * @return string|null
      */
     public function getCodecUnwrapped()
@@ -277,7 +304,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 编码格式，支持 mp3、aac、opus、H264、H265、H266, 视频默认H264
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 4;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 5;</code>
      * @param \Google\Protobuf\StringValue $var
      * @return $this
      */
@@ -294,7 +321,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 编码格式，支持 mp3、aac、opus、H264、H265、H266, 视频默认H264
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 4;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Codec = 5;</code>
      * @param string|null $var
      * @return $this
      */
@@ -306,7 +333,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 视频流清晰度，支持：240p,360p,480p,540p,720p,1080p,2k,4k,od,oe.
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 6;</code>
      * @return \Google\Protobuf\StringValue|null
      */
     public function getDefinition()
@@ -329,7 +356,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 视频流清晰度，支持：240p,360p,480p,540p,720p,1080p,2k,4k,od,oe.
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 6;</code>
      * @return string|null
      */
     public function getDefinitionUnwrapped()
@@ -340,7 +367,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 视频流清晰度，支持：240p,360p,480p,540p,720p,1080p,2k,4k,od,oe.
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 6;</code>
      * @param \Google\Protobuf\StringValue $var
      * @return $this
      */
@@ -357,7 +384,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 视频流清晰度，支持：240p,360p,480p,540p,720p,1080p,2k,4k,od,oe.
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 5;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Definition = 6;</code>
      * @param string|null $var
      * @return $this
      */
@@ -369,7 +396,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 以,分隔，最多100个
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 6;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 7;</code>
      * @return \Google\Protobuf\StringValue|null
      */
     public function getVids()
@@ -392,7 +419,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 以,分隔，最多100个
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 6;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 7;</code>
      * @return string|null
      */
     public function getVidsUnwrapped()
@@ -403,7 +430,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 以,分隔，最多100个
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 6;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 7;</code>
      * @param \Google\Protobuf\StringValue $var
      * @return $this
      */
@@ -420,7 +447,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 以,分隔，最多100个
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 6;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Vids = 7;</code>
      * @param string|null $var
      * @return $this
      */
@@ -432,7 +459,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 以秒为单位的时间戳
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 7;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 8;</code>
      * @return \Google\Protobuf\StringValue|null
      */
     public function getStartTime()
@@ -455,7 +482,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 以秒为单位的时间戳
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 7;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 8;</code>
      * @return string|null
      */
     public function getStartTimeUnwrapped()
@@ -466,7 +493,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 以秒为单位的时间戳
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 7;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 8;</code>
      * @param \Google\Protobuf\StringValue $var
      * @return $this
      */
@@ -483,7 +510,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 以秒为单位的时间戳
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 7;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue StartTime = 8;</code>
      * @param string|null $var
      * @return $this
      */
@@ -495,7 +522,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 以秒为单位的时间戳，大于StartTime
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 8;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 9;</code>
      * @return \Google\Protobuf\StringValue|null
      */
     public function getEndTime()
@@ -518,7 +545,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 以秒为单位的时间戳，大于StartTime
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 8;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 9;</code>
      * @return string|null
      */
     public function getEndTimeUnwrapped()
@@ -529,7 +556,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 以秒为单位的时间戳，大于StartTime
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 8;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 9;</code>
      * @param \Google\Protobuf\StringValue $var
      * @return $this
      */
@@ -546,7 +573,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 以秒为单位的时间戳，大于StartTime
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 8;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue EndTime = 9;</code>
      * @param string|null $var
      * @return $this
      */
@@ -558,7 +585,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 0代表无限循环
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 9;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 10;</code>
      * @return \Google\Protobuf\StringValue|null
      */
     public function getCycles()
@@ -581,7 +608,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 0代表无限循环
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 9;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 10;</code>
      * @return string|null
      */
     public function getCyclesUnwrapped()
@@ -592,7 +619,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
     /**
      * 0代表无限循环
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 9;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 10;</code>
      * @param \Google\Protobuf\StringValue $var
      * @return $this
      */
@@ -609,7 +636,7 @@ class VodUpdatePlaylistRequest extends \Google\Protobuf\Internal\Message
 
      * 0代表无限循环
      *
-     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 9;</code>
+     * Generated from protobuf field <code>.google.protobuf.StringValue Cycles = 10;</code>
      * @param string|null $var
      * @return $this
      */

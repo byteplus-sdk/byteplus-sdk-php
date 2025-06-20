@@ -17,10 +17,11 @@ class RequestVod
         \GPBMetadata\Google\Protobuf\Wrappers::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodWorkflow::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodUpload::initOnce();
+        \Byteplus\Service\Vod\Models\GPBMetadata\VodCommon::initOnce();
         $pool->internalAddGeneratedFile(
             '
-õm
-&byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto"™
+Ár
+&byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto&byteplus/vod/business/vod_common.proto"™
 VodGetAllPlayInfoRequest
 Vids (	
 Formats (	
@@ -307,10 +308,11 @@ $VodGetWorkflowExecutionStatusRequest
 Region (	
 UserName (	"-
 VodGetSpaceDetailRequest
-	SpaceName (	"4
+	SpaceName (	"I
 VodListSpaceRequest
 Offset (
-Limit ("?
+Limit (
+ProjectName (	"?
 VodUpdateSpaceRequest
 	SpaceName (	
 Description (	"^
@@ -386,7 +388,13 @@ DomainName (	
 Domains (	
 StartTimestamp (
 EndTimestamp (
-SortType (	"œ
+SortType (	"{
+VodListCdnTopAccessRequest
+Domains (	
+StartTimestamp (
+EndTimestamp (
+SortType (	
+Item (	"œ
 (VodDescribeVodDomainBandwidthDataRequest
 
 DomainList (	
@@ -626,36 +634,42 @@ RegionList (	"{
 Vids (	"B
 VodQueryMediaBlockStatusRequest
 	SpaceName (	
-Vids (	"
-VodCreatePlaylistRequest
-Name (	
-Format (	
-Codec (	
+Vids (	"°
+VodCreatePlaylistRequest
+	SpaceName (	
+Name (	
+Format (	
+Codec (	
 
-Definition (	
-Vids (	
-	StartTime (	
-EndTime (	
-Cycles (	"D
-VodGetPlaylistsRequest
-Ids (	
-Limit (
-Offset ("™
-VodUpdatePlaylistRequest
+Definition (	
+Vids (	
+	StartTime (	
+EndTime (	
+Cycles	 (	"e
+VodGetPlaylistsRequest
+	SpaceName (	
+Ids (	
+Name (	
+Limit (
+Offset ("¬
+VodUpdatePlaylistRequest
+	SpaceName (	
 
-Id (	*
-Name (2.google.protobuf.StringValue,
-Format (2.google.protobuf.StringValue+
-Codec (2.google.protobuf.StringValue0
+Id (	*
+Name (2.google.protobuf.StringValue,
+Format (2.google.protobuf.StringValue+
+Codec (2.google.protobuf.StringValue0
 
-Definition (2.google.protobuf.StringValue*
-Vids (2.google.protobuf.StringValue/
-	StartTime (2.google.protobuf.StringValue-
-EndTime (2.google.protobuf.StringValue,
-Cycles	 (2.google.protobuf.StringValue"&
-VodDeletePlaylistRequest
+Definition (2.google.protobuf.StringValue*
+Vids (2.google.protobuf.StringValue/
+	StartTime (2.google.protobuf.StringValue-
+EndTime	 (2.google.protobuf.StringValue,
+Cycles
+ (2.google.protobuf.StringValue"9
+VodDeletePlaylistRequest
+	SpaceName (	
 
-Id (	"B
+Id (	"B
 VodSetIntertrustApiKeyRequest
 	SpaceName (	
 ApiKey (	"2
@@ -683,7 +697,20 @@ PkPassword (	
 VodGetDrmLicenseRequest
 Vid (	
 Kid (	
-ThirdPartyDrmType (	BÔ
+ThirdPartyDrmType (	"
+VodSetMirrorSrcRuleRequest
+	SpaceName (	(
+Id (2.google.protobuf.StringValueB
+MirrorSrcRule (2+.Byteplus.Vod.Models.Business.MirrorSrcRule">
+VodDeleteMirrorSrcRuleRequest
+	SpaceName (	
+
+Id (	"<
+VodListMirrorSrcRuleRequest
+	SpaceName (	
+
+Id (	"
+VodListProjectsRequestBÔ
 &com.byteplus.service.vod.model.requestB
 VodRequestPZFgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/request ØÊ#Byteplus\\Service\\Vod\\Models\\Requestâ\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);

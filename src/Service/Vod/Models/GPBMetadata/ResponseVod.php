@@ -21,6 +21,7 @@ class ResponseVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodWorkflow::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodEdit::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodSpace::initOnce();
+        \Byteplus\Service\Vod\Models\GPBMetadata\VodProject::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodCdn::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodCommon::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodSmartStrategy::initOnce();
@@ -28,8 +29,8 @@ class ResponseVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodMeasure::initOnce();
         $pool->internalAddGeneratedFile(
             '
-ø‹
-(byteplus/vod/response/response_vod.protoByteplus.Vod.Models.Response$byteplus/vod/business/vod_play.proto%byteplus/vod/business/vod_media.proto&byteplus/vod/business/vod_upload.proto(byteplus/vod/business/vod_workflow.proto$byteplus/vod/business/vod_edit.proto%byteplus/vod/business/vod_space.proto#byteplus/vod/business/vod_cdn.proto&byteplus/vod/business/vod_common.proto.byteplus/vod/business/vod_smart_strategy.proto+byteplus/vod/business/vod_apps_manage.proto\'byteplus/vod/business/vod_measure.proto"¦
+Ä’
+(byteplus/vod/response/response_vod.protoByteplus.Vod.Models.Response$byteplus/vod/business/vod_play.proto%byteplus/vod/business/vod_media.proto&byteplus/vod/business/vod_upload.proto(byteplus/vod/business/vod_workflow.proto$byteplus/vod/business/vod_edit.proto%byteplus/vod/business/vod_space.proto\'byteplus/vod/business/vod_project.proto#byteplus/vod/business/vod_cdn.proto&byteplus/vod/business/vod_common.proto.byteplus/vod/business/vod_smart_strategy.proto+byteplus/vod/business/vod_apps_manage.proto\'byteplus/vod/business/vod_measure.proto"¦
 VodGetAllPlayInfoResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataB
 Result (22.Byteplus.Vod.Models.Business.VodAllPlayInfoResult"Ÿ
@@ -198,7 +199,10 @@ $VodRemoveDomainFromSchedulerResponseE
 Result (27.Byteplus.Vod.Models.Business.VodListCdnAccessLogResult"³
 VodListCdnTopAccessUrlResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataJ
-Result (2:.Byteplus.Vod.Models.Business.VodListCdnTopAccessUrlResult"É
+Result (2:.Byteplus.Vod.Models.Business.VodListCdnTopAccessUrlResult"­
+VodListCdnTopAccessResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataG
+Result (27.Byteplus.Vod.Models.Business.VodListCdnTopAccessResult"É
 )VodDescribeVodDomainBandwidthDataResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataU
 Result (2E.Byteplus.Vod.Models.Business.VodDescribeVodDomainBandwidthDataResult"³
@@ -319,7 +323,18 @@ $DescribeVodRealtimeMediaDataResponseE
 Result (26.Byteplus.Vod.Models.Business.VodGetFairPlayCertResult"¤
 VodGetDrmLicenseResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataA
-Result (21.Byteplus.Vod.Models.Business.VodDrmLicenseResultBØ
+Result (21.Byteplus.Vod.Models.Business.VodDrmLicenseResult"­
+VodSetMirrorSrcRuleResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataG
+Result (27.Byteplus.Vod.Models.Business.VodSetMirrorSrcRuleResult"g
+VodDeleteMirrorSrcRuleResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"¯
+VodListMirrorSrcRuleResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataH
+Result (28.Byteplus.Vod.Models.Business.VodListMirrorSrcRuleResult"¥
+VodListProjectsResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataC
+Result (23.Byteplus.Vod.Models.Business.VodListProjectsResultBØ
 \'com.byteplus.service.vod.model.responseBVodResponsePZGgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/response ØÊ$Byteplus\\Service\\Vod\\Models\\Responseâ\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);
 

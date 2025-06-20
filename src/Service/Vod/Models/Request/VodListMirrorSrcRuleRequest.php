@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>Byteplus.Vod.Models.Request.VodDeletePlaylistRequest</code>
+ * Generated from protobuf message <code>Byteplus.Vod.Models.Request.VodListMirrorSrcRuleRequest</code>
  */
-class VodDeletePlaylistRequest extends \Google\Protobuf\Internal\Message
+class VodListMirrorSrcRuleRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string SpaceName = 1;</code>
