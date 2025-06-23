@@ -20,7 +20,7 @@ class RequestVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodCommon::initOnce();
         $pool->internalAddGeneratedFile(
             '
-¡r
+–s
 &byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto&byteplus/vod/business/vod_common.proto"ô
 VodGetAllPlayInfoRequest
 Vids (	
@@ -44,7 +44,7 @@ NeedThumbs	 (	
 
 UserAction (	
 Quality (	
-ForceExpire (	"˚
+ForceExpire (	"ù
 VodGetPlayInfoRequest
 Vid (	
 Format (	
@@ -68,7 +68,9 @@ NeedThumbs	 (	
 
 PlayConfig (	
 ForceExpire (	
-DashMode (	"g
+DashMode (	
+DrmKEK (	
+JSPlayer (	"g
 VodGetPrivateDrmPlayAuthRequest
 DrmType (	
 Vid (	
@@ -78,7 +80,9 @@ PlayConfig (	
 DrmAuthToken (	
 
 Ak (	
-Source (	"ò
+Source (	"5
+ VodCreateHlsDecryptionKeyRequest
+	SpaceName (	"ò
 +VodGetPlayInfoWithLiveTimeShiftSceneRequest
 	StoreUris (	
 	SpaceName (	
@@ -402,7 +406,7 @@ DomainList (	
 EndTime (	
 Aggregation (
 BandwidthType (	
-Area (	"ä
+Area (	"ú
 VodListCdnUsageDataRequest
 Domains (	
 Interval (	
@@ -418,11 +422,12 @@ NeedDetail (
  (	
 Protocol (	
 	IpVersion (	
-BillingRegion (	"V
+BillingRegion (	
+TimeZone (	"V
  VodListCdnUsageDataDetailRequest
 Domain (	
 	StartTime (
-EndTime ("§
+EndTime ("∂
 VodListCdnStatusDataRequest
 Domains (	
 Interval (	
@@ -431,13 +436,14 @@ NeedDetail (
 DataType (	
 Metric (	
 
-NeedDetail ("W
+NeedDetail (
+TimeZone (	"W
 !VodListCdnStatusDataDetailRequest
 Domain (	
 	StartTime (
 EndTime ("\'
 VodDescribeIPInfoRequest
-Ips (	"ê
+Ips (	"¢
 VodListCdnPvDataRequest
 Domains (	
 Interval (	
@@ -445,7 +451,8 @@ NeedDetail ("W
 EndTimestamp (
 DataType (	
 
-NeedDetail ("ì
+NeedDetail (
+TimeZone (	"ì
 VodListCdnHitrateDataRequest
 Domains (	
 Interval (	
