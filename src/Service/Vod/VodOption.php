@@ -46,6 +46,16 @@ class VodOption
                 ],
             ]
         ],
+        'CreateHlsDecryptionKey' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'CreateHlsDecryptionKey',
+                    'Version' => '2027-01-01',
+                ],
+            ]
+        ],
         'GetPlayInfoWithLiveTimeShiftScene' => [
             'url' => '/',
             'method' => 'get',
@@ -631,6 +641,16 @@ class VodOption
                 'query' => [
                     'Action' => 'GetHlsDecryptionKey',
                     'Version' => '2023-01-01',
+                ],
+            ]
+        ],
+        'CreateHlsDecryptionKey' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'CreateHlsDecryptionKey',
+                    'Version' => '2027-01-01',
                 ],
             ]
         ],
