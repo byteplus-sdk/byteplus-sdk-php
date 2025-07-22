@@ -52,7 +52,7 @@ class VodOption
             'config' => [
                 'query' => [
                     'Action' => 'CreateHlsDecryptionKey',
-                    'Version' => '2027-01-01',
+                    'Version' => '2023-07-01',
                 ],
             ]
         ],
@@ -650,7 +650,7 @@ class VodOption
             'config' => [
                 'query' => [
                     'Action' => 'CreateHlsDecryptionKey',
-                    'Version' => '2027-01-01',
+                    'Version' => '2023-07-01',
                 ],
             ]
         ],
