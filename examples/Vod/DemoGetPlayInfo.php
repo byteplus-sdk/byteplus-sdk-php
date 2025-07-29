@@ -26,6 +26,10 @@ $request->setPlayScene("your PlayScene");
 $request->setDrmExpireTimestamp("your DrmExpireTimestamp");
 $request->setQuality("your Quality");
 $request->setPlayConfig("your PlayConfig");
+$request->setForceExpire("your ForceExpire");
+$request->setDashMode("your DashMode");
+$request->setDrmKEK("your DrmKEK");
+$request->setJSPlayer("your JSPlayer");
 
 
 $response = new Byteplus\Service\Vod\Models\Response\VodGetPlayInfoResponse();

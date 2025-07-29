@@ -20,6 +20,8 @@ use Byteplus\Service\Vod\Models\Request\VodGetPlayInfoRequest;
 use Byteplus\Service\Vod\Models\Response\VodGetPlayInfoResponse;
 use Byteplus\Service\Vod\Models\Request\VodGetPrivateDrmPlayAuthRequest;
 use Byteplus\Service\Vod\Models\Response\VodGetPrivateDrmPlayAuthResponse;
+use Byteplus\Service\Vod\Models\Request\VodCreateHlsDecryptionKeyRequest;
+use Byteplus\Service\Vod\Models\Response\VodCreateHlsDecryptionKeyResponse;
 use Byteplus\Service\Vod\Models\Request\VodGetPlayInfoWithLiveTimeShiftSceneRequest;
 use Byteplus\Service\Vod\Models\Response\VodGetPlayInfoWithLiveTimeShiftSceneResponse;
 use Byteplus\Service\Vod\Models\Request\VodUrlUploadRequest;
@@ -164,13 +166,7 @@ class Vod extends V4Curl
     public function __construct()
     {
         $this->region = func_get_arg(0);
-        if ($this->region == "ap-singapore-1") {
-            $this->apiList = VodOption::$apiList;
-        }
-        if ($this->region == "ap-southeast-1") {
-            $this->apiList = VodOption::$apiListApSoutheast1;
-        }
-
+        $this->apiList = VodOption::$apiList;
         parent::__construct($this->region);
     }
 
@@ -361,6 +357,39 @@ class Vod extends V4Curl
             echo $response->getBody()->getContents(), "\n";
         }
         $respData = new VodGetPrivateDrmPlayAuthResponse();
+        try {
+            $respData = VodUtils::parseResponseData($response, $respData);
+        } catch (Exception $e) {
+            throw $e;
+        } catch (Throwable $t) {
+            throw $t;
+        }
+        return $respData;
+    }
+
+    /**
+     * CreateHlsDecryptionKey.
+     *
+     * @param $req VodCreateHlsDecryptionKeyRequest
+     * @return VodCreateHlsDecryptionKeyResponse
+     * @throws Exception the exception
+     * @throws Throwable the exception
+     */
+    public function createHlsDecryptionKey (VodCreateHlsDecryptionKeyRequest $req): VodCreateHlsDecryptionKeyResponse
+    {
+        try {
+            $query = VodUtils::formatRequestParam($req);
+            $response = $this->request('CreateHlsDecryptionKey', ['query' => $query]);
+        } catch (Exception $e) {
+            throw $e;
+        } catch (Throwable $t) {
+            throw $t;
+        }
+        if ($response->getStatusCode() != 200) {
+            echo $response->getStatusCode(), "\n";
+            echo $response->getBody()->getContents(), "\n";
+        }
+        $respData = new VodCreateHlsDecryptionKeyResponse();
         try {
             $respData = VodUtils::parseResponseData($response, $respData);
         } catch (Exception $e) {

@@ -130,6 +130,18 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string DashMode = 19;</code>
      */
     protected $DashMode = '';
+    /**
+     *客户端生成 私有Drm加密 用于加密密钥明文,unionInfo,DrmExpireTImestamp
+     *
+     * Generated from protobuf field <code>string DrmKEK = 20;</code>
+     */
+    protected $DrmKEK = '';
+    /**
+     *用于标识请求来自于web播放器 "1"表示web播放器
+     *
+     * Generated from protobuf field <code>string JSPlayer = 21;</code>
+     */
+    protected $JSPlayer = '';
 
     /**
      * Constructor.
@@ -178,6 +190,10 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
      *          强行指定本次请求的时间戳防盗链 单位秒
      *     @type string $DashMode
      *          format=dash时,指定下发video model还是mpd文件
+     *     @type string $DrmKEK
+     *          客户端生成 私有Drm加密 用于加密密钥明文,unionInfo,DrmExpireTImestamp
+     *     @type string $JSPlayer
+     *          用于标识请求来自于web播放器 "1"表示web播放器
      * }
      */
     public function __construct($data = NULL) {
@@ -681,6 +697,58 @@ class VodGetPlayInfoRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->DashMode = $var;
+
+        return $this;
+    }
+
+    /**
+     *客户端生成 私有Drm加密 用于加密密钥明文,unionInfo,DrmExpireTImestamp
+     *
+     * Generated from protobuf field <code>string DrmKEK = 20;</code>
+     * @return string
+     */
+    public function getDrmKEK()
+    {
+        return $this->DrmKEK;
+    }
+
+    /**
+     *客户端生成 私有Drm加密 用于加密密钥明文,unionInfo,DrmExpireTImestamp
+     *
+     * Generated from protobuf field <code>string DrmKEK = 20;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setDrmKEK($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->DrmKEK = $var;
+
+        return $this;
+    }
+
+    /**
+     *用于标识请求来自于web播放器 "1"表示web播放器
+     *
+     * Generated from protobuf field <code>string JSPlayer = 21;</code>
+     * @return string
+     */
+    public function getJSPlayer()
+    {
+        return $this->JSPlayer;
+    }
+
+    /**
+     *用于标识请求来自于web播放器 "1"表示web播放器
+     *
+     * Generated from protobuf field <code>string JSPlayer = 21;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setJSPlayer($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->JSPlayer = $var;
 
         return $this;
     }

@@ -29,7 +29,7 @@ class ResponseVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodMeasure::initOnce();
         $pool->internalAddGeneratedFile(
             '
-Ä’
+€”
 (byteplus/vod/response/response_vod.protoByteplus.Vod.Models.Response$byteplus/vod/business/vod_play.proto%byteplus/vod/business/vod_media.proto&byteplus/vod/business/vod_upload.proto(byteplus/vod/business/vod_workflow.proto$byteplus/vod/business/vod_edit.proto%byteplus/vod/business/vod_space.proto\'byteplus/vod/business/vod_project.proto#byteplus/vod/business/vod_cdn.proto&byteplus/vod/business/vod_common.proto.byteplus/vod/business/vod_smart_strategy.proto+byteplus/vod/business/vod_apps_manage.proto\'byteplus/vod/business/vod_measure.proto"¦
 VodGetAllPlayInfoResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataB
@@ -45,7 +45,10 @@ class ResponseVod
 Result (2<.Byteplus.Vod.Models.Business.VodGetPrivateDrmPlayAuthResult"³
 VodGetHlsDecryptionKeyResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataJ
-Result (2:.Byteplus.Vod.Models.Business.VodGetHlsDecryptionKeyResult"Ï
+Result (2:.Byteplus.Vod.Models.Business.VodGetHlsDecryptionKeyResult"¹
+!VodCreateHlsDecryptionKeyResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataM
+Result (2=.Byteplus.Vod.Models.Business.VodCreateHlsDecryptionKeyResult"Ï
 ,VodGetPlayInfoWithLiveTimeShiftSceneResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataX
 Result (2H.Byteplus.Vod.Models.Business.VodGetPlayInfoWithLiveTimeShiftSceneResult"œ
