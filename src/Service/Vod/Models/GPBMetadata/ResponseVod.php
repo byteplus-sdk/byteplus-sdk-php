@@ -27,10 +27,11 @@ class ResponseVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodSmartStrategy::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodAppsManage::initOnce();
         \Byteplus\Service\Vod\Models\GPBMetadata\VodMeasure::initOnce();
+        \Byteplus\Service\Vod\Models\GPBMetadata\VodQualityPlatform::initOnce();
         $pool->internalAddGeneratedFile(
             '
-€”
-(byteplus/vod/response/response_vod.protoByteplus.Vod.Models.Response$byteplus/vod/business/vod_play.proto%byteplus/vod/business/vod_media.proto&byteplus/vod/business/vod_upload.proto(byteplus/vod/business/vod_workflow.proto$byteplus/vod/business/vod_edit.proto%byteplus/vod/business/vod_space.proto\'byteplus/vod/business/vod_project.proto#byteplus/vod/business/vod_cdn.proto&byteplus/vod/business/vod_common.proto.byteplus/vod/business/vod_smart_strategy.proto+byteplus/vod/business/vod_apps_manage.proto\'byteplus/vod/business/vod_measure.proto"¦
+‚š
+(byteplus/vod/response/response_vod.protoByteplus.Vod.Models.Response$byteplus/vod/business/vod_play.proto%byteplus/vod/business/vod_media.proto&byteplus/vod/business/vod_upload.proto(byteplus/vod/business/vod_workflow.proto$byteplus/vod/business/vod_edit.proto%byteplus/vod/business/vod_space.proto\'byteplus/vod/business/vod_project.proto#byteplus/vod/business/vod_cdn.proto&byteplus/vod/business/vod_common.proto.byteplus/vod/business/vod_smart_strategy.proto+byteplus/vod/business/vod_apps_manage.proto\'byteplus/vod/business/vod_measure.proto0byteplus/vod/business/vod_quality_platform.proto"¦
 VodGetAllPlayInfoResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataB
 Result (22.Byteplus.Vod.Models.Business.VodAllPlayInfoResult"Ÿ
@@ -66,7 +67,10 @@ class ResponseVod
 Result (26.Byteplus.Vod.Models.Business.VodApplyUploadInfoResult"­
 VodCommitUploadInfoResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataG
-Result (27.Byteplus.Vod.Models.Business.VodCommitUploadInfoResult"¥
+Result (27.Byteplus.Vod.Models.Business.VodCommitUploadInfoResult"Å
+\'VodListFileMetaInfosByFileNamesResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataS
+Result (2C.Byteplus.Vod.Models.Business.VodListFileMetaInfosByFileNamesResult"¥
 VodGetMediaInfosResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataB
 Result (22.Byteplus.Vod.Models.Business.VodGetMediaInfosData"c
@@ -85,7 +89,10 @@ class ResponseVod
 Result (20.Byteplus.Vod.Models.Business.VodDeleteMediaData"«
 VodDeleteTranscodesResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataE
-Result (25.Byteplus.Vod.Models.Business.VodDeleteTranscodesData"£
+Result (25.Byteplus.Vod.Models.Business.VodDeleteTranscodesData"¯
+VodDeleteMediaTosFileResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataG
+Result (27.Byteplus.Vod.Models.Business.VodDeleteMediaTosFileData"£
 VodGetMediaListResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataA
 Result (21.Byteplus.Vod.Models.Business.VodGetMediaListData"±
@@ -130,7 +137,10 @@ $VodDeleteVideoClassificationResponseE
 Result (2-.Byteplus.Vod.Models.Business.VodSnapshotData"£
 VodGetFileListResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataB
-Result (22.Byteplus.Vod.Models.Business.VodGetMediaInfosData"h
+Result (22.Byteplus.Vod.Models.Business.VodGetMediaInfosData"£
+VodGetFileInfosResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataA
+Result (21.Byteplus.Vod.Models.Business.VodGetFileInfosData"h
 VodExtractMediaMetaTaskResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadata"§
 VodStartWorkflowResponseE
@@ -337,7 +347,10 @@ $DescribeVodRealtimeMediaDataResponseE
 Result (28.Byteplus.Vod.Models.Business.VodListMirrorSrcRuleResult"¥
 VodListProjectsResponseE
 ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataC
-Result (23.Byteplus.Vod.Models.Business.VodListProjectsResultBØ
+Result (23.Byteplus.Vod.Models.Business.VodListProjectsResult"­
+GetVodMediaPlayDataResponseE
+ResponseMetadata (2+.Byteplus.Base.Models.Base.ResponseMetadataG
+Result (27.Byteplus.Vod.Models.Business.GetVodMediaPlayDataResultBØ
 \'com.byteplus.service.vod.model.responseBVodResponsePZGgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/response ØÊ$Byteplus\\Service\\Vod\\Models\\Responseâ\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);
 
