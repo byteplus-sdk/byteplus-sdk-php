@@ -253,6 +253,36 @@ class VodOption
                 ],
             ]
         ],
+        'GetFileInfos' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'GetFileInfos',
+                    'Version' => '2023-07-01',
+                ],
+            ]
+        ],
+        'DeleteMediaTosFile' => [
+            'url' => '/',
+            'method' => 'post',
+            'config' => [
+                'query' => [
+                    'Action' => 'DeleteMediaTosFile',
+                    'Version' => '2023-07-01',
+                ],
+            ]
+        ],
+        'ListFileMetaInfosByFileNames' => [
+            'url' => '/',
+            'method' => 'get',
+            'config' => [
+                'query' => [
+                    'Action' => 'ListFileMetaInfosByFileNames',
+                    'Version' => '2023-07-01',
+                ],
+            ]
+        ],
         // **********************************************************************
         // 转码
         // **********************************************************************
