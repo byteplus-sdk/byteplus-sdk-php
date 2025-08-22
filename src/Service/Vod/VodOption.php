@@ -275,7 +275,7 @@ class VodOption
         ],
         'ListFileMetaInfosByFileNames' => [
             'url' => '/',
-            'method' => 'get',
+            'method' => 'post',
             'config' => [
                 'query' => [
                     'Action' => 'ListFileMetaInfosByFileNames',
