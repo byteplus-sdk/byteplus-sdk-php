@@ -172,12 +172,7 @@ class Vod extends V4Curl
     public function __construct()
     {
         $this->region = func_get_arg(0);
-        if ($this->region == "ap-singapore-1") {
-            $this->apiList = VodOption::$apiList;
-        }
-        if ($this->region == "ap-southeast-1") {
-            $this->apiList = VodOption::$apiListApSoutheast1;
-        }
+        $this->apiList = VodOption::$apiList;
     }
 
     /**
