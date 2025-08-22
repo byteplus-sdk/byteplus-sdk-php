@@ -9,7 +9,7 @@ $client->setAccessKey('your ak');
 $client->setSecretKey('your sk');
 
 $request = new Byteplus\Service\Vod\Models\Request\VodDeleteMediaTosFileRequest();
-$request->setFileNames([new Byteplus\Service\Vod\Models\Business\FileNames()]);
+$request->setFileNames(["your FileNames"]);
 $request->setSpaceName("your SpaceName");
 
 
