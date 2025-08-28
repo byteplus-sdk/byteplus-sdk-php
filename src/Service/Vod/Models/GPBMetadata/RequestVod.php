@@ -20,7 +20,7 @@ class RequestVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodCommon::initOnce();
         $pool->internalAddGeneratedFile(
             '
-Ðs
+¸y
 &byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto&byteplus/vod/business/vod_common.proto"™
 VodGetAllPlayInfoRequest
 Vids (	
@@ -129,7 +129,12 @@ SessionKey (	
 VodUploadSource (	"=
 VodUrlUploadJsonRequest
 	SpaceName (	
-URLSets (	".
+URLSets (	"i
+&VodListFileMetaInfosByFileNamesRequest
+	SpaceName (	
+FileNameEncodeds (	
+
+BucketName (	".
 VodGetRecommendedPosterRequest
 Vids (	"A
 "VodUpdateMediaPublishStatusRequest
@@ -155,7 +160,10 @@ SessionKey (	
 VodDeleteTranscodesRequest
 Vid (	
 FileIds (	
-CallbackArgs (	"û
+CallbackArgs (	"D
+VodDeleteMediaTosFileRequest
+	FileNames (	
+	SpaceName (	"û
 VodGetMediaListRequest
 	SpaceName (	
 Vid (	
@@ -250,7 +258,15 @@ SessionKey (	
 	SpaceName (	
 Prefix (	
 Limit (	
-Starter (	"-
+Starter (	"­
+VodGetFileInfosRequest
+	SpaceName (	
+EncodedFileNames (	
+
+BucketName (	
+NeedDownloadUrl (
+DownloadUrlNetworkType (	
+DownloadUrlExpire ("-
 VodExtractMediaMetaTaskRequest
 Vid (	"Š
 VodStartWorkflowRequest
@@ -717,7 +733,24 @@ PkPassword (	
 	SpaceName (	
 
 Id (	"
-VodListProjectsRequestBÔ
+VodListProjectsRequest"ã
+GetVodMediaPlayDataRequest
+AppID (	
+Platform (	
+	StartTime (	
+EndTime (	
+Granularity (
+Metrics (	
+
+Dimensions (	F
+Filter (26.Byteplus.Vod.Models.Request.GetVodMediaPlayDataFilter"ž
+GetVodMediaPlayDataFilter
+Logic (	G
+Filters (26.Byteplus.Vod.Models.Request.GetVodMediaPlayDataFilter
+Field (	
+
+Op (	
+Values (	BÔ
 &com.byteplus.service.vod.model.requestB
 VodRequestPZFgithub.com/byteplus-sdk/byteplus-sdk-golang/service/vod/models/request ØÊ#Byteplus\\Service\\Vod\\Models\\Requestâ\'Byteplus\\Service\\Vod\\Models\\GPBMetadatabproto3'
         , true);

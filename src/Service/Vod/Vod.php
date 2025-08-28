@@ -32,6 +32,8 @@ use Byteplus\Service\Vod\Models\Request\VodApplyUploadInfoRequest;
 use Byteplus\Service\Vod\Models\Response\VodApplyUploadInfoResponse;
 use Byteplus\Service\Vod\Models\Request\VodCommitUploadInfoRequest;
 use Byteplus\Service\Vod\Models\Response\VodCommitUploadInfoResponse;
+use Byteplus\Service\Vod\Models\Request\VodListFileMetaInfosByFileNamesRequest;
+use Byteplus\Service\Vod\Models\Response\VodListFileMetaInfosByFileNamesResponse;
 use Byteplus\Service\Vod\Models\Request\VodUpdateMediaInfoRequest;
 use Byteplus\Service\Vod\Models\Response\VodUpdateMediaInfoResponse;
 use Byteplus\Service\Vod\Models\Request\VodUpdateMediaPublishStatusRequest;
@@ -46,6 +48,10 @@ use Byteplus\Service\Vod\Models\Request\VodDeleteMediaRequest;
 use Byteplus\Service\Vod\Models\Response\VodDeleteMediaResponse;
 use Byteplus\Service\Vod\Models\Request\VodDeleteTranscodesRequest;
 use Byteplus\Service\Vod\Models\Response\VodDeleteTranscodesResponse;
+use Byteplus\Service\Vod\Models\Request\VodGetFileInfosRequest;
+use Byteplus\Service\Vod\Models\Response\VodGetFileInfosResponse;
+use Byteplus\Service\Vod\Models\Request\VodDeleteMediaTosFileRequest;
+use Byteplus\Service\Vod\Models\Response\VodDeleteMediaTosFileResponse;
 use Byteplus\Service\Vod\Models\Request\VodGetMediaListRequest;
 use Byteplus\Service\Vod\Models\Response\VodGetMediaListResponse;
 use Byteplus\Service\Vod\Models\Request\VodGetSubtitleInfoListRequest;
@@ -566,6 +572,39 @@ class Vod extends V4Curl
     }
 
     /**
+     * ListFileMetaInfosByFileNames.
+     *
+     * @param $req VodListFileMetaInfosByFileNamesRequest
+     * @return VodListFileMetaInfosByFileNamesResponse
+     * @throws Exception the exception
+     * @throws Throwable the exception
+     */
+    public function listFileMetaInfosByFileNames (VodListFileMetaInfosByFileNamesRequest $req): VodListFileMetaInfosByFileNamesResponse
+    {
+        try {
+            $query = VodUtils::formatRequestParam($req);
+            $response = $this->request('ListFileMetaInfosByFileNames', ['form_params' => $query]);
+        } catch (Exception $e) {
+            throw $e;
+        } catch (Throwable $t) {
+            throw $t;
+        }
+        if ($response->getStatusCode() != 200) {
+            echo $response->getStatusCode(), "\n";
+            echo $response->getBody()->getContents(), "\n";
+        }
+        $respData = new VodListFileMetaInfosByFileNamesResponse();
+        try {
+            $respData = VodUtils::parseResponseData($response, $respData);
+        } catch (Exception $e) {
+            throw $e;
+        } catch (Throwable $t) {
+            throw $t;
+        }
+        return $respData;
+    }
+
+    /**
      * UpdateMediaInfo.
      *
      * @param $req VodUpdateMediaInfoRequest
@@ -786,6 +825,72 @@ class Vod extends V4Curl
             echo $response->getBody()->getContents(), "\n";
         }
         $respData = new VodDeleteTranscodesResponse();
+        try {
+            $respData = VodUtils::parseResponseData($response, $respData);
+        } catch (Exception $e) {
+            throw $e;
+        } catch (Throwable $t) {
+            throw $t;
+        }
+        return $respData;
+    }
+
+    /**
+     * GetFileInfos.
+     *
+     * @param $req VodGetFileInfosRequest
+     * @return VodGetFileInfosResponse
+     * @throws Exception the exception
+     * @throws Throwable the exception
+     */
+    public function getFileInfos (VodGetFileInfosRequest $req): VodGetFileInfosResponse
+    {
+        try {
+            $query = VodUtils::formatRequestParam($req);
+            $response = $this->request('GetFileInfos', ['query' => $query]);
+        } catch (Exception $e) {
+            throw $e;
+        } catch (Throwable $t) {
+            throw $t;
+        }
+        if ($response->getStatusCode() != 200) {
+            echo $response->getStatusCode(), "\n";
+            echo $response->getBody()->getContents(), "\n";
+        }
+        $respData = new VodGetFileInfosResponse();
+        try {
+            $respData = VodUtils::parseResponseData($response, $respData);
+        } catch (Exception $e) {
+            throw $e;
+        } catch (Throwable $t) {
+            throw $t;
+        }
+        return $respData;
+    }
+
+    /**
+     * DeleteMediaTosFile.
+     *
+     * @param $req VodDeleteMediaTosFileRequest
+     * @return VodDeleteMediaTosFileResponse
+     * @throws Exception the exception
+     * @throws Throwable the exception
+     */
+    public function deleteMediaTosFile (VodDeleteMediaTosFileRequest $req): VodDeleteMediaTosFileResponse
+    {
+        try {
+            $query = VodUtils::formatRequestParam($req);
+            $response = $this->request('DeleteMediaTosFile', ['form_params' => $query]);
+        } catch (Exception $e) {
+            throw $e;
+        } catch (Throwable $t) {
+            throw $t;
+        }
+        if ($response->getStatusCode() != 200) {
+            echo $response->getStatusCode(), "\n";
+            echo $response->getBody()->getContents(), "\n";
+        }
+        $respData = new VodDeleteMediaTosFileResponse();
         try {
             $respData = VodUtils::parseResponseData($response, $respData);
         } catch (Exception $e) {
