@@ -19,6 +19,8 @@ abstract class V4Curl extends Singleton
     protected $ak = '';
     protected $sk = '';
     protected $st = '';
+    protected $version = '';
+    protected $apiList = [];
 
 
 
