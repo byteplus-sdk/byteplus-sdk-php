@@ -371,6 +371,17 @@ class Cdn extends V4Curl
           ]
         ],
 
+        'ListResourceTags' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'ListResourceTags',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
         'AddCdnCertificate' => [
           'url' => '/',
           'method' => 'post',
@@ -586,6 +597,50 @@ class Cdn extends V4Curl
           'config' => [
               'query' => [
                   'Action' => 'CreateServiceTemplate',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'CreateTemplateVersion' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'CreateTemplateVersion',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeTemplateReleaseVersions' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeTemplateReleaseVersions',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeDomainShared' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeDomainShared',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
+        'DescribeCdnIP' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'DescribeCdnIP',
                   'Version' => '2021-03-01',
               ],
           ]
@@ -833,6 +888,17 @@ class Cdn extends V4Curl
           ]
         ],
 
+        'AddSharedConfig' => [
+          'url' => '/',
+          'method' => 'post',
+          'config' => [
+              'query' => [
+                  'Action' => 'AddSharedConfig',
+                  'Version' => '2021-03-01',
+              ],
+          ]
+        ],
+
         'TagResources' => [
           'url' => '/',
           'method' => 'post',
@@ -898,6 +964,8 @@ class Cdn extends V4Curl
               ],
           ]
         ],
+
+
 ];
 
     public function __construct()
@@ -1199,6 +1267,14 @@ class Cdn extends V4Curl
         return $this->requestWithRetry("DescribeCdnUpperIp", ['json' => $data]);
     }
 
+    public function listResourceTags(): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("ListResourceTags", ['json' => $data]);
+    }
+
     public function addCdnCertificate(array $data = []): string
     {
         if (empty($data)) {
@@ -1357,6 +1433,38 @@ class Cdn extends V4Curl
             $data = new \ArrayObject();
         }
         return $this->requestWithRetry("CreateServiceTemplate", ['json' => $data]);
+    }
+
+    public function createTemplateVersion(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("CreateTemplateVersion", ['json' => $data]);
+    }
+
+    public function describeTemplateReleaseVersions(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeTemplateReleaseVersions", ['json' => $data]);
+    }
+
+    public function describeDomainShared(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeDomainShared", ['json' => $data]);
+    }
+
+    public function describeCdnIP(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("DescribeCdnIP", ['json' => $data]);
     }
 
     public function describeDistrictData(array $data = []): string
@@ -1535,6 +1643,14 @@ class Cdn extends V4Curl
         return $this->requestWithRetry("UpdateSharedConfig", ['json' => $data]);
     }
 
+    public function addSharedConfig(array $data = []): string
+    {
+        if (empty($data)) {
+            $data = new \ArrayObject();
+        }
+        return $this->requestWithRetry("AddSharedConfig", ['json' => $data]);
+    }
+
     public function tagResources(array $data = []): string
     {
         if (empty($data)) {
@@ -1582,4 +1698,5 @@ class Cdn extends V4Curl
         }
         return $this->requestWithRetry("DescribeRuleEngineTemplate", ['json' => $data]);
     }
+
 }
