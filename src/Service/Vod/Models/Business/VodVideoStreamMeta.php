@@ -55,6 +55,10 @@ class VodVideoStreamMeta extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>float Fps = 7;</code>
      */
     protected $Fps = 0.0;
+    /**
+     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.SubStreamInfo SubStreamInfo = 8;</code>
+     */
+    private $SubStreamInfo;
 
     /**
      * Constructor.
@@ -76,6 +80,7 @@ class VodVideoStreamMeta extends \Google\Protobuf\Internal\Message
      *          视频码率(Kbps)
      *     @type float $Fps
      *          帧率
+     *     @type \Byteplus\Service\Vod\Models\Business\SubStreamInfo[]|\Google\Protobuf\Internal\RepeatedField $SubStreamInfo
      * }
      */
     public function __construct($data = NULL) {
@@ -261,6 +266,28 @@ class VodVideoStreamMeta extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->Fps = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.SubStreamInfo SubStreamInfo = 8;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getSubStreamInfo()
+    {
+        return $this->SubStreamInfo;
+    }
+
+    /**
+     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.SubStreamInfo SubStreamInfo = 8;</code>
+     * @param \Byteplus\Service\Vod\Models\Business\SubStreamInfo[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setSubStreamInfo($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Byteplus\Service\Vod\Models\Business\SubStreamInfo::class);
+        $this->SubStreamInfo = $arr;
 
         return $this;
     }
