@@ -128,7 +128,7 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
      */
     protected $Quality = '';
     /**
-     * 弹幕蒙版偏移量
+     *弹幕蒙版偏移量
      *
      * Generated from protobuf field <code>string BarrageMaskOffset = 20;</code>
      */
@@ -175,6 +175,10 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string BackupUrlExpire = 27;</code>
      */
     protected $BackupUrlExpire = '';
+    /**
+     * Generated from protobuf field <code>int32 Channels = 28;</code>
+     */
+    protected $Channels = 0;
 
     /**
      * Constructor.
@@ -221,7 +225,7 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
      *     @type string $Quality
      *          音频质量
      *     @type string $BarrageMaskOffset
-     *           弹幕蒙版偏移量
+     *          弹幕蒙版偏移量
      *     @type float $Duration
      *          时长
      *     @type string $KeyFrameAlignment
@@ -236,6 +240,7 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
      *           MainPlayUrl的过期时间
      *     @type string $BackupUrlExpire
      *           BackupPlayUrl的过期时间
+     *     @type int $Channels
      * }
      */
     public function __construct($data = NULL) {
@@ -738,7 +743,7 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 弹幕蒙版偏移量
+     *弹幕蒙版偏移量
      *
      * Generated from protobuf field <code>string BarrageMaskOffset = 20;</code>
      * @return string
@@ -749,7 +754,7 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 弹幕蒙版偏移量
+     *弹幕蒙版偏移量
      *
      * Generated from protobuf field <code>string BarrageMaskOffset = 20;</code>
      * @param string $var
@@ -961,6 +966,28 @@ class VodPlayInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->BackupUrlExpire = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 Channels = 28;</code>
+     * @return int
+     */
+    public function getChannels()
+    {
+        return $this->Channels;
+    }
+
+    /**
+     * Generated from protobuf field <code>int32 Channels = 28;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setChannels($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->Channels = $var;
 
         return $this;
     }
