@@ -14,32 +14,32 @@ use Google\Protobuf\Internal\GPBUtil;
 class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
 {
     /**
-     * 域名（当前仅支持一个域名) 
+     * 域名（当前仅支持一个域名)
      *
      * Generated from protobuf field <code>string Domains = 1;</code>
      */
     protected $Domains = '';
     /**
-     * 查询起始时间戳，单位：Unix秒级时间戳 
+     * 查询起始时间戳，单位：Unix秒级时间戳
      *
      * Generated from protobuf field <code>int32 StartTimestamp = 2;</code>
      */
     protected $StartTimestamp = 0;
     /**
-     * 查询结束时间戳，单位：Unix秒级时间戳 
+     * 查询结束时间戳，单位：Unix秒级时间戳
      *
      * Generated from protobuf field <code>int32 EndTimestamp = 3;</code>
      */
     protected $EndTimestamp = 0;
     /**
-     * 排序方式，默认值为pv。取值：flux - 流量, pv -访问量 
+     * 排序方式，默认值为pv。取值：flux - 流量, pv -访问量
      *
      * Generated from protobuf field <code>string SortType = 4;</code>
      */
     protected $SortType = '';
     /**
      * 指定一个统计字段，默认值为url。取值：url：表示请求 URL, referer：表示请求
-     * Referer 
+     * Referer
      *
      * Generated from protobuf field <code>string Item = 5;</code>
      */
@@ -52,16 +52,16 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $Domains
-     *           域名（当前仅支持一个域名) 
+     *           域名（当前仅支持一个域名)
      *     @type int $StartTimestamp
-     *           查询起始时间戳，单位：Unix秒级时间戳 
+     *           查询起始时间戳，单位：Unix秒级时间戳
      *     @type int $EndTimestamp
-     *           查询结束时间戳，单位：Unix秒级时间戳 
+     *           查询结束时间戳，单位：Unix秒级时间戳
      *     @type string $SortType
-     *           排序方式，默认值为pv。取值：flux - 流量, pv -访问量 
+     *           排序方式，默认值为pv。取值：flux - 流量, pv -访问量
      *     @type string $Item
      *           指定一个统计字段，默认值为url。取值：url：表示请求 URL, referer：表示请求
-     *           Referer 
+     *           Referer
      * }
      */
     public function __construct($data = NULL) {
@@ -70,7 +70,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 域名（当前仅支持一个域名) 
+     * 域名（当前仅支持一个域名)
      *
      * Generated from protobuf field <code>string Domains = 1;</code>
      * @return string
@@ -81,7 +81,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 域名（当前仅支持一个域名) 
+     * 域名（当前仅支持一个域名)
      *
      * Generated from protobuf field <code>string Domains = 1;</code>
      * @param string $var
@@ -96,7 +96,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 查询起始时间戳，单位：Unix秒级时间戳 
+     * 查询起始时间戳，单位：Unix秒级时间戳
      *
      * Generated from protobuf field <code>int32 StartTimestamp = 2;</code>
      * @return int
@@ -107,7 +107,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 查询起始时间戳，单位：Unix秒级时间戳 
+     * 查询起始时间戳，单位：Unix秒级时间戳
      *
      * Generated from protobuf field <code>int32 StartTimestamp = 2;</code>
      * @param int $var
@@ -122,7 +122,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 查询结束时间戳，单位：Unix秒级时间戳 
+     * 查询结束时间戳，单位：Unix秒级时间戳
      *
      * Generated from protobuf field <code>int32 EndTimestamp = 3;</code>
      * @return int
@@ -133,7 +133,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 查询结束时间戳，单位：Unix秒级时间戳 
+     * 查询结束时间戳，单位：Unix秒级时间戳
      *
      * Generated from protobuf field <code>int32 EndTimestamp = 3;</code>
      * @param int $var
@@ -148,7 +148,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 排序方式，默认值为pv。取值：flux - 流量, pv -访问量 
+     * 排序方式，默认值为pv。取值：flux - 流量, pv -访问量
      *
      * Generated from protobuf field <code>string SortType = 4;</code>
      * @return string
@@ -159,7 +159,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 排序方式，默认值为pv。取值：flux - 流量, pv -访问量 
+     * 排序方式，默认值为pv。取值：flux - 流量, pv -访问量
      *
      * Generated from protobuf field <code>string SortType = 4;</code>
      * @param string $var
@@ -175,7 +175,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * 指定一个统计字段，默认值为url。取值：url：表示请求 URL, referer：表示请求
-     * Referer 
+     * Referer
      *
      * Generated from protobuf field <code>string Item = 5;</code>
      * @return string
@@ -187,7 +187,7 @@ class VodListCdnTopAccessRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * 指定一个统计字段，默认值为url。取值：url：表示请求 URL, referer：表示请求
-     * Referer 
+     * Referer
      *
      * Generated from protobuf field <code>string Item = 5;</code>
      * @param string $var
