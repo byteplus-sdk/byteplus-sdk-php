@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>Byteplus.Vod.Models.Request.VodCreateDomainV2Request</code>
+ * Generated from protobuf message <code>Byteplus.Vod.Models.Request.UpdateDomainOriginInfoV2Request</code>
  */
-class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
+class UpdateDomainOriginInfoV2Request extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>string SpaceName = 1;</code>
@@ -22,51 +22,33 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
      */
     protected $DomainType = '';
     /**
-     * 域名
-     *
      * Generated from protobuf field <code>string Domain = 3;</code>
      */
     protected $Domain = '';
     /**
-     * Generated from protobuf field <code>int32 SourceStationType = 5;</code>
-     */
-    protected $SourceStationType = 0;
-    /**
      *源站地址类型
      *
-     * Generated from protobuf field <code>int32 SourceStationAddressType = 6;</code>
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodDomainSourceStationAddressType SourceStationAddressType = 4;</code>
      */
     protected $SourceStationAddressType = 0;
     /**
-     *源站地址
+     * 源站列表
      *
-     * Generated from protobuf field <code>string Origins = 7;</code>
+     * Generated from protobuf field <code>repeated string Origins = 5;</code>
      */
-    protected $Origins = '';
+    private $Origins;
     /**
-     *地区
+     * 加速区域
      *
-     * Generated from protobuf field <code>string Area = 8;</code>
+     * Generated from protobuf field <code>string Area = 6;</code>
      */
     protected $Area = '';
     /**
-     *挂载tos 桶名称
+     * 源站配置模块
      *
-     * Generated from protobuf field <code>string BucketName = 9;</code>
-     */
-    protected $BucketName = '';
-    /**
-     * 源站列表
-     *
-     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.CdnOriginRule Origin = 11;</code>
+     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.CdnOriginRule Origin = 7;</code>
      */
     private $Origin;
-    /**
-     * 回源Host
-     *
-     * Generated from protobuf field <code>string Host = 16;</code>
-     */
-    protected $Host = '';
 
     /**
      * Constructor.
@@ -77,20 +59,14 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
      *     @type string $SpaceName
      *     @type string $DomainType
      *     @type string $Domain
-     *           域名
-     *     @type int $SourceStationType
      *     @type int $SourceStationAddressType
      *          源站地址类型
-     *     @type string $Origins
-     *          源站地址
-     *     @type string $Area
-     *          地区
-     *     @type string $BucketName
-     *          挂载tos 桶名称
-     *     @type \Byteplus\Service\Vod\Models\Business\CdnOriginRule[]|\Google\Protobuf\Internal\RepeatedField $Origin
+     *     @type string[]|\Google\Protobuf\Internal\RepeatedField $Origins
      *           源站列表
-     *     @type string $Host
-     *           回源Host
+     *     @type string $Area
+     *           加速区域
+     *     @type \Byteplus\Service\Vod\Models\Business\CdnOriginRule[]|\Google\Protobuf\Internal\RepeatedField $Origin
+     *           源站配置模块
      * }
      */
     public function __construct($data = NULL) {
@@ -143,8 +119,6 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 域名
-     *
      * Generated from protobuf field <code>string Domain = 3;</code>
      * @return string
      */
@@ -154,8 +128,6 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 域名
-     *
      * Generated from protobuf field <code>string Domain = 3;</code>
      * @param string $var
      * @return $this
@@ -169,31 +141,9 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 SourceStationType = 5;</code>
-     * @return int
-     */
-    public function getSourceStationType()
-    {
-        return $this->SourceStationType;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 SourceStationType = 5;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setSourceStationType($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->SourceStationType = $var;
-
-        return $this;
-    }
-
-    /**
      *源站地址类型
      *
-     * Generated from protobuf field <code>int32 SourceStationAddressType = 6;</code>
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodDomainSourceStationAddressType SourceStationAddressType = 4;</code>
      * @return int
      */
     public function getSourceStationAddressType()
@@ -204,23 +154,23 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     /**
      *源站地址类型
      *
-     * Generated from protobuf field <code>int32 SourceStationAddressType = 6;</code>
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodDomainSourceStationAddressType SourceStationAddressType = 4;</code>
      * @param int $var
      * @return $this
      */
     public function setSourceStationAddressType($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkEnum($var, \Byteplus\Service\Vod\Models\Business\VodDomainSourceStationAddressType::class);
         $this->SourceStationAddressType = $var;
 
         return $this;
     }
 
     /**
-     *源站地址
+     * 源站列表
      *
-     * Generated from protobuf field <code>string Origins = 7;</code>
-     * @return string
+     * Generated from protobuf field <code>repeated string Origins = 5;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getOrigins()
     {
@@ -228,24 +178,24 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *源站地址
+     * 源站列表
      *
-     * Generated from protobuf field <code>string Origins = 7;</code>
-     * @param string $var
+     * Generated from protobuf field <code>repeated string Origins = 5;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
     public function setOrigins($var)
     {
-        GPBUtil::checkString($var, True);
-        $this->Origins = $var;
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->Origins = $arr;
 
         return $this;
     }
 
     /**
-     *地区
+     * 加速区域
      *
-     * Generated from protobuf field <code>string Area = 8;</code>
+     * Generated from protobuf field <code>string Area = 6;</code>
      * @return string
      */
     public function getArea()
@@ -254,9 +204,9 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *地区
+     * 加速区域
      *
-     * Generated from protobuf field <code>string Area = 8;</code>
+     * Generated from protobuf field <code>string Area = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -269,35 +219,9 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *挂载tos 桶名称
+     * 源站配置模块
      *
-     * Generated from protobuf field <code>string BucketName = 9;</code>
-     * @return string
-     */
-    public function getBucketName()
-    {
-        return $this->BucketName;
-    }
-
-    /**
-     *挂载tos 桶名称
-     *
-     * Generated from protobuf field <code>string BucketName = 9;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setBucketName($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->BucketName = $var;
-
-        return $this;
-    }
-
-    /**
-     * 源站列表
-     *
-     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.CdnOriginRule Origin = 11;</code>
+     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.CdnOriginRule Origin = 7;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getOrigin()
@@ -306,9 +230,9 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 源站列表
+     * 源站配置模块
      *
-     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.CdnOriginRule Origin = 11;</code>
+     * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.CdnOriginRule Origin = 7;</code>
      * @param \Byteplus\Service\Vod\Models\Business\CdnOriginRule[]|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -316,32 +240,6 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Byteplus\Service\Vod\Models\Business\CdnOriginRule::class);
         $this->Origin = $arr;
-
-        return $this;
-    }
-
-    /**
-     * 回源Host
-     *
-     * Generated from protobuf field <code>string Host = 16;</code>
-     * @return string
-     */
-    public function getHost()
-    {
-        return $this->Host;
-    }
-
-    /**
-     * 回源Host
-     *
-     * Generated from protobuf field <code>string Host = 16;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setHost($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->Host = $var;
 
         return $this;
     }
