@@ -61,6 +61,12 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string VodUploadSource = 8;</code>
      */
     protected $VodUploadSource = '';
+    /**
+     * 支持解析hls Manifest 
+     *
+     * Generated from protobuf field <code>bool SupportParseManifest = 16;</code>
+     */
+    protected $SupportParseManifest = false;
 
     /**
      * Constructor.
@@ -84,6 +90,8 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
      *           上传中文件的文件后缀 
      *     @type string $VodUploadSource
      *           上传中文件的来源 
+     *     @type bool $SupportParseManifest
+     *           支持解析hls Manifest 
      * }
      */
     public function __construct($data = NULL) {
@@ -295,6 +303,32 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->VodUploadSource = $var;
+
+        return $this;
+    }
+
+    /**
+     * 支持解析hls Manifest 
+     *
+     * Generated from protobuf field <code>bool SupportParseManifest = 16;</code>
+     * @return bool
+     */
+    public function getSupportParseManifest()
+    {
+        return $this->SupportParseManifest;
+    }
+
+    /**
+     * 支持解析hls Manifest 
+     *
+     * Generated from protobuf field <code>bool SupportParseManifest = 16;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setSupportParseManifest($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->SupportParseManifest = $var;
 
         return $this;
     }

@@ -20,6 +20,7 @@ use Byteplus\Service\Vod\Models\Request\VodApplyUploadInfoRequest;
 use Byteplus\Service\Vod\Models\Request\VodCommitUploadInfoRequest;
 use Byteplus\Service\Vod\Models\Request\VodUploadMaterialRequest;
 use Byteplus\Service\Vod\Models\Request\VodUploadMediaRequest;
+use Byteplus\Service\Vod\Models\Request\VodParseUploadManifestRequest;
 use Byteplus\Service\Vod\Models\Response\VodCommitUploadInfoResponse;
 use Byteplus\Service\Vod\Vod;
 
@@ -36,6 +37,13 @@ class VodUpload extends Vod
      */
     public function uploadMedia(VodUploadMediaRequest $vodUploadMediaRequest): VodCommitUploadInfoResponse
     {
+        $filePath = $vodUploadMediaRequest->getFilePath();
+        $isM3u8 = $this->isM3u8File($filePath);
+
+        if ($isM3u8 && $vodUploadMediaRequest->getSupportParseManifest()) {
+            $this->parseAndUploadM3U8Segments($vodUploadMediaRequest);
+        }
+
         $applyRequest = new VodApplyUploadInfoRequest();
         $applyRequest->setSpaceName($vodUploadMediaRequest->getSpaceName());
         $applyRequest->setFileName($vodUploadMediaRequest->getFileName());
@@ -54,6 +62,109 @@ class VodUpload extends Vod
             return $this->commitUploadInfo($request);
         } catch (Throwable $e) {
             throw $e;
+        }
+    }
+
+    private function isM3u8File(string $filePath): bool
+    {
+        $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+        return $extension === 'm3u8';
+    }
+
+    private function parseAndUploadM3U8Segments(VodUploadMediaRequest $vodUploadMediaRequest)
+    {
+        $spaceName = $vodUploadMediaRequest->getSpaceName();
+        $filePath = $vodUploadMediaRequest->getFilePath();
+        $seenFiles = [];
+        $segments = [];
+
+        $parse = function($currentPath, $relativePathPrefix) use (&$parse, &$seenFiles, &$segments, $spaceName) {
+            if (!file_exists($currentPath)) {
+                throw new Exception("m3u8 file not exists: " . $currentPath);
+            }
+
+            $manifestContent = file_get_contents($currentPath);
+
+            $parseRequest = new VodParseUploadManifestRequest();
+            $parseRequest->setSpaceName($spaceName);
+            $parseRequest->setManifestType("m3u8");
+            $parseRequest->setManifestContent($manifestContent);
+
+            $parseResponse = $this->parseUploadManifest($parseRequest);
+            if ($parseResponse->getResponseMetadata() != null && $parseResponse->getResponseMetadata()->getError() != null) {
+                $errorJson = $parseResponse->getResponseMetadata()->getError()->serializeToJsonString();
+                throw new Exception($errorJson);
+            }
+
+            $manifestDir = dirname($currentPath);
+            if ($parseResponse->getResult() != null && $parseResponse->getResult()->getData() != null) {
+                $mediaSegments = $parseResponse->getResult()->getData()->getMediaSegments();
+                foreach ($mediaSegments as $segment) {
+                    $segmentPath = $manifestDir . DIRECTORY_SEPARATOR . $segment;
+                    if (isset($seenFiles[$segmentPath])) {
+                        continue;
+                    }
+                    $seenFiles[$segmentPath] = true;
+
+                    $segmentFileName = $segment;
+                    if ($relativePathPrefix != "") {
+                        $segmentFileName = $relativePathPrefix . DIRECTORY_SEPARATOR . $segmentFileName;
+                    }
+
+                    if (strtolower(pathinfo($segmentPath, PATHINFO_EXTENSION)) === 'm3u8') {
+                        $subRelativePathPrefix = dirname($segmentFileName);
+                        if ($subRelativePathPrefix === ".") {
+                            $subRelativePathPrefix = "";
+                        }
+                        $parse($segmentPath, $subRelativePathPrefix);
+                    }
+
+                    $segments[] = [
+                        'filePath' => $segmentPath,
+                        'fileName' => $segmentFileName
+                    ];
+                }
+            }
+        };
+
+        $parse($filePath, "");
+
+        $pathPrefix = "";
+        if ($vodUploadMediaRequest->getFileName() != "") {
+            $pathPrefix = dirname($vodUploadMediaRequest->getFileName());
+            if ($pathPrefix != ".") {
+                $pathPrefix .= DIRECTORY_SEPARATOR;
+            } else {
+                $pathPrefix = "";
+            }
+        }
+
+        foreach ($segments as $segment) {
+            $segmentFileName = $pathPrefix . $segment['fileName'];
+            $maxRetries = 3;
+            $retryCount = 0;
+            $success = false;
+
+            while ($retryCount < $maxRetries && !$success) {
+                try {
+                    $applyRequest = new VodApplyUploadInfoRequest();
+                    $applyRequest->setSpaceName($vodUploadMediaRequest->getSpaceName());
+                    $applyRequest->setFileName($segmentFileName);
+                    $applyRequest->setStorageClass($vodUploadMediaRequest->getStorageClass());
+                    $applyRequest->setFileType("object");
+                    $resp = $this->upload($applyRequest, $segment['filePath']);
+                    if ($resp[0] != 0) {
+                        throw new Exception($resp[1]);
+                    }
+                    $success = true;
+                } catch (Exception $e) {
+                    $retryCount++;
+                    if ($retryCount >= $maxRetries) {
+                        throw $e;
+                    }
+                    usleep(100000 * $retryCount);
+                }
+            }
         }
     }
 
