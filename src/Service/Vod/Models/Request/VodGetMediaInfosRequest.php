@@ -19,6 +19,12 @@ class VodGetMediaInfosRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string Vids = 1;</code>
      */
     protected $Vids = '';
+    /**
+     *是否需要智能标签等信息
+     *
+     * Generated from protobuf field <code>bool NeedSmartInfo = 2;</code>
+     */
+    protected $NeedSmartInfo = false;
 
     /**
      * Constructor.
@@ -28,6 +34,8 @@ class VodGetMediaInfosRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $Vids
      *          视频ID列表
+     *     @type bool $NeedSmartInfo
+     *          是否需要智能标签等信息
      * }
      */
     public function __construct($data = NULL) {
@@ -57,6 +65,32 @@ class VodGetMediaInfosRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->Vids = $var;
+
+        return $this;
+    }
+
+    /**
+     *是否需要智能标签等信息
+     *
+     * Generated from protobuf field <code>bool NeedSmartInfo = 2;</code>
+     * @return bool
+     */
+    public function getNeedSmartInfo()
+    {
+        return $this->NeedSmartInfo;
+    }
+
+    /**
+     *是否需要智能标签等信息
+     *
+     * Generated from protobuf field <code>bool NeedSmartInfo = 2;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setNeedSmartInfo($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->NeedSmartInfo = $var;
 
         return $this;
     }
