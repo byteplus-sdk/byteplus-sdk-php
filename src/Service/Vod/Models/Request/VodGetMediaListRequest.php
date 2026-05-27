@@ -85,6 +85,12 @@ class VodGetMediaListRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string VodUploadSources = 12;</code>
      */
     protected $VodUploadSources = '';
+    /**
+     *智能标签，多个用","隔开
+     *
+     * Generated from protobuf field <code>string SmartTags = 13;</code>
+     */
+    protected $SmartTags = '';
 
     /**
      * Constructor.
@@ -116,6 +122,8 @@ class VodGetMediaListRequest extends \Google\Protobuf\Internal\Message
      *           tos存储类型(Standard, Archive)，多个用","隔开
      *     @type string $VodUploadSources
      *           音视频上传来源，多个用","隔开
+     *     @type string $SmartTags
+     *          智能标签，多个用","隔开
      * }
      */
     public function __construct($data = NULL) {
@@ -431,6 +439,32 @@ class VodGetMediaListRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->VodUploadSources = $var;
+
+        return $this;
+    }
+
+    /**
+     *智能标签，多个用","隔开
+     *
+     * Generated from protobuf field <code>string SmartTags = 13;</code>
+     * @return string
+     */
+    public function getSmartTags()
+    {
+        return $this->SmartTags;
+    }
+
+    /**
+     *智能标签，多个用","隔开
+     *
+     * Generated from protobuf field <code>string SmartTags = 13;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setSmartTags($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->SmartTags = $var;
 
         return $this;
     }
