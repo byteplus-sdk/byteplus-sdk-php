@@ -31,6 +31,12 @@ class VodMediaInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated .Byteplus.Vod.Models.Business.VodTranscodeInfo TranscodeInfos = 3;</code>
      */
     private $TranscodeInfos;
+    /**
+     *智能媒资信息
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodMediaSmartInfo SmartInfo = 4;</code>
+     */
+    protected $SmartInfo = null;
 
     /**
      * Constructor.
@@ -44,6 +50,8 @@ class VodMediaInfo extends \Google\Protobuf\Internal\Message
      *          原视频信息
      *     @type \Byteplus\Service\Vod\Models\Business\VodTranscodeInfo[]|\Google\Protobuf\Internal\RepeatedField $TranscodeInfos
      *          转码视频信息列表
+     *     @type \Byteplus\Service\Vod\Models\Business\VodMediaSmartInfo $SmartInfo
+     *          智能媒资信息
      * }
      */
     public function __construct($data = NULL) {
@@ -145,6 +153,42 @@ class VodMediaInfo extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Byteplus\Service\Vod\Models\Business\VodTranscodeInfo::class);
         $this->TranscodeInfos = $arr;
+
+        return $this;
+    }
+
+    /**
+     *智能媒资信息
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodMediaSmartInfo SmartInfo = 4;</code>
+     * @return \Byteplus\Service\Vod\Models\Business\VodMediaSmartInfo|null
+     */
+    public function getSmartInfo()
+    {
+        return $this->SmartInfo;
+    }
+
+    public function hasSmartInfo()
+    {
+        return isset($this->SmartInfo);
+    }
+
+    public function clearSmartInfo()
+    {
+        unset($this->SmartInfo);
+    }
+
+    /**
+     *智能媒资信息
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodMediaSmartInfo SmartInfo = 4;</code>
+     * @param \Byteplus\Service\Vod\Models\Business\VodMediaSmartInfo $var
+     * @return $this
+     */
+    public function setSmartInfo($var)
+    {
+        GPBUtil::checkMessage($var, \Byteplus\Service\Vod\Models\Business\VodMediaSmartInfo::class);
+        $this->SmartInfo = $var;
 
         return $this;
     }
