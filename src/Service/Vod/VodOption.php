@@ -409,6 +409,17 @@ class VodOption
                 ],
             ]
         ],
+        'CreateDomain' => [
+             'url' => '/',
+             'method' => 'get',
+             'config' => [
+                  'timeout' => 10.0,
+                  'query' => [
+                      'Action' => 'CreateDomain',
+                      'Version' => '2023-01-01',
+                  ],
+             ]
+        ],
         'CreateCdnRefreshTask' => [
             'url' => '/',
             'method' => 'get',

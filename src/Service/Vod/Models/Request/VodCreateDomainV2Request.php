@@ -38,13 +38,8 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
      */
     protected $SourceStationAddressType = 0;
     /**
-     *源站地址
-     *
-     * Generated from protobuf field <code>string Origins = 7;</code>
-     */
-    protected $Origins = '';
-    /**
-     *地区
+     *  string Origins = 7;                  //源站地址，这个参数在历史 SDK
+     *  不可用，所以废弃，后续可以使用编号 11 的 Origin 参数
      *
      * Generated from protobuf field <code>string Area = 8;</code>
      */
@@ -81,10 +76,9 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
      *     @type int $SourceStationType
      *     @type int $SourceStationAddressType
      *          源站地址类型
-     *     @type string $Origins
-     *          源站地址
      *     @type string $Area
-     *          地区
+     *            string Origins = 7;                  //源站地址，这个参数在历史 SDK
+     *            不可用，所以废弃，后续可以使用编号 11 的 Origin 参数
      *     @type string $BucketName
      *          挂载tos 桶名称
      *     @type \Byteplus\Service\Vod\Models\Business\CdnOriginRule[]|\Google\Protobuf\Internal\RepeatedField $Origin
@@ -217,33 +211,8 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *源站地址
-     *
-     * Generated from protobuf field <code>string Origins = 7;</code>
-     * @return string
-     */
-    public function getOrigins()
-    {
-        return $this->Origins;
-    }
-
-    /**
-     *源站地址
-     *
-     * Generated from protobuf field <code>string Origins = 7;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setOrigins($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->Origins = $var;
-
-        return $this;
-    }
-
-    /**
-     *地区
+     *  string Origins = 7;                  //源站地址，这个参数在历史 SDK
+     *  不可用，所以废弃，后续可以使用编号 11 的 Origin 参数
      *
      * Generated from protobuf field <code>string Area = 8;</code>
      * @return string
@@ -254,7 +223,8 @@ class VodCreateDomainV2Request extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *地区
+     *  string Origins = 7;                  //源站地址，这个参数在历史 SDK
+     *  不可用，所以废弃，后续可以使用编号 11 的 Origin 参数
      *
      * Generated from protobuf field <code>string Area = 8;</code>
      * @param string $var
