@@ -679,6 +679,21 @@ class VodOption
     {
         switch ($region) {
             case 'ap-southeast-1':
+                $config = [
+                    'host' => 'https://vod.ap-southeast-1.byteplusapi.com',
+                    'scheme' => 'https',
+                    'config' => [
+                        'timeout' => 5.0,
+                        'headers' => [
+                            'Accept' => 'application/json',
+                        ],
+                        'v4_credentials' => [
+                            'region' => $region,
+                            'service' => 'vod',
+                        ],
+                    ],
+                ];
+                break;
             case 'ap-singapore-1':
                 $config = [
                     'host' => 'https://vod.byteplusapi.com',
