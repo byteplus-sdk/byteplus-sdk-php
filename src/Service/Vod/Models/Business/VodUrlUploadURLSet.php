@@ -97,6 +97,18 @@ class VodUrlUploadURLSet extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>bool EnableLowPriority = 14;</code>
      */
     protected $EnableLowPriority = false;
+    /**
+     * 文件类型 
+     *
+     * Generated from protobuf field <code>string FileType = 15;</code>
+     */
+    protected $FileType = '';
+    /**
+     * 媒资类型 
+     *
+     * Generated from protobuf field <code>int32 RecordType = 16;</code>
+     */
+    protected $RecordType = 0;
 
     /**
      * Constructor.
@@ -132,6 +144,10 @@ class VodUrlUploadURLSet extends \Google\Protobuf\Internal\Message
      *           URL加密算法 
      *     @type bool $EnableLowPriority
      *           是否闲时转码 
+     *     @type string $FileType
+     *           文件类型 
+     *     @type int $RecordType
+     *           媒资类型 
      * }
      */
     public function __construct($data = NULL) {
@@ -499,6 +515,58 @@ class VodUrlUploadURLSet extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->EnableLowPriority = $var;
+
+        return $this;
+    }
+
+    /**
+     * 文件类型 
+     *
+     * Generated from protobuf field <code>string FileType = 15;</code>
+     * @return string
+     */
+    public function getFileType()
+    {
+        return $this->FileType;
+    }
+
+    /**
+     * 文件类型 
+     *
+     * Generated from protobuf field <code>string FileType = 15;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setFileType($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->FileType = $var;
+
+        return $this;
+    }
+
+    /**
+     * 媒资类型 
+     *
+     * Generated from protobuf field <code>int32 RecordType = 16;</code>
+     * @return int
+     */
+    public function getRecordType()
+    {
+        return $this->RecordType;
+    }
+
+    /**
+     * 媒资类型 
+     *
+     * Generated from protobuf field <code>int32 RecordType = 16;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setRecordType($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->RecordType = $var;
 
         return $this;
     }
