@@ -21,7 +21,7 @@ class RequestVod
         \Byteplus\Service\Vod\Models\GPBMetadata\VodCdn::initOnce();
         $pool->internalAddGeneratedFile(
             '
-Â{
+¼}
 &byteplus/vod/request/request_vod.protoByteplus.Vod.Models.Request(byteplus/vod/business/vod_workflow.proto&byteplus/vod/business/vod_upload.proto&byteplus/vod/business/vod_common.proto#byteplus/vod/business/vod_cdn.proto"™
 VodGetAllPlayInfoRequest
 Vids (	
@@ -94,7 +94,7 @@ PlayConfig (	
 	SpaceName (	A
 URLSets (20.Byteplus.Vod.Models.Business.VodUrlUploadURLSet"/
 VodQueryUploadTaskInfoRequest
-JobIds (	"¥
+JobIds (	"¿
 VodApplyUploadInfoRequest
 	SpaceName (	
 
@@ -103,7 +103,8 @@ SessionKey (	
 FileType (	
 FileName (	
 StorageClass (
-FileExtension (	"Û
+FileExtension (	
+UploadHostPrefer (	"õ
 VodUploadMediaRequest
 	SpaceName (	
 FilePath (	
@@ -112,8 +113,9 @@ SessionKey (	
 FileName (	
 StorageClass (
 FileExtension (	
-VodUploadSource (	
-SupportParseManifest ("£
+VodUploadSource (	
+UploadHostPrefer	 (	
+SupportParseManifest ("½
 VodUploadMaterialRequest
 	SpaceName (	
 FilePath (	
@@ -121,7 +123,16 @@ SessionKey (	
 	Functions (	
 FileType (	
 FileName (	
-FileExtension (	"…
+FileExtension (	
+UploadHostPrefer (	"©
+VodUploadObjectRequest
+	SpaceName (	
+FilePath (	
+CallbackArgs (	
+	Functions (	
+FileName (	
+FileExtension (	
+UploadHostPrefer (	"…
 VodCommitUploadInfoRequest
 	SpaceName (	
 

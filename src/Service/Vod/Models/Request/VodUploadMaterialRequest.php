@@ -55,6 +55,12 @@ class VodUploadMaterialRequest extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string FileExtension = 7;</code>
      */
     protected $FileExtension = '';
+    /**
+     * 上传域名偏好 
+     *
+     * Generated from protobuf field <code>string UploadHostPrefer = 8;</code>
+     */
+    protected $UploadHostPrefer = '';
 
     /**
      * Constructor.
@@ -76,6 +82,8 @@ class VodUploadMaterialRequest extends \Google\Protobuf\Internal\Message
      *           上传的文件在存储中的名字，即 bucket/key 中的 key 
      *     @type string $FileExtension
      *           上传中文件的文件后缀 
+     *     @type string $UploadHostPrefer
+     *           上传域名偏好 
      * }
      */
     public function __construct($data = NULL) {
@@ -261,6 +269,32 @@ class VodUploadMaterialRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->FileExtension = $var;
+
+        return $this;
+    }
+
+    /**
+     * 上传域名偏好 
+     *
+     * Generated from protobuf field <code>string UploadHostPrefer = 8;</code>
+     * @return string
+     */
+    public function getUploadHostPrefer()
+    {
+        return $this->UploadHostPrefer;
+    }
+
+    /**
+     * 上传域名偏好 
+     *
+     * Generated from protobuf field <code>string UploadHostPrefer = 8;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUploadHostPrefer($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->UploadHostPrefer = $var;
 
         return $this;
     }
