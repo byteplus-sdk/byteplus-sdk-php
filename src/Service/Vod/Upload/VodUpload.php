@@ -49,6 +49,7 @@ class VodUpload extends Vod
         $applyRequest->setFileName($vodUploadMediaRequest->getFileName());
         $applyRequest->setFileExtension($vodUploadMediaRequest->getFileExtension());
         $applyRequest->setStorageClass($vodUploadMediaRequest->getStorageClass());
+        $applyRequest->setUploadHostPrefer($vodUploadMediaRequest->getUploadHostPrefer());
         $resp = $this->upload($applyRequest, $vodUploadMediaRequest->getFilePath());
         if ($resp[0] != 0) {
             throw new Exception($resp[1]);
@@ -151,6 +152,7 @@ class VodUpload extends Vod
                     $applyRequest->setSpaceName($vodUploadMediaRequest->getSpaceName());
                     $applyRequest->setFileName($segmentFileName);
                     $applyRequest->setStorageClass($vodUploadMediaRequest->getStorageClass());
+                    $applyRequest->setUploadHostPrefer($vodUploadMediaRequest->getUploadHostPrefer());
                     $applyRequest->setFileType("object");
                     $resp = $this->upload($applyRequest, $segment['filePath']);
                     if ($resp[0] != 0) {
@@ -175,6 +177,7 @@ class VodUpload extends Vod
         $applyRequest->setFileType($vodUploadMaterialRequest->getFileType());
         $applyRequest->setFileName($vodUploadMaterialRequest->getFileName());
         $applyRequest->setFileExtension($vodUploadMaterialRequest->getFileExtension());
+        $applyRequest->setUploadHostPrefer($vodUploadMaterialRequest->getUploadHostPrefer());
         $resp = $this->upload($applyRequest, $vodUploadMaterialRequest->getFilePath());
         if ($resp[0] != 0) {
             throw new Exception($resp[1]);
