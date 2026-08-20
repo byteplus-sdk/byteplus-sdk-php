@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>Byteplus.Vod.Models.Request.VodUploadMediaRequest</code>
+ * Generated from protobuf message <code>Byteplus.Vod.Models.Request.VodUploadObjectRequest</code>
  */
-class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
+class VodUploadObjectRequest extends \Google\Protobuf\Internal\Message
 {
     /**
      * 上传的空间名 
@@ -44,35 +44,17 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
      */
     protected $FileName = '';
     /**
-     * 上传的文件的存储类型，1-标准存储，2-归档存储，非必填参数，默认为标准存储 
-     *
-     * Generated from protobuf field <code>int32 StorageClass = 6;</code>
-     */
-    protected $StorageClass = 0;
-    /**
      * 上传中文件的文件后缀 
      *
-     * Generated from protobuf field <code>string FileExtension = 7;</code>
+     * Generated from protobuf field <code>string FileExtension = 6;</code>
      */
     protected $FileExtension = '';
     /**
-     * 上传中文件的来源 
-     *
-     * Generated from protobuf field <code>string VodUploadSource = 8;</code>
-     */
-    protected $VodUploadSource = '';
-    /**
      * 上传域名偏好 
      *
-     * Generated from protobuf field <code>string UploadHostPrefer = 9;</code>
+     * Generated from protobuf field <code>string UploadHostPrefer = 7;</code>
      */
     protected $UploadHostPrefer = '';
-    /**
-     * 支持解析hls Manifest 
-     *
-     * Generated from protobuf field <code>bool SupportParseManifest = 16;</code>
-     */
-    protected $SupportParseManifest = false;
 
     /**
      * Constructor.
@@ -90,16 +72,10 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
      *           上传的功能函数 
      *     @type string $FileName
      *           上传的文件在存储中的名字，即 bucket/key 中的 key 
-     *     @type int $StorageClass
-     *           上传的文件的存储类型，1-标准存储，2-归档存储，非必填参数，默认为标准存储 
      *     @type string $FileExtension
      *           上传中文件的文件后缀 
-     *     @type string $VodUploadSource
-     *           上传中文件的来源 
      *     @type string $UploadHostPrefer
      *           上传域名偏好 
-     *     @type bool $SupportParseManifest
-     *           支持解析hls Manifest 
      * }
      */
     public function __construct($data = NULL) {
@@ -238,35 +214,9 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 上传的文件的存储类型，1-标准存储，2-归档存储，非必填参数，默认为标准存储 
-     *
-     * Generated from protobuf field <code>int32 StorageClass = 6;</code>
-     * @return int
-     */
-    public function getStorageClass()
-    {
-        return $this->StorageClass;
-    }
-
-    /**
-     * 上传的文件的存储类型，1-标准存储，2-归档存储，非必填参数，默认为标准存储 
-     *
-     * Generated from protobuf field <code>int32 StorageClass = 6;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setStorageClass($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->StorageClass = $var;
-
-        return $this;
-    }
-
-    /**
      * 上传中文件的文件后缀 
      *
-     * Generated from protobuf field <code>string FileExtension = 7;</code>
+     * Generated from protobuf field <code>string FileExtension = 6;</code>
      * @return string
      */
     public function getFileExtension()
@@ -277,7 +227,7 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
     /**
      * 上传中文件的文件后缀 
      *
-     * Generated from protobuf field <code>string FileExtension = 7;</code>
+     * Generated from protobuf field <code>string FileExtension = 6;</code>
      * @param string $var
      * @return $this
      */
@@ -290,35 +240,9 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * 上传中文件的来源 
-     *
-     * Generated from protobuf field <code>string VodUploadSource = 8;</code>
-     * @return string
-     */
-    public function getVodUploadSource()
-    {
-        return $this->VodUploadSource;
-    }
-
-    /**
-     * 上传中文件的来源 
-     *
-     * Generated from protobuf field <code>string VodUploadSource = 8;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setVodUploadSource($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->VodUploadSource = $var;
-
-        return $this;
-    }
-
-    /**
      * 上传域名偏好 
      *
-     * Generated from protobuf field <code>string UploadHostPrefer = 9;</code>
+     * Generated from protobuf field <code>string UploadHostPrefer = 7;</code>
      * @return string
      */
     public function getUploadHostPrefer()
@@ -329,7 +253,7 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
     /**
      * 上传域名偏好 
      *
-     * Generated from protobuf field <code>string UploadHostPrefer = 9;</code>
+     * Generated from protobuf field <code>string UploadHostPrefer = 7;</code>
      * @param string $var
      * @return $this
      */
@@ -337,32 +261,6 @@ class VodUploadMediaRequest extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->UploadHostPrefer = $var;
-
-        return $this;
-    }
-
-    /**
-     * 支持解析hls Manifest 
-     *
-     * Generated from protobuf field <code>bool SupportParseManifest = 16;</code>
-     * @return bool
-     */
-    public function getSupportParseManifest()
-    {
-        return $this->SupportParseManifest;
-    }
-
-    /**
-     * 支持解析hls Manifest 
-     *
-     * Generated from protobuf field <code>bool SupportParseManifest = 16;</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setSupportParseManifest($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->SupportParseManifest = $var;
 
         return $this;
     }

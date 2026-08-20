@@ -57,6 +57,10 @@ class ApplyUploadInfoParam extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>int32 StorageClass = 11;</code>
      */
     protected $StorageClass = 0;
+    /**
+     * Generated from protobuf field <code>string UploadHostPrefer = 12;</code>
+     */
+    protected $UploadHostPrefer = '';
 
     /**
      * Constructor.
@@ -75,6 +79,7 @@ class ApplyUploadInfoParam extends \Google\Protobuf\Internal\Message
      *     @type int $FlushUploadMode
      *     @type string $Md5
      *     @type int $StorageClass
+     *     @type string $UploadHostPrefer
      * }
      */
     public function __construct($data = NULL) {
@@ -320,6 +325,28 @@ class ApplyUploadInfoParam extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkInt32($var);
         $this->StorageClass = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string UploadHostPrefer = 12;</code>
+     * @return string
+     */
+    public function getUploadHostPrefer()
+    {
+        return $this->UploadHostPrefer;
+    }
+
+    /**
+     * Generated from protobuf field <code>string UploadHostPrefer = 12;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setUploadHostPrefer($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->UploadHostPrefer = $var;
 
         return $this;
     }
