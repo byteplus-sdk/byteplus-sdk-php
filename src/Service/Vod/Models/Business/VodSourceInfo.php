@@ -133,6 +133,18 @@ class VodSourceInfo extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string FileName = 20;</code>
      */
     protected $FileName = '';
+    /**
+     * AIGC来源
+     *
+     * Generated from protobuf field <code>string AIGCSource = 23;</code>
+     */
+    protected $AIGCSource = '';
+    /**
+     * AIGCMeta
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodAIGCMeta AIGCMeta = 24;</code>
+     */
+    protected $AIGCMeta = null;
 
     /**
      * Constructor.
@@ -180,6 +192,10 @@ class VodSourceInfo extends \Google\Protobuf\Internal\Message
      *          存储类型，STANDARD or ARCHIVE
      *     @type string $FileName
      *          文件名
+     *     @type string $AIGCSource
+     *           AIGC来源
+     *     @type \Byteplus\Service\Vod\Models\Business\VodAIGCMeta $AIGCMeta
+     *           AIGCMeta
      * }
      */
     public function __construct($data = NULL) {
@@ -723,6 +739,68 @@ class VodSourceInfo extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->FileName = $var;
+
+        return $this;
+    }
+
+    /**
+     * AIGC来源
+     *
+     * Generated from protobuf field <code>string AIGCSource = 23;</code>
+     * @return string
+     */
+    public function getAIGCSource()
+    {
+        return $this->AIGCSource;
+    }
+
+    /**
+     * AIGC来源
+     *
+     * Generated from protobuf field <code>string AIGCSource = 23;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setAIGCSource($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->AIGCSource = $var;
+
+        return $this;
+    }
+
+    /**
+     * AIGCMeta
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodAIGCMeta AIGCMeta = 24;</code>
+     * @return \Byteplus\Service\Vod\Models\Business\VodAIGCMeta|null
+     */
+    public function getAIGCMeta()
+    {
+        return $this->AIGCMeta;
+    }
+
+    public function hasAIGCMeta()
+    {
+        return isset($this->AIGCMeta);
+    }
+
+    public function clearAIGCMeta()
+    {
+        unset($this->AIGCMeta);
+    }
+
+    /**
+     * AIGCMeta
+     *
+     * Generated from protobuf field <code>.Byteplus.Vod.Models.Business.VodAIGCMeta AIGCMeta = 24;</code>
+     * @param \Byteplus\Service\Vod\Models\Business\VodAIGCMeta $var
+     * @return $this
+     */
+    public function setAIGCMeta($var)
+    {
+        GPBUtil::checkMessage($var, \Byteplus\Service\Vod\Models\Business\VodAIGCMeta::class);
+        $this->AIGCMeta = $var;
 
         return $this;
     }
